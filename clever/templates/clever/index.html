@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+     <div class="modal fade" id="signModal" >
+        <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="{% url 'login1' %}">{% csrf_token %}
+            Name:<input type="text" Name="us" class="form-control"><br>
+            Password:<input type="password" Name="ps" class="form-control"><br>
+           <center> <input type="submit" class="btn btn-warning"></center> <br>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       <!-- <button type="button" class="btn btn-primary">Save changes</button>-->
+
+ </div>
+  </div>
+</div>
+</div>
+
+{% include 'clever/header.html' %}
+    <!---------------------------modal end here------------------------->
+
+    <!-- ##### Hero Area Start ##### -->
+    <section class="hero-area bg-img bg-overlay-2by5"  style="height:450px;background-image: url({% static 'clever/img/bg-img/jg1.jpg' %});">
+        <div class="container h-100" >
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <!-- Hero Content -->
+                    <div class="hero-content text-center">
+                        <h2>Let's Study Together</h2>
+                        <a href="#" class="btn clever-btn">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ##### Hero Area End ##### -->
+
+    <!-- ##### Popular Courses Start ##### -->
+    <section class="popular-courses-area section-padding-100-0" style="background-image: url({% static 'clever/img/core-img/texture.png'%});">
+        <div class="container">
+           <!-- <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h3></h3>
+                    </div>
+                </div>
+            </div>
+                    -->
+            <div class="row">
+                <!-- Single Popular Course -->
+                <div class="col-3 col-md-3 col-lg-3">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="100ms">
+                        <a href="{% url 'C1' %}">
+                            <img src="{% static 'clever/img/bg-img/j4.jpg' %}" alt=""></a>
+                        <!-- Course Content -->
+                        <div class="course-content" style="border:solid 0px;height:125px;">
+                            <h4>Learn C Programming</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Popular Course -->
+                <div class="col-1 col-md-1 col-lg-3">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="100ms">
+                        <a href="{% url 'cpHome1' %}">
+                            <img src="{% static 'clever/img/bg-img/C+++.jpg' %}" alt=""></a>
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>Learn C++ Programming</h4>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Popular Course -->
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="100ms">
+                         <a href="{% url 'AI1' %}">
+                             <img src="{% static 'clever/img/bg-img/c3.jpg' %}" alt=""></a>
+                        <!-- Course Content -->
+                        <div class="course-content"style="border:solid 0px;height:125px;">
+                            <h4>Artificial Intelligence</h4>
+                          
+                        </div>
+                        
+                    </div>
+                </div>
+                 <!-- Single Popular Course -->
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="100ms">
+                        <a href="{% url 'MachineLearning1' %}">
+                            <img src="{% static 'clever/img/bg-img/j5.jpg' %}" alt=""></a>
+                        <!-- Course Content -->
+                        <div class="course-content"style="border:solid 0px;height:125px;">
+                            <h4>Machine<br> 
+                            Learning</h4>
+                          
+                        </div>
+                        
+                    </div>
+                </div>
+                 <!-- Single Popular Course -->
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="100ms">
+                        <a href="{% url 'BigData1' %}">
+                            <img src="{% static 'clever/img/bg-img/j6.jpg' %}" alt=""></a>
+                        <!-- Course Content -->
+                        <div class="course-content"style="border:solid 0px;height:90px;">
+
+                            <center><h4>Hadoop</h4></center>
+                          
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- Single Popular Course -->
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="100ms">
+                       <a href="{% url 'EH1' %}">
+                           <img src="{% static 'clever/img/bg-img/j7.jpg' %}" alt=""></a>
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>Ethical Hacking</h4>
+                            
+                        </div>
+                    </div>
+                </div>
+                 <!-- Single Popular Course -->
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="110ms">
+                         <a href="{% url 'DataStructure1' %}">
+                             <img src="{% static 'clever/img/bg-img/DS.jpg' %}" alt=""></a>
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>Data Structure</h4>
+                        </div>
+                    </div>
+                </div>
+                  <!-- Single Popular Course -->
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="100ms">
+                        <img src="{% static 'clever/img/bg-img/OS.jpg' %}" alt="">
+                        <!-- Course Content -->
+                        <div class="course-content">
+                           <center> <h4>OS</h4></center>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Popular Courses End ##### -->
+<!-- ##### Register Now Start ##### -->
+    <section class="register-now bg-img section-padding-100-0 d-flex " id="register" style="background-image: url({% static 'clever/img/bg-img/bj2.jpg' %});">
+        <!-- Register Contact Form -->
+        <div class="register-contact-form mb-100 wow fadeInUp" data-wow-delay="250ms">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="forms">
+                          <center>  <h4>Register For Free</h4></center>
+                            <form action="{% url 'reg1' %}" method="post">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="Name" Name="nm" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="Email" Name="em" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="Phone" Name="ph"  placeholder="Phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="Username" Name="us"  placeholder="Username">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" id="Password" Name="ps" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+
+                                        <div class="form-group">
+                                            <input type="date" class="form-control" id="DOB" Name="dob" placeholder="Date of Birth">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="City" Name="cty" placeholder="City">
+                                        </div>
+                                    </div>
+                                   <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="state" Name="st" placeholder="State">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn clever-btn w-100">Signup</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+    </section>
+    <!-- ##### Register Now End ##### -->
+ <!-- ##### About Start ##### -->
+  <section class="About-area section-padding-100-0">
+         <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h3>About us</h3>
+                        <p> Welcome to our website, where you'll find a wealth of information about the programming languages and many popular subjects and you can learn that subjects.<br> We created this website to help you gain a better understanding of your study problem.In this website you can search topics you want. We hope you take advantage of this resource and visit us often. Be sure to add our site to your list of "favorites" in your Internet browser. We frequently update our information.</p>
+                    </div>
+                </div>
+            </div>
+        
+    </section>
+    </body>
+    <!-- ##### About End ##### -->
+{% include 'clever/footer.html' %}
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+
+</html>

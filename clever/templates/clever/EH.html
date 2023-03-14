@@ -1,0 +1,463 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+    <script type="text/javascript" src="{% static 'clever/jq/jquery-1.10.2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'clever/jq/jquery.min.js' %}"></script>
+    <script>
+        $(document).ready(function(){
+        $(".t1").click(function(){
+        $(".p1").show();
+        $(".p2").hide();
+        $(".p3").hide();
+        $(".p4").hide();
+        $(".p5").hide();
+        $(".p6").hide();
+        $(".p7").hide();
+        });
+
+        $(".t2").click(function(){
+        $(".p1").hide();
+        $(".p2").show();
+        $(".p3").hide();
+        $(".p4").hide();
+        $(".p5").hide();
+        $(".p6").hide();
+        $(".p7").hide();
+        });
+
+         $(".t3").click(function(){
+         $(".p1").hide();
+        $(".p2").hide();
+        $(".p3").show();
+        $(".p4").hide();
+        $(".p5").hide();
+        $(".p6").hide();
+        $(".p7").hide();
+        });
+
+         $(".t4").click(function(){
+        $(".p1").hide();
+        $(".p2").hide();
+        $(".p3").hide();
+        $(".p4").show();
+        $(".p5").hide();
+        $(".p6").hide();
+        $(".p7").hide();
+        });
+
+         $(".t5").click(function(){
+         $(".p1").hide();
+        $(".p2").hide();
+        $(".p3").hide();
+        $(".p4").hide();
+        $(".p5").show();
+        $(".p6").hide();
+        $(".p7").hide();
+        });
+
+         $(".t6").click(function(){
+         $(".p1").hide();
+        $(".p2").hide();
+        $(".p3").hide();
+        $(".p4").hide();
+        $(".p5").hide();
+        $(".p6").show();
+        $(".p7").hide();
+        });
+
+        $(".t7").click(function(){
+         $(".p1").hide();
+        $(".p2").hide();
+        $(".p3").hide();
+        $(".p4").hide();
+        $(".p5").hide();
+        $(".p6").hide();
+        $(".p7").show();
+        });
+        });
+
+
+    </script>
+    <style>
+
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:2500px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+                <h2> Ethical Hacking </h2>
+                <p class="t1">Introduction</p>
+                <p class="t2">Hacker Types</p>
+                <p class="t3">Ethical Hacking - Terminologies</p>
+                <p class ="t4">Ethical Hacking - Tools</p>
+                <p class="t5">Ethical Hacking - Skills</p>
+                <p class="t6">Ethical Hacking - Process</p>
+                <p class="t7">Ethical Hacking - Reconnaissance</p>
+
+
+        </div>
+        </div>
+       <div class="col-md-6 all" style="border:solid 0px ;">
+           <div class="p1" style="border:solid 0px ;height:2500px;">
+                <center><h1>Ethical Hacking </h1></center>
+<p>Hacking has been a part of computing for almost five decades and it is a very broad discipline, which covers a wide range of topics. The first known event of hacking had taken place in 1960 at MIT and at the same time, the term "Hacker" was originated.</p>
+<p>Hacking is the act of finding the possible entry points that exist in a computer system or a computer network and finally entering into them. Hacking is usually done to gain unauthorized access to a computer system or a computer network, either to harm the systems or to steal sensitive information available on the computer.</p>
+<p>Hacking is usually legal as long as it is being done to find weaknesses in a computer or network system for testing purpose. This sort of hacking is what we call <b>Ethical Hacking</b>.</p>
+<p>A computer expert who does the act of hacking is called a "Hacker". Hackers are those who seek knowledge, to understand how systems operate, how they are designed, and then attempt to play with these systems.</p>
+<h2>Types of Hacking</h2>
+<p>We can segregate hacking into different categories, based on what is being hacked. Here is a set of examples &minus;</p>
+<ul class="list">
+<li><p><b>Website Hacking</b> &minus; Hacking a website means taking unauthorized control over a web server and its associated software such as databases and other interfaces.</p></li>
+<li><p><b>Network Hacking</b> &minus; Hacking a network means gathering information about a network by using tools like Telnet, NS lookup, Ping, Tracert, Netstat, etc. with the intent to harm the network system and hamper its operation.</p></li>
+<li><p><b>Email Hacking</b> &minus; It includes getting unauthorized access on an Email account and using it without taking the consent of its owner.</p></li>
+<li><p><b>Ethical Hacking</b> &minus; Ethical hacking involves finding weaknesses in a computer or network system for testing purpose and finally getting them fixed.</p></li>
+<li><p><b>Password Hacking</b> &minus; This is the process of recovering secret passwords from data that has been stored in or transmitted by a computer system.</p></li>
+<li><p><b>Computer Hacking</b> &minus; This is the process of stealing computer ID and password by applying hacking methods and getting unauthorized access to a computer system.</p></li>
+</ul>
+<h2>Advantages of Hacking</h2>
+<p>Hacking is quite useful in the following scenarios &minus;</p>
+<ul class="list">
+<li><p>To recover lost information, especially in case you lost your password.</p></li>
+<li><p>To perform penetration testing to strengthen computer and network security.</p></li>
+<li><p>To put adequate preventative measures in place to prevent security breaches.</p></li>
+<li><p>To have a computer system that prevents malicious hackers from gaining access.</p></li>
+</ul>
+<h2>Disadvantages of Hacking</h2>
+<p>Hacking is quite dangerous if it is done with harmful intent. It can cause &minus;</p>
+<ul class="list">
+<li><p>Massive security breach.</p></li>
+<li><p>Unauthorized system access on private information.</p></li>
+<li><p>Privacy violation.</p></li>
+<li><p>Hampering system operation.</p></li>
+<li><p>Denial of service attacks.</p></li>
+<li><p>Malicious attack on the system.</p></li>
+</ul>
+<h2>Purpose of Hacking</h2>
+<p>There could be various positive and negative intentions behind performing hacking activities. Here is a list of some probable reasons why people indulge in hacking activities &minus;</p>
+<h1></h1>
+<li>Just for fun</li>
+<li>Show-off</li>
+<li>Steal important information</li>
+<li>Damaging the system</li>
+<li>Hampering privacy</li>
+<li>Money extortion</li>
+<li>System security testing</li>
+<li>To break policy compliance</li>
+
+<hr />
+
+
+            </div>
+
+            <div class="p2" style="border:solid 0px;height:2000px;display:none">
+                <center><h1>Hacker Types</h1></center>
+<p>Hackers can be classified into different categories such as white hat, black hat, and grey hat, based on their intent of hacking a system. These different terms come from old Spaghetti Westerns, where the bad guy wears a black cowboy hat and the good guy wears a white hat.</p>
+<h2>White Hat Hackers</h2>
+<p>White Hat hackers are also known as <b>Ethical Hackers</b>. They never intent to harm a system, rather they try to find out weaknesses in a computer or a network system as a part of penetration testing and vulnerability assessments.</p>
+<p>Ethical hacking is not illegal and it is one of the demanding jobs available in the IT industry. There are numerous companies that hire ethical hackers for penetration testing and vulnerability assessments.</p>
+<h2>Black Hat Hackers</h2>
+<p>Black Hat hackers, also known as <b>crackers</b>, are those who hack in order to gain unauthorized access to a system and harm its operations or steal sensitive information.</p>
+<p>Black Hat hacking is always illegal because of its bad intent which includes stealing corporate data, violating privacy, damaging the system, blocking network communication, etc.</p>
+<h2>Grey Hat Hackers</h2>
+<p>Grey hat hackers are a blend of both black hat and white hat hackers. They act without malicious intent but for their fun, they exploit a security weakness in a computer system or network without the owner’s permission or knowledge.</p>
+<p>Their intent is to bring the weakness to the attention of the owners and getting appreciation or a little bounty from the owners.</p>
+<h2>Miscellaneous Hackers</h2>
+<p>Apart from the above well-known classes of hackers, we have the following categories of hackers based on what they hack and how they do it &minus;</p>
+<h3>Red Hat Hackers</h3>
+<p>Red hat hackers are again a blend of both black hat and white hat hackers. They are usually on the level of hacking government agencies, top-secret information hubs, and generally anything that falls under the category of sensitive information.</p>
+<h3>Blue Hat Hackers</h3>
+<p>A blue hat hacker is someone outside computer security consulting firms who is used to bug-test a system prior to its launch. They look for loopholes that can be exploited and try to close these gaps. Microsoft also uses the term <b>BlueHat</b> to represent a series of security briefing events.</p>
+<h3>Elite Hackers</h3>
+<p>This is a social status among hackers, which is used to describe the most skilled. Newly discovered exploits will circulate among these hackers.</p>
+<h3>Script Kiddie</h3>
+<p>A script kiddie is a non-expert who breaks into computer systems by using pre-packaged automated tools written by others, usually with little understanding of the underlying concept, hence the term <b>Kiddie</b>.</p>
+<h3>Neophyte</h3>
+<p>A neophyte, "n00b", or "newbie" or "Green Hat Hacker" is someone who is new to hacking or phreaking and has almost no knowledge or experience of the workings of technology and hacking.</p>
+<h3>Hacktivist</h3>
+<p>A hacktivist is a hacker who utilizes technology to announce a social, ideological, religious, or political message. In general, most hacktivism involves website defacement or denialof-service attacks.</p>
+            </div>
+
+
+
+ <div class="p3" style="border:solid 0px;height:3000px;display:none">
+                <center><h1>Ethical Hacking - Terminologies</h1></center>
+<p>Following is a list of important terms used in the field of hacking.</p>
+<ul class="list">
+<li><p><b>Adware</b> &minus; Adware is software designed to force pre-chosen ads to display on your system.</p></li>
+<li><p><b>Attack</b> &minus; An attack is an action that is done on a system to get its access and extract sensitive data.</p></li>
+<li><p><b>Back door</b> &minus; A back door, or trap door, is a hidden entry to a computing device or software that bypasses security measures, such as logins and password protections.</p></li>
+<li><p><b>Bot</b> &minus; A bot is a program that automates an action so that it can be done repeatedly at a much higher rate for a more sustained period than a human operator could do it. For example, sending HTTP, FTP or Telnet at a higher rate or calling script to create objects at a higher rate.</p></li>
+<li><p><b>Botnet</b> &minus; A botnet, also known as zombie army, is a group of computers controlled without their owners’ knowledge. Botnets are used to send spam or make denial of service attacks.</p></li>
+<li><p><b>Brute force attack</b> &minus; A brute force attack is an automated and the simplest kind of method to gain access to a system or website. It tries different combination of usernames and passwords, over and over again, until it gets in.</p></li>
+<li><p><b>Buffer Overflow</b> &minus; Buffer Overflow is a flaw that occurs when more data is written to a block of memory, or buffer, than the buffer is allocated to hold.</p></li>
+<li><p><b>Clone phishing</b> &minus; Clone phishing is the modification of an existing, legitimate email with a false link to trick the recipient into providing personal information.</p></li>
+<li><p><b>Cracker</b> &minus; A cracker is one who modifies the software to access the features which are considered undesirable by the person cracking the software, especially copy protection features.</p></li>
+<li><p><b>Denial of service attack (DoS)</b> &minus; A denial of service (DoS) attack is a malicious attempt to make a server or a network resource unavailable to users, usually by temporarily interrupting or suspending the services of a host connected to the Internet.</p></li>
+<li><p><b>DDoS</b> &minus; Distributed denial of service attack.</p></li>
+<li><p><b>Exploit Kit</b> &minus; An exploit kit is software system designed to run on web servers, with the purpose of identifying software vulnerabilities in client machines communicating with it and exploiting discovered vulnerabilities to upload and execute malicious code on the client.</p></li>
+<li><p><b>Exploit</b> &minus; Exploit is a piece of software, a chunk of data, or a sequence of commands that takes advantage of a bug or vulnerability to compromise the security of a computer or network system.</p></li>
+<li><p><b>Firewall</b> &minus; A firewall is a filter designed to keep unwanted intruders outside a computer system or network while allowing safe communication between systems and users on the inside of the firewall.</p></li>
+<li><p><b>Keystroke logging</b> &minus; Keystroke logging is the process of tracking the keys which are pressed on a computer (and which touchscreen points are used). It is simply the map of a computer/human interface. It is used by gray and black hat hackers to record login IDs and passwords. Keyloggers are usually secreted onto a device using a Trojan delivered by a phishing email.</p></li>
+<li><p><b>Logic bomb</b> &minus; A virus secreted into a system that triggers a malicious action when certain conditions are met. The most common version is the time bomb.</p></li>
+<li><p><b>Malware</b> &minus; Malware is an umbrella term used to refer to a variety of forms of hostile or intrusive software, including computer viruses, worms, Trojan horses, ransomware, spyware, adware, scareware, and other malicious programs.</p></li>
+<li><p><b>Master Program</b> &minus; A master program is the program a black hat hacker uses to remotely transmit commands to infected zombie drones, normally to carry out Denial of Service attacks or spam attacks.</p></li>
+<li><p><b>Phishing</b> &minus; Phishing is an e-mail fraud method in which the perpetrator sends out legitimate-looking emails, in an attempt to gather personal and financial information from recipients.</p></li>
+<li><p><b>Phreaker</b> &minus; Phreakers are considered the original computer hackers and they are those who break into the telephone network illegally, typically to make free longdistance phone calls or to tap phone lines.</p></li>
+<li><p><b>Rootkit</b> &minus; Rootkit is a stealthy type of software, typically malicious, designed to hide the existence of certain processes or programs from normal methods of detection and enable continued privileged access to a computer.</p></li>
+<li><p><b>Shrink Wrap code</b> &minus; A Shrink Wrap code attack is an act of exploiting holes in unpatched or poorly configured software.</p></li>
+<li><p><b>Social engineering</b> &minus; Social engineering implies deceiving someone with the purpose of acquiring sensitive and personal information, like credit card details or user names and passwords.</p></li>
+<li><p><b>Spam</b> &minus; A Spam is simply an unsolicited email, also known as junk email, sent to a large number of recipients without their consent.</p></li>
+<li><p><b>Spoofing</b> &minus; Spoofing is a technique used to gain unauthorized access to computers, whereby the intruder sends messages to a computer with an IP address indicating that the message is coming from a trusted host.</p></li>
+<li><p><b>Spyware</b> &minus; Spyware is software that aims to gather information about a person or organization without their knowledge and that may send such information to another entity without the consumer's consent, or that asserts control over a computer without the consumer's knowledge.</p></li>
+<li><p><b>SQL Injection</b> &minus; SQL injection is an SQL code injection technique, used to attack data-driven applications, in which malicious SQL statements are inserted into an entry field for execution (e.g. to dump the database contents to the attacker).</p></li>
+<li><p><b>Threat</b> &minus; A threat is a possible danger that can exploit an existing bug or vulnerability to compromise the security of a computer or network system.</p></li>
+<li><p><b>Trojan</b> &minus; A Trojan, or Trojan Horse, is a malicious program disguised to look like a valid program, making it difficult to distinguish from programs that are supposed to be there designed with an intention to destroy files, alter information, steal passwords or other information.</p></li>
+<li><p><b>Virus</b> &minus; A virus is a malicious program or a piece of code which is capable of copying itself and typically has a detrimental effect, such as corrupting the system or destroying data.</p></li>
+<li><p><b>Vulnerability</b> &minus; A vulnerability is a weakness which allows a hacker to compromise the security of a computer or network system.</p></li>
+<li><p><b>Worms</b> &minus; A worm is a self-replicating virus that does not alter files but resides in active memory and duplicates itself.</p></li>
+
+</ul>
+<hr />
+            </div>
+
+ <div class="p4" style="border:solid 0px;height:3000px;display:none">
+                <center><h1>Ethical Hacking - Tools</h1></center>
+<p>In this chapter, we will discuss in brief some of famous tools that are widely used to prevent hacking and getting unauthorized access to a computer or network system.</p>
+<h2>NMAP</h2>
+<p>Nmap stands for Network Mapper. It is an open source tool that is used widely for network discovery and security auditing. Nmap was originally designed to scan large networks, but it can work equally well for single hosts. Network administrators also find it useful for tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime.</p>
+<p>Nmap uses raw IP packets to determine &minus;</p>
+<ul class="list">
+<li><p>what hosts are available on the network,</p></li>
+<li><p>what services those hosts are offering,</p></li>
+<li><p>what operating systems they are running on,</p></li>
+<li><p>what type of firewalls are in use, and other such characteristics.</p></li>
+</ul>
+<p>Nmap runs on all major computer operating systems such as Windows, Mac OS X, and Linux.</p>
+<h2>Metasploit</h2>
+<p>Metasploit is one of the most powerful exploit tools. It’s a product of Rapid7 and most of its resources can be found at: www.metasploit.com. It comes in two versions − <b>commercial</b> and <b>free edition</b>. Matasploit can be used with command prompt or with Web UI.</p>
+<p>With Metasploit, you can perform the following operations &minus;</p>
+<ul class="list">
+<li><p>Conduct basic penetration tests on small networks</p></li>
+<li><p>Run spot checks on the exploitability of vulnerabilities</p></li>
+<li><p>Discover the network or import scan data</p></li>
+<li><p>Browse exploit modules and run individual exploits on hosts</p></li>
+</ul>
+<h2>Burp Suit</h2>
+<p>Burp Suite is a popular platform that is widely used for performing security testing of web applications. It has various tools that work in collaboration to support the entire testing process, from initial mapping and analysis of an application's attack surface, through to finding and exploiting security vulnerabilities.</p>
+<p>Burp is easy to use and provides the administrators full control to combine advanced manual techniques with automation for efficient testing. Burp can be easily configured and it contains features to assist even the most experienced testers with their work.</p>
+<h2>Angry IP Scanner</h2>
+<p>Angry IP scanner is a lightweight, cross-platform IP address and port scanner. It can scan IP addresses in any range. It can be freely copied and used anywhere. In order to increase the scanning speed, it uses multithreaded approach, wherein a separate scanning thread is created for each scanned IP address.</p>
+<p>Angry IP Scanner simply pings each IP address to check if it’s alive, and then, it resolves its hostname, determines the MAC address, scans ports, etc. The amount of gathered data about each host can be saved to TXT, XML, CSV, or IP-Port list files. With help of plugins, Angry IP Scanner can gather any information about scanned IPs.</p>
+<h2>Cain &amp; Abel</h2>
+<p>Cain &amp; Abel is a password recovery tool for Microsoft Operating Systems. It helps in easy recovery of various kinds of passwords by employing any of the following methods &minus;</p>
+<ul class="list">
+<li><p>sniffing the network,</p></li>
+<li><p>cracking encrypted passwords using Dictionary, Brute-Force and Cryptanalysis attacks,</p></li>
+<li><p>recording VoIP conversations,</p></li>
+<li><p>decoding scrambled passwords,</p></li>
+<li><p>recovering wireless network keys,</p></li>
+<li><p>revealing password boxes,</p></li>
+<li><p>uncovering cached passwords and analyzing routing protocols.</p></li>
+</ul>
+<p>Cain &amp; Abel is a useful tool for security consultants, professional penetration testers and everyone else who plans to use it for ethical reasons.</p>
+<h2>Ettercap</h2>
+<p>Ettercap stands for Ethernet Capture. It is a network security tool for Man-in-the-Middle attacks. It features sniffing of live connections, content filtering on the fly and many other interesting tricks. Ettercap has inbuilt features for network and host analysis. It supports active and passive dissection of many protocols.</p>
+<p>You can run Ettercap on all the popular operating systems such as Windows, Linux, and Mac OS X.</p>
+<h2>EtherPeek</h2>
+<p>EtherPeek is a wonderful tool that simplifies network analysis in a multiprotocol heterogeneous network environment. EtherPeek is a small tool (less than 2 MB) that can be easily installed in a matter of few minutes.</p>
+<p>EtherPeek proactively sniffs traffic packets on a network. By default, EtherPeek supports protocols such as AppleTalk, IP, IP Address Resolution Protocol (ARP), NetWare, TCP, UDP, NetBEUI, and NBT packets.</p>
+<h2>SuperScan</h2>
+<p>SuperScan is a powerful tool for network administrators to scan TCP ports and resolve hostnames. It has a user friendly interface that you can use to &minus;</p>
+<ul class="list">
+<li><p>Perform ping scans and port scans using any IP range.</p></li>
+<li><p>Scan any port range from a built-in list or any given range.</p></li>
+<li><p>View responses from connected hosts.</p></li>
+<li><p>Modify the port list and port descriptions using the built in editor.</p></li>
+</ul>
+<hr />
+            </div>
+
+ <div class="p5" style="border:solid 0px;height:3000px;display:none">
+                <center><h1>Ethical Hacking - Skills</h1></center>
+<p>As an ethical hacker, you will need to understand various hacking techniques such as &minus;</p>
+<h1></h1>
+<li>Password guessing and cracking</li>
+<li>Session hijacking</li>
+<li>Session spoofing</li>
+<li>Network traffic sniffing</li>
+<li>Denial of Service attacks</li>
+<li>Exploiting buffer overflow vulnerabilities</li>
+<li>SQL injection</li>
+
+<p>In this chapter, we will discuss some of the skills that you would require to become an expert in Ethical Hacking.</p>
+<h2>Basic Skills</h2>
+<p>Computer Hacking is a Science as well as an Art. Like any other expertise, you need to put a lot of effort in order to acquire knowledge and become an expert hacker. Once you are on the track, you would need more effort to keep up-to-date with latest technologies, new vulnerabilities and exploitation techniques.</p>
+<ul class="list">
+<li><p>An ethical hacker must be a computer systems expert and needs to have very strong programming and computer networking skills.</p></li>
+<li><p>An ethical hacker needs to have a lot of patience, persistence, and perseverance to try again and again and wait for the required result.</p></li>
+</ul>
+<p>Additionally, an ethical hacker should be smart enough to understand the situation and other users’ mind-set in order to apply social engineering exploits. A good ethical hacker has great problem-solving skills too.</p>
+<h2>Courses &amp; Certifications</h2>
+<p>This tutorial provides the basic guidelines to become a successful Ethical Hacker. If you want to excel in this field, then you might choose to pursue the following courses and certifications &minus;</p>
+<ul class="list">
+<li><p>Obtain a bachelor’s degree in Computer Science or A+ Certificate to gain an understanding of the most common hardware and software technologies.</p></li>
+<li><p>Get into a programmer’s role for a few years and then switch to get a tech support position.</p></li>
+<li><p>Proceed to get network certifications like Network+ or CCNA and then security certifications like Security+, CISSP, or TICSA.</p></li>
+<li><p>It is recommended that you get some work experience as a Network Engineer and System Administrator to understand networks and systems inside out.</p></li>
+<li><p>Keep going through various books, tutorials and papers to understand various computer security aspects and take them as a challenge to secure your network and computer systems as network security engineer.</p></li>
+<li><p>Study courses which cover creating Trojan horses, backdoors, viruses, and worms, denial of service (DoS) attacks, SQL injection, buffer overflow, session hijacking, and system hacking.</p></li>
+<li><p>Master the art of penetration testing, footprinting and reconnaissance, and social engineering.</p></li>
+<li><p>Finally go for a Certified Ethical Hacker (CEH) Certification.</p></li>
+</ul>
+<p>GIAC (Global Information Assurance Certification) and Offensive Security Certified Professional (OSCP) are additional IT security certifications which will add a lot of value to your profile.</p>
+<h3>Final Note</h3>
+<p>You need to stay as a White Hat Hacker which means you need to work within given boundaries. Never intrude or attack any computer or network without a required permission from the authorities.</p>
+<p>As a final note, it is highly recommended that you refrain from engaging yourself in black hat hacking which may spoil your entire career.</p>
+<hr />
+            </div>
+
+ <div class="p6" style="border:solid 0px;height:3000px;display:none">
+                <center><h1> Ethical Hacking - Process</h1></center>
+<p>Like all good projects, ethical hacking too has a set of distinct phases. It helps hackers to make a structured ethical hacking attack.</p>
+<p>Different security training manuals explain the process of ethical hacking in different ways, but for me as a Certified Ethical Hacker, the entire process can be categorized into the following six phases.</p>
+<img src="{% static 'clever/img/bg-img/ball.jpg' %}" alt="Ethical Hacking Process" />
+<h2>Reconnaissance</h2>
+<p>Reconnaissance is the phase where the attacker gathers information about a target using active or passive means. The tools that are widely used in this process are NMAP, Hping, Maltego, and Google Dorks.</p>
+<h2>Scanning</h2>
+<p>In this process, the attacker begins to actively probe a target machine or network for vulnerabilities that can be exploited. The tools used in this process are Nessus, Nexpose, and NMAP.</p>
+<h2>Gaining Access</h2>
+<p>In this process, the vulnerability is located and you attempt to exploit it in order to enter into the system. The primary tool that is used in this process is Metasploit.</p>
+<h2>Maintaining Access</h2>
+<p>It is the process where the hacker has already gained access into a system. After gaining access, the hacker installs some backdoors in order to enter into the system when he needs access in this owned system in future. Metasploit is the preferred tool in this process.</p>
+<h2>Clearing Tracks</h2>
+<p>This process is actually an unethical activity. It has to do with the deletion of logs of all the activities that take place during the hacking process.</p>
+<h2>Reporting</h2>
+<p>Reporting is the last step of finishing the ethical hacking process. Here the Ethical Hacker compiles a report with his findings and the job that was done such as the tools used, the success rate, vulnerabilities found, and the exploit processes.</p>
+<h2>Quick Tip</h2>
+<p>The processes are not standard. You can adopt a set of different processes and tools according to your techniques that you are comfortable with. The process is of least significance as long as you are able to get the desired results.</p>
+<hr />
+            </div>
+
+ <div class="p7" style="border:solid 0px;height:3000px;display:none">
+                <center><h1>Ethical Hacking - Reconnaissance</h1></center>
+<p>Information Gathering and getting to know the target systems is the first process in ethical hacking. Reconnaissance is a set of processes and techniques (Footprinting, Scanning &amp; Enumeration) used to covertly discover and collect information about a target system.</p>
+<p>During reconnaissance, an ethical hacker attempts to gather as much information about a target system as possible, following the seven steps listed below &minus;</p>
+<h1></h1>
+<li>Gather initial information</li>
+<li>Determine the network range</li>
+<li>Identify active machines</li>
+<li>Discover open ports and access points</li>
+<li>Fingerprint the operating system</li>
+<li>Uncover services on ports</li>
+<li>Map the network</li>
+<p>We will discuss in detail all these steps in the subsequent chapters of this tutorial. Reconnaissance takes place in two parts &minus; <b>Active Reconnaissance</b> and <b>Passive Reconnaissance</b>.</p>
+<h2>Active Reconnaissance</h2>
+<p>In this process, you will directly interact with the computer system to gain information. This information can be relevant and accurate. But there is a risk of getting detected if you are planning active reconnaissance without permission. If you are detected, then system admin can take severe action against you and trail your subsequent activities.</p>
+<h2>Passive Reconnaissance</h2>
+<p>In this process, you will not be directly connected to a computer system. This process is used to gather essential information without ever interacting with the target systems.</p>
+<hr />
+            </div>
+
+        </div><!--  6 div close --->
+
+    <div class="col-md-3 bll"></div>
+</div>
+</div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

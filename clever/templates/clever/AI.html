@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+    <script type="text/javascript" src="{% static 'clever/jq/jquery-1.10.2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'clever/jq/jquery.min.js' %}"></script>
+    <script>
+        $(document).ready(function(){
+        $(".t1").click(function(){
+        $(".p1").show();
+        $(".p2").hide();
+        $(".p3").hide();
+        $(".p4").hide();
+        $(".p5").hide();
+        $(".p6").hide();
+        $(".p7").hide();
+        });
+
+        $(".t2").click(function(){
+        $(".p1").hide();
+        $(".p3").hide();
+        $(".p2").show();
+        $(".p4").hide();
+         $(".p5").hide();
+        $(".p6").hide();
+        $(".p7").hide();
+
+        });
+
+         $(".t3").click(function(){
+        $(".p1").hide();
+        $(".p2").hide();
+        $(".p3").show();
+         $(".p4").hide();
+          $(".p5").hide();
+        $(".p6").hide();
+        $(".p7").hide();
+        });
+
+         $(".t4").click(function(){
+        $(".p1").hide();
+        $(".p2").hide();
+        $(".p4").show();
+         $(".p3").hide();
+          $(".p5").hide();
+        $(".p6").hide();
+        $(".p7").hide();
+        });
+
+         $(".t5").click(function(){
+        $(".p1").hide();
+        $(".p2").hide();
+        $(".p5").show();
+         $(".p3").hide();
+          $(".p4").hide();
+        $(".p6").hide();
+        $(".p7").hide();
+        });
+         $(".t6").click(function(){
+        $(".p1").hide();
+        $(".p2").hide();
+        $(".p6").show();
+         $(".p3").hide();
+          $(".p5").hide();
+        $(".p4").hide();
+        $(".p7").hide();
+        });
+         $(".t7").click(function(){
+        $(".p1").hide();
+        $(".p2").hide();
+        $(".p4").hide();
+         $(".p3").hide();
+          $(".p5").hide();
+        $(".p6").hide();
+        $(".p7").show();
+        });
+        });
+
+    </script>
+    <style>
+
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:5550px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+<body>
+
+<div class="container-fluid">
+
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+                <h2> Artificial Intelligence Topics</h2>
+                <p class="t1">Introduction</p>
+                <p class="t2">Intelligent System</p>
+                <p class="t3">Research Areas</p>
+                <p class ="t4">Agents and Environments</p>
+                <p class="t5">Popular Search Algorithm</p>
+                <p class="t6">Fuzzy Logic System</p>
+                <p class="t7">Natural language Processing</p>
+
+
+        </div>
+        </div>
+       <div class="col-md-6 all" style="border:solid 0px ;">
+           <div class="p1" style="border:solid 0px ;height:2500px;">
+                <center><h1>AI Introduction</h1></center>
+<p>Since the invention of computers or machines, their capability to perform various tasks went on growing exponentially. Humans have developed the power of computer systems in terms of their diverse working domains, their increasing speed, and reducing size with respect to time.</p>
+<p>A branch of Computer Science named <i>Artificial Intelligence</i> pursues creating the computers or machines as intelligent as human beings.</p>
+<h2>What is Artificial Intelligence?</h2>
+<p>According to the father of Artificial Intelligence, John McCarthy, it is <i>“The science and engineering of making intelligent machines, especially intelligent computer programs”.</i></p>
+<p>Artificial Intelligence is a way of <b>making a computer, a computer-controlled robot, or a software think intelligently</b>, in the similar manner the intelligent humans think.</p>
+<p>AI is accomplished by studying how human brain thinks, and how humans learn, decide, and work while trying to solve a problem, and then using the outcomes of this study as a basis of developing intelligent software and systems.</p>
+<h2>Philosophy of AI</h2>
+<p>While exploiting the power of the computer systems, the curiosity of human, lead him to wonder, <i>“Can a machine think and behave like humans do?”</i></p>
+<p>Thus, the development of AI started with the intention of creating similar intelligence in machines that we find and regard high in humans.</p>
+<h2>Goals of AI</h2>
+<ul class="list">
+<li><p><b>To Create Expert Systems</b> &minus; The systems which exhibit intelligent behavior, learn, demonstrate, explain, and advice its users.</p></li>
+<li><p><b>To Implement Human Intelligence in Machines</b> &minus; Creating systems that understand, think, learn, and behave like humans.</p></li>
+</ul>
+<h2>What Contributes to AI?</h2>
+<p>Artificial intelligence is a science and technology based on disciplines such as Computer Science, Biology, Psychology, Linguistics, Mathematics, and Engineering. A major thrust of AI is in the development of computer functions associated with human intelligence, such as reasoning, learning, and problem solving.</p>
+<p>Out of the following areas, one or multiple areas can contribute to build an intelligent system.</p>
+<img src="{% static 'clever/img/bg-img/AI1.jpg' %}" alt="Components of AI" />
+<h2>Programming Without and With AI</h2>
+<p>The programming without and with AI is different in following ways &minus;</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;width:50%;">Programming Without AI</th>
+<th style="text-align:center;">Programming With AI</th>
+</tr>
+<tr>
+<td>A computer program without AI can answer the <b>specific</b> questions it is meant to solve.</td>
+<td>A computer program with AI can answer the <b>generic</b> questions it is meant to solve.</td>
+</tr>
+<tr>
+<td style="vertical-align:middle;">Modification in the program leads to change in its structure.</td>
+<td>AI programs can absorb new modifications by putting highly independent pieces of information together. Hence you can modify even a minute piece of information of program without affecting its structure.</td>
+</tr>
+<tr>
+<td>Modification is not quick and easy. It may lead to affecting the program adversely.</td>
+<td style="vertical-align:middle;">Quick and Easy program modification.</td>
+</tr>
+</table>
+<h2>What is AI Technique?</h2>
+<p>In the real world, the knowledge has some unwelcomed properties &minus;</p>
+<ul class="list">
+<li>Its volume is huge, next to unimaginable.</li>
+<li>It is not well-organized or well-formatted.</li>
+<li>It keeps changing constantly.</li>
+</ul>
+<p>AI Technique is a manner to organize and use the knowledge efficiently in such a way that &minus;</p>
+<ul class="list">
+<li>It should be perceivable by the people who provide it.</li>
+<li>It should be easily modifiable to correct errors.</li>
+<li>It should be useful in many situations though it is incomplete or inaccurate.</li>
+</ul>
+<p>AI techniques elevate the speed of execution of the complex program it is equipped with.</p>
+<h2>Applications of AI</h2>
+<p>AI has been dominant in various fields such as &minus;</p>
+<ul class="list">
+<li><p><b>Gaming</b> &minus; AI plays crucial role in strategic games such as chess, poker, tic-tac-toe, etc., where machine can think of large number of possible positions based on heuristic knowledge.</p></li>
+<li><p><b>Natural Language Processing</b> &minus; It is possible to interact with the computer that understands natural language spoken by humans.</p></li>
+<li><p><b>Expert Systems</b> &minus; There are some applications which integrate machine, software, and special information to impart reasoning and advising. They provide explanation and advice to the users.</p></li>
+<li><p><b>Vision Systems</b> &minus; These systems understand, interpret, and comprehend visual input on the computer. For example,</p>
+<ul class="list">
+<li><p>A spying aeroplane takes photographs, which are used to figure out spatial information or map of the areas.</p></li>
+<li><p>Doctors use clinical expert system to diagnose the patient.</p></li>
+<li><p>Police use computer software that can recognize the face of criminal with the stored portrait made by forensic artist.</p></li>
+</ul>
+</li>
+<li><p><b>Speech Recognition</b> &minus; Some intelligent systems are capable of hearing and comprehending the language in terms of sentences and their meanings while a human talks to it. It can handle different accents, slang words, noise in the background, change in human’s noise due to cold, etc.</p></li>
+<li><p><b>Handwriting Recognition</b> &minus; The handwriting recognition software reads the text written on paper by a pen or on screen by a stylus. It can recognize the shapes of the letters and convert it into editable text.</p></li>
+<li><p><b>Intelligent Robots</b> &minus; Robots are able to perform the tasks given by a human. They have sensors to detect physical data from the real world such as light, heat, temperature, movement, sound, bump, and pressure. They have efficient processors, multiple sensors and huge memory, to exhibit intelligence. In addition, they are capable of learning from their mistakes and they can adapt to the new environment.</p></li>
+</ul>
+<h2>History of AI</h2>
+<p>Here is the history of AI during 20th century &minus;</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;width:8%;">Year</th>
+<th style="text-align:center;">Milestone / Innovation</th>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1923</td>
+<td><p>Karel Čapek play named “Rossum's Universal Robots” (RUR) opens in London, first use of the word "robot" in English.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1943</td>
+<td><p>Foundations for neural networks laid.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1945</td>
+<td><p>Isaac Asimov, a Columbia University alumni, coined the term <i>Robotics</i>.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1950</td>
+<td><p>Alan Turing introduced Turing Test for evaluation of intelligence and published <i>Computing Machinery and Intelligence.</i> Claude Shannon published <i>Detailed Analysis of Chess Playing</i> as a search.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1956</td>
+<td><p>John McCarthy coined the term <i>Artificial Intelligence</i>. Demonstration of the first running AI program at Carnegie Mellon University.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1958</td>
+<td><p>John McCarthy invents LISP programming language for AI.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1964</td>
+<td><p>Danny Bobrow's dissertation at MIT showed that computers can understand natural language well enough to solve algebra word problems correctly.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1965</td>
+<td><p>Joseph Weizenbaum at MIT built <i>ELIZA</i>, an interactive problem that carries on a dialogue in English.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1969</td>
+<td><p>Scientists at Stanford Research Institute Developed <i>Shakey</i>, a robot, equipped with locomotion, perception, and problem solving.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1973</td>
+<td><p>The Assembly Robotics group at Edinburgh University built <i>Freddy</i>, the Famous Scottish Robot, capable of using vision to locate and assemble models.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1979</td>
+<td><p>The first computer-controlled autonomous vehicle, Stanford Cart, was built.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1985</td>
+<td><p>Harold Cohen created and demonstrated the drawing program, <i>Aaron</i>.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1990</td>
+<td><p>Major advances in all areas of AI &minus;</p>
+<ul class="list">
+<li>Significant demonstrations in machine learning</li>
+<li>Case-based reasoning</li>
+<li>Multi-agent planning</li>
+<li>Scheduling</li>
+<li>Data mining, Web Crawler</li>
+<li>natural language understanding and translation</li>
+<li>Vision, Virtual Reality</li>
+<li>Games</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1997</td>
+<td><p>The Deep Blue Chess Program beats the then world chess champion, Garry Kasparov.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">2000</td>
+<td><p>Interactive robot pets become commercially available. MIT displays <i>Kismet</i>, a robot with a face that expresses emotions. The robot <i>Nomad</i> explores remote regions of Antarctica and locates meteorites.</p></td>
+</tr>
+</table>
+<hr />
+            </div>
+
+            <div class="p2" style="border:solid 0px;height:2500px;display:none">
+                <center><h1>Intelligent System</h1></center>
+<p>While studying artificially intelligence, you need to know what intelligence is. This chapter covers Idea of intelligence, types, and components of intelligence.</p>
+<h2>What is Intelligence?</h2>
+<p>The ability of a system to calculate, reason, perceive relationships and analogies, learn from experience, store and retrieve information from memory, solve problems, comprehend complex ideas, use natural language fluently, classify, generalize, and adapt new situations.</p>
+<h2>Types of Intelligence</h2>
+<p>As described by Howard Gardner, an American developmental psychologist, the Intelligence comes in multifold &minus;</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;width:40%;">Intelligence</th>
+<th style="text-align:center;">Description</th>
+<th style="text-align:center;">Example</th>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">Linguistic intelligence</td>
+<td>The ability to speak, recognize, and use mechanisms of phonology (speech sounds), syntax (grammar), and semantics (meaning).</td>
+<td style="text-align:center;vertical-align:middle;">Narrators, Orators</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">Musical intelligence</td>
+<td>The ability to create, communicate with, and understand meanings made of sound, understanding of pitch, rhythm.</td>
+<td style="text-align:center;vertical-align:middle;">Musicians, Singers, Composers</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">Logical-mathematical intelligence</td>
+<td>The ability of use and understand relationships in the absence of action or objects. Understanding complex and abstract ideas.</td>
+<td style="text-align:center;vertical-align:middle;">Mathematicians, Scientists</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">Spatial intelligence</td>
+<td>The ability to perceive visual or spatial information, change it, and re-create visual images without reference to the objects, construct 3D images, and to move and rotate them.</td>
+<td style="text-align:center;vertical-align:middle;">Map readers, Astronauts, Physicists</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">Bodily-Kinesthetic intelligence</td>
+<td>The ability to use complete or part of the body to solve problems or fashion products, control over fine and coarse motor skills, and manipulate the objects.</td>
+<td style="text-align:center;vertical-align:middle;">Players, Dancers</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">Intra-personal intelligence</td>
+<td>The ability to distinguish among one’s own feelings, intentions, and motivations.</td>
+<td style="text-align:center;vertical-align:middle;">Gautam Buddhha</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">Interpersonal intelligence</td>
+<td>The ability to recognize and make distinctions among other people’s feelings, beliefs, and intentions.</td>
+<td style="text-align:center;vertical-align:middle;">Mass Communicators, Interviewers</td>
+</tr>
+</table>
+<p>You can say a machine or a system is <b>artificially intelligent</b> when it is equipped with at least one and at most all intelligences in it.</p>
+<h2>What is Intelligence Composed of?</h2>
+<p>The intelligence is intangible. It is composed of &minus;</p>
+<ul class="list">
+<li>Reasoning</li>
+<li>Learning</li>
+<li>Problem Solving</li>
+<li>Perception</li>
+<li>Linguistic Intelligence</li>
+</ul>
+<img src="{% static 'clever/img/bg-img/intell.jpg' %}" alt="Components of Intelligence" />
+<p>Let us go through all the components briefly &minus;</p>
+<ul class="list">
+<li><p><b>Reasoning</b> &minus; It is the set of processes that enables us to provide basis for judgement, making decisions, and prediction. There are broadly two types &minus;</p></li>
+</ul>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;width:50%;">Inductive Reasoning</th>
+<th style="text-align:center;">Deductive Reasoning</th>
+</tr>
+<tr>
+<td style="vertical-align:middle;">It conducts specific observations to makes broad general statements.</td>
+<td>It starts with a general statement and examines the possibilities to reach a specific, logical conclusion.</td>
+</tr>
+<tr>
+<td>Even if all of the premises are true in a statement, inductive reasoning allows for the conclusion to be false.</td>
+<td>If something is true of a class of things in general, it is also true for all members of that class.</td>
+</tr>
+<tr>
+<td style="vertical-align:middle;">Example &minus; "Nita is a teacher. Nita is studious. Therefore, All teachers are studious."</td>
+<td>Example &minus; "All women of age above 60 years are grandmothers. Shalini is 65 years. Therefore, Shalini is a grandmother."</td>
+</tr>
+</table>
+<ul class="list">
+<li><p><b>Learning</b> &minus; It is the activity of gaining knowledge or skill by studying, practising, being taught, or experiencing something. Learning enhances the awareness of the subjects of the study.</p>
+<p>The ability of learning is possessed by humans, some animals, and AI-enabled   systems. Learning is categorized as &minus;</p>
+<ul class="list">
+<li><p><b>Auditory Learning</b> &minus; It is learning by listening and hearing. For example, students listening to recorded audio lectures.</p></li>
+<li><p><b>Episodic Learning</b> &minus; To learn by remembering sequences of events that one has witnessed or experienced. This is linear and orderly.</p></li>
+<li><p><b>Motor Learning</b> &minus; It is learning by precise movement of muscles. For example, picking objects, Writing, etc.</p></li>
+<li><p><b>Observational Learning</b> &minus; To learn by watching and imitating others. For example, child tries to learn by mimicking her parent.</p></li>
+<li><p><b>Perceptual Learning</b> &minus; It is learning to recognize stimuli that one has seen before. For example, identifying and classifying objects and situations.</p></li>
+<li><p><b>Relational Learning</b> &minus; It involves learning to differentiate among various stimuli on the basis of relational properties, rather than absolute properties. For Example, Adding ‘little less’ salt at the time of cooking potatoes that came up salty last time, when cooked with adding say a tablespoon of salt.</p></li>
+<li><p><b>Spatial Learning</b> &minus; It is learning through visual stimuli such as images, colors, maps, etc. For Example, A person can create roadmap in mind before actually following the road.</p></li>
+<li><p><b>Stimulus-Response Learning</b> &minus; It is learning to perform a particular behavior when a certain stimulus is present. For example, a dog raises its ear on hearing doorbell.</p></li>
+</ul>
+</li>
+<li><p><b>Problem Solving</b> &minus; It is the process in which one perceives and tries to arrive at a desired solution from a present situation by taking some path, which is blocked by known or unknown hurdles.</p>
+<p>Problem solving also includes <b>decision making</b>, which is the process of selecting the best suitable alternative out of multiple alternatives to reach the desired goal are available.</p></li>
+<li><p><b>Perception</b> &minus; It is the process of acquiring, interpreting, selecting, and organizing sensory information.</p>
+<p>Perception presumes <b>sensing</b>. In humans, perception is aided by sensory organs. In the domain of AI, perception mechanism puts the data acquired by the sensors together in a meaningful manner.</p></li>
+<li><p><b>Linguistic Intelligence</b> &minus; It is one’s ability to use, comprehend, speak, and write the verbal and written language. It is important in interpersonal communication.</p></li>
+</ul>
+<h2>Difference between Human and Machine Intelligence</h2>
+<ul class="list">
+<li><p>Humans perceive by patterns whereas the machines perceive by set of rules and data.</p></li>
+<li><p>Humans store and recall information by patterns, machines do it by searching algorithms. For example, the number 40404040 is easy to remember, store, and recall as its pattern is simple.</p></li>
+<li><p>Humans can figure out the complete object even if some part of it is missing or distorted; whereas the machines cannot do it correctly.</p></li>
+</ul>
+            </div>
+            <div class="p3" style="border:solid 0px;height:2500px;display:none">
+                <center><h1>Research Area</h1></center>
+<p>The domain of artificial intelligence is huge in breadth and width. While proceeding, we consider the broadly common and prospering research areas in the domain of AI &minus;</p>
+<img src="{% static 'clever/img/bg-img/research.jpg' %}" alt="Research Areas of Intelligence" />
+<h2>Speech and Voice Recognition</h2>
+<p>These both terms are common in robotics, expert systems and natural language processing. Though these terms are used interchangeably, their objectives are different.</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">Speech Recognition</th>
+<th style="text-align:center;">Voice Recognition</th>
+</tr>
+<tr>
+<td>The speech recognition aims at understanding and comprehending <b>WHAT</b> was spoken.</td>
+<td>The objective of voice recognition is to recognize <b>WHO</b> is speaking.</td>
+</tr>
+<tr>
+<td>It is used in hand-free computing, map, or menu navigation.</td>
+<td>It is used to identify a person by analysing its tone, voice pitch, and accent, etc.</td>
+</tr>
+<tr>
+<td>Machine does not need training for Speech Recognition as it is not speaker dependent.</td>
+<td>This recognition system needs training as it is person oriented.</td>
+</tr>
+<tr>
+<td>Speaker independent Speech Recognition systems are difficult to develop.</td>
+<td>Speaker dependent Speech Recognition systems are comparatively easy to develop.</td>
+</tr>
+</table>
+<h3>Working of Speech and Voice Recognition Systems</h3>
+<p>The user input spoken at a microphone goes to sound card of the system. The converter turns the analog signal into equivalent digital signal for the speech processing. The database is used to compare the sound patterns to recognize the words. Finally, a reverse feedback is given to the database.</p>
+<p>This source-language text becomes input to the Translation Engine, which converts it to the target language text. They are supported with interactive GUI, large database of vocabulary, etc.</p>
+<h2>Real Life Applications of Research Areas</h2>
+<p>There is a large array of applications where AI is serving common people in their day-to-day lives &minus;</p>
+<!-- Table of applications needed to add -->
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">Sr.No.</th>
+<th style="text-align:center;">Research Areas</th>
+<th style="text-align:center;">Real Life Application</th>
+</tr>
+<tr>
+<td style="text-align:center;">1</td>
+<td><p><b>Expert Systems</b></p>
+<p>Examples &minus; Flight-tracking systems, Clinical systems.</p></td>
+<td><img src="{% static 'clever/img/bg-img/exp.jpg' %}" alt="Expert Systems Application" /></td>
+</tr>
+<tr>
+<td style="text-align:center;">2</td>
+<td><p><b>Natural Language Processing</b></p>
+<p>Examples: Google Now feature, speech recognition, Automatic voice output.</p></td>
+<td><img src="{% static 'clever/img/bg-img/nlp.jpg' %}" alt="NLP Application" /></td>
+</tr>
+<tr>
+<td style="text-align:center;">3</td>
+<td><p><b>Neural Networks</b></p>
+<p>Examples &minus; Pattern recognition systems such as face recognition, character recognition, handwriting recognition.</p></td>
+<td><img src="{% static 'clever/img/bg-img/AI1.jpg' %}" alt="Neural Networks Application" /></td>
+</tr>
+<tr>
+<td style="text-align:center;">4</td>
+<td><p><b>Robotics</b></p>
+<p>Examples &minus; Industrial robots for moving, spraying, painting, precision checking, drilling, cleaning, coating, carving, etc.</p></td>
+<td><img src="{% static 'clever/img/bg-img/robo.jpg' %}" alt="Robotics Application" /></td>
+</tr>
+<tr>
+<td style="text-align:center;">5</td>
+<td><p><b>Fuzzy Logic Systems</b></p>
+<p>Examples &minus; Consumer electronics, automobiles, etc.</p></td>
+<td><img src="{% static 'clever/img/bg-img/fuzzy.jpg' %}" alt="Fuzzy Logic Application" /></td>
+</tr>
+</table>
+<h2>Task Classification of AI</h2>
+<p>The domain of AI is classified into <b>Formal tasks, Mundane tasks,</b> and <b>Expert tasks.</b></p>
+<img src="{% static 'clever/img/bg-img/task.jpg' %}" alt="Task Domains of AI" />
+<table class="table table-bordered">
+<tr>
+<th colspan="3" style="text-align:center;">Task Domains of Artificial Intelligence</th>
+</tr>
+<tr>
+<th style="text-align:center;width:35%;">Mundane (Ordinary) Tasks</th>
+<th style="text-align:center;width:35%;">Formal Tasks</th>
+<th style="text-align:center;">Expert Tasks</th>
+</tr>
+<tr>
+<td>Perception
+<ul class="list">
+<li>Computer Vision</li>
+<li>Speech, Voice</li>
+</ul>
+</td>
+<td>
+<ul class="list">
+<li>Mathematics</li>
+<li>Geometry</li>
+<li>Logic</li>
+<li>Integration and Differentiation</li>
+</ul>
+</td>
+<td>
+<ul class="list">
+<li>Engineering</li>
+<li>Fault Finding</li>
+<li>Manufacturing</li>
+<li>Monitoring</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Natural Language Processing
+<ul class="list">
+<li>Understanding</li>
+<li>Language Generation</li>
+<li>Language Translation</li></ul>
+</td>
+<td>Games
+<ul class="list">
+<li>Go</li>
+<li>Chess (Deep Blue)</li>
+<li>Ckeckers</li></ul>
+</td>
+<td>Scientific Analysis</td>
+</tr>
+<tr>
+<td>Common Sense</td>
+<td>Verification</td>
+<td>Financial Analysis</td>
+</tr>
+<tr>
+<td>Reasoning</td>
+<td>Theorem Proving</td>
+<td>Medical Diagnosis</td>
+</tr>
+<tr>
+<td>Planing</td>
+<td></td>
+<td>Creativity</td>
+</tr>
+<tr>
+<td>Robotics
+<ul class="list">
+<li>Locomotive</li>
+</ul>
+</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<p>Humans learn <b>mundane (ordinary) tasks</b> since their birth. They learn by perception, speaking, using language, and locomotives. They learn Formal Tasks and Expert Tasks later, in that order.</p>
+<p>For humans, the mundane tasks are easiest to learn. The same was considered true before trying to implement mundane tasks in machines. Earlier, all work of AI was concentrated in the mundane task domain.</p>
+<p>Later, it turned out that the machine requires more knowledge, complex knowledge representation, and complicated algorithms for handling mundane tasks. This is the reason <b>why AI work is more prospering in the Expert Tasks domain</b> now, as the expert task domain needs expert knowledge without common sense, which can be easier to represent and handle.</p>
+
+            </div>
+          <div class="p4" style="border:solid 0px;height:2500px;display:none">
+             <center> <h1>Agents and Environment</h1></center>
+<p>An AI system is composed of an agent and its environment. The agents act in their environment. The environment may contain other agents.</p>
+<h2>What are Agent and Environment?</h2>
+<p>An <b>agent</b> is anything that can perceive its environment through <b>sensors</b> and acts upon that environment through <b>effectors.</b></p>
+<ul class="list">
+<li><p>A <b>human agent</b> has sensory organs such as eyes, ears, nose, tongue and skin parallel to the sensors, and other organs such as hands, legs, mouth, for effectors.</p></li>
+<li><p>A <b>robotic agent</b> replaces cameras and infrared range finders for the sensors, and various motors and actuators for effectors.</p></li>
+<li><p>A <b>software agent</b> has encoded bit strings as its programs and actions.</p></li>
+</ul>
+<img src="{% static 'clever/img/bg-img/aen.jpg' %}" alt="Agent and Environment" />
+<h2>Agent Terminology</h2>
+<ul class="list">
+<li><p><b>Performance Measure of Agent</b> &minus; It is the criteria, which determines how successful an agent is.</p></li>
+<li><p><b>Behavior of Agent</b> &minus; It is the action that agent performs after any given sequence of percepts.</p></li>
+<li><p><b>Percept</b> &minus; It is agent’s perceptual inputs at a given instance.</p></li>
+<li><p><b>Percept Sequence</b> &minus; It is the history of all that an agent has perceived till date.</p></li>
+<li><p><b>Agent Function</b> &minus; It is a map from the precept sequence to an action.</p></li>
+</ul>
+<h2>Rationality</h2>
+<p>Rationality is nothing but status of being reasonable, sensible, and having good sense of judgment.</p>
+<p>Rationality is concerned with expected actions and results depending upon what the agent has perceived. Performing actions with the aim of obtaining useful information is an important part of rationality.</p>
+<h2>What is Ideal Rational Agent?</h2>
+<p>An ideal rational agent is the one, which is capable of doing expected actions to maximize its performance measure, on the basis of &minus;</p>
+<ul class="list">
+<li>Its percept sequence</li>
+<li>Its built-in knowledge base</li>
+</ul>
+<p>Rationality of an agent depends on the following &minus;</p>
+<ul class="list">
+<li><p>The <b>performance measures</b>, which determine the degree of success.</p></li>
+<li><p>Agent’s <b>Percept Sequence</b> till now.</p></li>
+<li><p>The agent’s <b>prior knowledge about the environment</b>.</p></li>
+<li><p>The <b>actions</b> that the agent can carry out.</p></li>
+</ul>
+<p>A rational agent always performs right action, where the right action means the action that causes the agent to be most successful in the given percept sequence. The problem the agent solves is characterized by Performance Measure, Environment, Actuators, and Sensors (PEAS).</p>
+<h2>The Structure of Intelligent Agents</h2>
+<p>Agent’s structure can be viewed as &minus;</p>
+<ul class="list">
+<li>Agent = Architecture &plus; Agent Program</li>
+<li>Architecture = the machinery that an agent executes on.</li>
+<li>Agent Program = an implementation of an agent function.</li>
+</ul>
+<h3>Simple Reflex Agents</h3>
+<ul class="list">
+<li>They choose actions only based on the current percept.</li>
+<li>They are rational only if a correct decision is made only on the basis of current precept.</li>
+<li>Their environment is completely observable.</li>
+</ul>
+<p><b>Condition-Action Rule</b> &minus; It is a rule that maps a state (condition) to an action.</p>
+<img src="{% static 'clever/img/bg-img/sim.jpg' %}" alt="Simple Reflex Agent"/>
+<h3>Model Based Reflex Agents</h3>
+<p>They use a model of the world to choose their actions. They maintain an internal state.</p>
+<p><b>Model</b> &minus; knowledge about “how the things happen in the world”.</p>
+<p><b>Internal State</b> &minus; It is a representation of unobserved aspects of current state depending on percept history.</p>
+<p><b>Updating the state requires the information about &minus;</b></p>
+<ul class="list">
+<li>How the world evolves.</li>
+<li>How the agent’s actions affect the world.</li>
+</ul>
+<img src="{% static 'clever/img/bg-img/mod.jpg' %}" alt="Model Based Reflex Agents"/>
+<h3>Goal Based Agents</h3>
+<p>They choose their actions in order to achieve goals. Goal-based approach is more flexible than reflex agent since the knowledge supporting a decision is explicitly modeled, thereby allowing for modifications.</p>
+<p><b>Goal</b> &minus; It is the description of desirable situations.</p>
+<img src="{% static 'clever/img/bg-img/goal.jpg' %}" alt="Goal Based Reflex Agents"/>
+<h3>Utility Based Agents</h3>
+<p>They choose actions based on a preference (utility) for each state.</p>
+<p>Goals are inadequate when &minus;</p>
+<ul class="list">
+<li><p>There are conflicting goals, out of which only few can be achieved.</p></li>
+<li><p>Goals have some uncertainty of being achieved and you need to weigh likelihood of success against the importance of a goal.</p></li>
+</ul>
+<img src="{% static 'clever/img/bg-img/utility.jpg' %}" alt="Utility Based Agents"/>
+<h2>The Nature of Environments</h2>
+<p>Some programs operate in the entirely <b>artificial environment</b> confined to keyboard input, database, computer file systems and character output on a screen.</p>
+<p>In contrast, some software agents (software robots or softbots) exist in rich, unlimited softbots domains. The simulator has a <b>very detailed, complex environment</b>. The software agent needs to choose from a long array of actions in real time. A softbot designed to scan the online preferences of the customer and show interesting items to the customer works in the <b>real</b> as well as an <b>artificial</b> environment.</p>
+<p>The most famous <b>artificial environment</b> is the <b>Turing Test environment</b>, in which one real and other artificial agents are tested on equal ground. This is a very challenging environment as it is highly difficult for a software agent to perform as well as a human.</p>
+<h3>Turing Test</h3>
+<p>The success of an intelligent behavior of a system can be measured with Turing Test.</p>
+<p>Two persons and a machine to be evaluated participate in the test. Out of the two persons, one plays the role of the tester. Each of them sits in different rooms. The tester is unaware of who is machine and who is a human. He interrogates the questions by typing and sending them to both intelligences, to which he receives typed responses.</p>
+<p>This test aims at fooling the tester. If the tester fails to determine machine’s response from the human response, then the machine is said to be intelligent.</p>
+<h2>Properties of Environment</h2>
+<p>The environment has multifold properties &minus;</p>
+<ul class="list">
+<li><p><b>Discrete / Continuous</b> &minus; If there are a limited number of distinct, clearly defined, states of the environment, the environment is discrete (For example, chess); otherwise it is continuous (For example, driving).</p></li>
+<li><p><b>Observable / Partially Observable</b> &minus; If it is possible to determine the complete state of the environment at each time point from the percepts it is observable; otherwise it is only partially observable.</p></li>
+<li><p><b>Static / Dynamic</b> &minus; If the environment does not change while an agent is acting, then it is static; otherwise it is dynamic.</p></li>
+<li><p><b>Single agent / Multiple agents</b> &minus; The environment may contain other agents which may be of the same or different kind as that of the agent.</p></li>
+<li><p><b>Accessible / Inaccessible</b> &minus; If the agent’s sensory apparatus can have access to the complete state of the environment, then the environment is accessible to that agent.</p></li>
+<li><p><b>Deterministic / Non-deterministic</b> &minus; If the next state of the environment is completely determined by the current state and the actions of the agent, then the environment is deterministic; otherwise it is non-deterministic.</p></li>
+<li><p><b>Episodic / Non-episodic</b> &minus; In an episodic environment, each episode consists of the agent perceiving and then acting. The quality of its action depends just on the episode itself. Subsequent episodes do not depend on the actions in the previous episodes. Episodic environments are much simpler because the agent does not need to think ahead.</p></li>
+</ul>
+          </div>
+             <div class="p5" style="border:solid 0px;height:2500px;display:none">
+             <center> <h1>Popular Search Algorithm</h1></center>
+<p>Searching is the universal technique of problem solving in AI. There are some single-player games such as tile games, Sudoku, crossword, etc. The search algorithms help you to search for a particular position in such games.</p>
+<h2>Single Agent Pathfinding Problems</h2>
+<p>The games such as 3X3 eight-tile, 4X4 fifteen-tile, and 5X5 twenty four tile puzzles are single-agent-path-finding challenges. They consist of a matrix of tiles with a blank tile. The player is required to arrange the tiles by sliding a tile either vertically or horizontally into a blank space with the aim of accomplishing some objective.</p>
+<p>The other examples of single agent pathfinding problems are Travelling Salesman Problem, Rubik’s Cube, and Theorem Proving.</p>
+<h2>Search Terminology</h2>
+<ul class="list">
+<li><p><b>Problem Space</b> &minus; It is the environment in which the search takes place. (A set of states and set of operators to change those states)</p></li>
+<li><p><b>Problem Instance</b> &minus; It is Initial state &plus; Goal state.</p></li>
+<li><p><b>Problem Space Graph</b> &minus; It represents problem state. States are shown by nodes and operators are shown by edges.</p></li>
+<li><p><b>Depth of a problem</b> &minus; Length of a shortest path or shortest sequence of operators from Initial State to goal state.</p></li>
+<li><p><b>Space Complexity</b> &minus; The maximum number of nodes that are stored in memory.</p></li>
+<li><p><b>Time Complexity</b> &minus; The maximum number of nodes that are created.</p></li>
+<li><p><b>Admissibility</b> &minus; A property of an algorithm to always find an optimal solution.</p></li>
+<li><p><b>Branching Factor</b> &minus; The average number of child nodes in the problem space graph.</p></li>
+<li><p><b>Depth</b> &minus; Length of the shortest path from initial state to goal state.</p></li>
+</ul>
+<h2>Brute-Force Search Strategies</h2>
+<p>They are most simple, as they do not need any domain-specific knowledge. They work fine with small number of possible states.</p>
+<p>Requirements &minus;</p>
+<ul class="list">
+<li>State description</li>
+<li>A set of valid operators</li>
+<li>Initial state</li>
+<li>Goal state description</li>
+</ul>
+<h3>Breadth-First Search</h3>
+<p>It starts from the root node, explores the neighboring nodes first and moves towards the next level neighbors. It generates one tree at a time until the solution is found. It can be implemented using FIFO queue data structure. This method provides shortest path to the solution.</p>
+<p>If <b>branching factor</b> (average number of child nodes for a given node) = b and depth = d, then number of nodes at level d = b<sup>d</sup>.</p>
+<p>The total no of nodes created in worst case is b + b<sup>2</sup> + b<sup>3</sup> + … + b<sup>d</sup>.</p>
+<p><b>Disadvantage</b> &minus; Since each level of nodes is saved for creating next one, it consumes a lot of memory space. Space requirement to store nodes is exponential.</p>
+<p>Its complexity depends on the number of nodes. It can check duplicate nodes.</p>
+<img src="{% static 'clever/img/bg-img/bfs.jpg' %}" alt="Breadth First Search" />
+<h3>Depth-First Search</h3>
+<p>It is implemented in recursion with LIFO stack data structure. It creates the same set of nodes as Breadth-First method, only in the different order.</p>
+<p>As the nodes on the single path are stored in each iteration from root to leaf node, the space requirement to store nodes is linear. With branching factor <i>b</i> and depth as <i>m</i>, the storage space is <i>bm.</i></p>
+<p><b>Disadvantage</b> &minus; This algorithm may not terminate and go on infinitely on one path. The solution to this issue is to choose a cut-off depth. If the ideal cut-off is <i>d</i>, and if chosen cut-off is lesser than <i>d</i>, then this algorithm may fail. If chosen cut-off is more than <i>d</i>, then execution time increases.</p>
+<p>Its complexity depends on the number of paths. It cannot check duplicate nodes.</p>
+<img src="{% static 'clever/img/bg-img/dfs.jpg' %}" alt="Depth First Search" />
+<h3>Bidirectional Search</h3>
+<p>It searches forward from initial state and backward from goal state till both meet to identify a common state.</p>
+<p>The path from initial state is concatenated with the inverse path from the goal state. Each search is done only up to half of the total path.</p>
+<h3>Uniform Cost Search</h3>
+<p>Sorting is done in increasing cost of the path to a node. It always expands the least cost node. It is identical to Breadth First search if each transition has the same cost.</p>
+<p>It explores paths in the increasing order of cost.</p>
+<p><b>Disadvantage</b> &minus; There can be multiple long paths with the cost &le; C*. Uniform Cost search must explore them all.</p>
+<h3>Iterative Deepening Depth-First Search</h3>
+<p>It performs depth-first search to level 1, starts over, executes a complete depth-first search to level 2, and continues in such way till the solution is found.</p>
+<p>It never creates a node until all lower nodes are generated. It only saves a stack of nodes. The algorithm ends when it finds a solution at depth <i>d</i>. The number of nodes created at depth <i>d</i> is b<sup>d</sup> and at depth <i>d-1</i> is b<sup>d-1.</sup></p>
+<img src="{% static 'clever/img/bg-img/indf.jpg' %}" alt="Interactive Deepening DF Search"/>
+<h3>Comparison of Various Algorithms Complexities</h3>
+<p>Let us see the performance of algorithms based on various criteria &minus;</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;vertical-align:middle;width:20%;">Criterion</th>
+<th style="width:20%;">Breadth First</th>
+<th style="width:20%;">Depth First</th>
+<th style="width:20%;vertical-align:middle;">Bidirectional</th>
+<th style="width:20%;">Uniform Cost</th>
+<th style="text-align:center;">Interactive Deepening</th>
+</tr>
+<tr>
+<td>Time</td>
+<td>b<sup>d</sup></td>
+<td>b<sup>m</sup></td>
+<td>b<sup>d/2</sup></td>
+<td>b<sup>d</sup></td>
+<td>b<sup>d</sup></td>
+</tr>
+<tr>
+<td>Space</td>
+<td>b<sup>d</sup></td>
+<td>b<sup>m</sup></td>
+<td>b<sup>d/2</sup></td>
+<td>b<sup>d</sup></td>
+<td>b<sup>d</sup></td>
+</tr>
+<tr>
+<td>Optimality</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Completeness</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</table>
+<h2>Informed (Heuristic) Search Strategies</h2>
+<p>To solve large problems with large number of possible states, problem-specific knowledge needs to be added to increase the efficiency of search algorithms.</p>
+<h3>Heuristic Evaluation Functions</h3>
+<p>They calculate the cost of optimal path between two states. A heuristic function for sliding-tiles games is computed by counting number of moves that each tile makes from its goal state and adding these number of moves for all tiles.</p>
+<h3>Pure Heuristic Search</h3>
+<p>It expands nodes in the order of their heuristic values. It creates two lists, a closed list for the already expanded nodes and an open list for the created but unexpanded nodes.</p>
+<p>In each iteration, a node with a minimum heuristic value is expanded, all its child nodes are created and placed in the closed list. Then, the heuristic function is applied to the child nodes and they are placed in the open list according to their heuristic value. The shorter paths are saved and the longer ones are disposed.</p>
+<h3>A * Search</h3>
+<p>It is best-known form of Best First search. It avoids expanding paths that are already expensive, but expands most promising paths first.</p>
+<p>f(n) = g(n) &plus; h(n), where</p>
+<ul class="list">
+<li>g(n) the cost (so far) to reach the node</li>
+<li>h(n) estimated cost to get from the node to the goal</li>
+<li>f(n) estimated total cost of path through n to goal. It is implemented using priority queue by increasing f(n).</li>
+</ul>
+<h3>Greedy Best First Search</h3>
+<p>It expands the node that is estimated to be closest to goal. It expands nodes based on f(n) = h(n). It is implemented using priority queue.</p>
+<p><b>Disadvantage</b> &minus; It can get stuck in loops. It is not optimal.</p>
+<h2>Local Search Algorithms</h2>
+<p>They start from a prospective solution and then move to a neighboring solution. They can return a valid solution even if it is interrupted at any time before they end.</p>
+<h3>Hill-Climbing Search</h3>
+<p>It is an iterative algorithm that starts with an arbitrary solution to a problem and attempts to find a better solution by changing a single element of the solution incrementally. If the change produces a better solution, an incremental change is taken as a new solution. This process is repeated until there are no further improvements.</p>
+<p>function Hill-Climbing (problem), returns a state that is a local maximum.</p>
+<pre class="result notranslate">
+inputs: problem, a problem
+local variables: current, a node
+                 neighbor, a node
+current &lt;-Make_Node(Initial-State[problem])
+loop
+   do neighbor &lt;- a highest_valued successor of <i>current</i>
+      if Value[neighbor] ≤ Value[current] then
+      return State[current]
+      current &lt;- neighbor
+
+end
+</pre>
+<p><b>Disadvantage</b> &minus; This algorithm is neither complete, nor optimal.</p>
+<h3>Local Beam Search</h3>
+<p>In this algorithm, it holds k number of states at any given time. At the start, these states are generated randomly. The successors of these k states are computed with the help of objective function. If any of these successors is the maximum value of the objective function, then the algorithm stops.</p>
+<p>Otherwise the (initial k states and k number of successors of the states = 2k) states are placed in a pool. The pool is then sorted numerically. The highest k states are selected as new initial states. This process continues until a maximum value is reached.</p>
+<p>function BeamSearch( <i>problem, k</i>), returns a solution state.</p>
+<pre class="result notranslate">
+start with k randomly generated states
+loop
+   generate all successors of all k states
+   if any of the states = solution, then return the state
+   else select the k best successors
+end
+</pre>
+<h3>Simulated Annealing</h3>
+<p>Annealing is the process of heating and cooling a metal to change its internal structure for modifying its physical properties. When the metal cools, its new structure is seized, and the metal retains its newly obtained properties. In simulated annealing process, the temperature is kept variable.</p>
+<p>We initially set the temperature high and then allow it to ‘cool' slowly as the algorithm proceeds. When the temperature is high, the algorithm is allowed to accept worse solutions with high frequency.</p>
+<p>Start</p>
+<ul class="list">
+<li>Initialize k = 0; L = integer number of variables;</li>
+<li>From i &rarr; j, search the performance difference &Delta;.</li>
+<li>If &Delta; &lt;= 0 then accept else if exp(-&Delta;/T(k)) &gt; random(0,1) then accept;</li>
+<li>Repeat steps 1 and 2 for L(k) steps.</li>
+<li>k = k &plus; 1;</li>
+</ul>
+<p>Repeat steps 1 through 4 till the criteria is met.</p>
+<p>End</p>
+<h3>Travelling Salesman Problem</h3>
+<p>In this algorithm, the objective is to find a low-cost tour that starts from a city, visits all cities en-route exactly once and ends at the same starting city.</p>
+<pre class="result notranslate">
+Start
+   Find out all (n -1)! Possible solutions, where n is the total number of cities.
+   Determine the minimum cost by finding out the cost of each of these (n -1)! solutions.
+   Finally, keep the one with the minimum cost.
+end
+</pre><img src="{% static 'clever/img/bg-img/travel.jpg' %}" alt="Travelling Salesman Problem"/>
+
+             </div>
+
+            <div class="p6" style="border:solid 0px;height:2500px;display:none">
+             <center> <h1>Fuzzy Logic</h1></center>
+<p>Fuzzy Logic Systems (FLS) produce acceptable but definite output in response to incomplete, ambiguous, distorted, or inaccurate (fuzzy) input.</p>
+<h2>What is Fuzzy Logic?</h2>
+<p>Fuzzy Logic (FL) is a method of reasoning that resembles human reasoning. The approach of FL imitates the way of decision making in humans that involves all intermediate possibilities between digital values YES and NO.</p>
+<p>The conventional logic block that a computer can understand takes precise input and produces a definite output as TRUE or FALSE, which is equivalent to human’s YES or NO.</p>
+<p>The inventor of fuzzy logic, Lotfi Zadeh, observed that unlike computers, the human decision making includes a range of possibilities between YES and NO, such as &minus;</p>
+<table border="1" align="center">
+<tr>
+<td>CERTAINLY YES</td>
+</tr>
+<tr>
+<td>POSSIBLY YES</td>
+</tr>
+<tr>
+<td>CANNOT SAY</td>
+</tr>
+<tr>
+<td>POSSIBLY NO</td>
+</tr>
+<tr>
+<td>CERTAINLY NO</td>
+</tr>
+</table>
+<p>The fuzzy logic works on the levels of possibilities of input to achieve the definite output.</p>
+<h3>Implementation</h3>
+<ul class="list">
+<li><p>It can be implemented in systems with various sizes and capabilities ranging from small micro-controllers to large, networked, workstation-based control systems.</p></li>
+<li><p>It can be implemented in hardware, software, or a combination of both.</p></li>
+</ul>
+<h2>Why Fuzzy Logic?</h2>
+<p>Fuzzy logic is useful for commercial and practical purposes.</p>
+<ul class="list">
+<li>It can control machines and consumer products.</li>
+<li>It may not give accurate reasoning, but acceptable reasoning.</li>
+<li>Fuzzy logic helps to deal with the uncertainty in engineering.</li>
+</ul>
+<h2>Fuzzy Logic Systems Architecture</h2>
+<p>It has four main parts as shown &minus;</p>
+<ul class="list">
+<li><p><b>Fuzzification Module</b> &minus; It transforms the system inputs, which are crisp numbers, into fuzzy sets. It splits the input signal into five steps such as &minus;</p></li>
+</ul>
+<table style="width:50%" align="center" class="table table-bordered">
+<tr>
+<td style="text-align:center;"><b>LP</b></td>
+<td style="text-align:center;">x is Large Positive</td>
+</tr>
+<tr>
+<td style="text-align:center;"><b>MP</b></td>
+<td style="text-align:center;">x is Medium Positive</td>
+</tr>
+<tr>
+<td style="text-align:center;"><b>S</b></td>
+<td style="text-align:center;">x is Small</td>
+</tr>
+<tr>
+<td style="text-align:center;"><b>MN</b></td>
+<td style="text-align:center;">x is Medium Negative</td>
+</tr>
+<tr>
+<td style="text-align:center;"><b>LN</b></td>
+<td style="text-align:center;">x is Large Negative</td>
+</tr>
+</table>
+<ul class="list">
+<li><p><b>Knowledge Base</b> &minus; It stores IF-THEN rules provided by experts.</p></li>
+<li><p><b>Inference Engine</b> &minus; It simulates the human reasoning process by making fuzzy inference on the inputs and IF-THEN rules.</p></li>
+<li><p><b>Defuzzification Module</b> &minus; It transforms the fuzzy set obtained by the inference engine into a crisp value.</p></li>
+</ul>
+<img src="{% static 'clever/img/bg-img/fuzzylogic.jpg' %}" alt="Fuzzy Logic System"/>
+<p>The <b>membership functions work on</b> fuzzy sets of variables.</p>
+<h3>Membership Function</h3>
+<p>Membership functions allow you to quantify linguistic term and represent a fuzzy set graphically. A <b>membership function</b> for a fuzzy <i>set A</i> on the universe of discourse X is defined as &mu;<sub>A</sub>:X &rarr; [0,1].</p>
+<p>Here, each element of <i>X</i> is mapped to a value between 0 and 1. It is called <b>membership value</b> or <b>degree of membership</b>. It quantifies the degree of membership of the element in <i>X</i> to the fuzzy set <i>A</i>.</p>
+<ul class="list">
+<li>x axis represents the universe of discourse.</li>
+<li>y axis represents the degrees of membership in the [0, 1] interval.</li>
+</ul>
+<p>There can be multiple membership functions applicable to fuzzify a numerical value. Simple membership functions are used as use of complex functions does not add more precision in the output.</p>
+<p>All membership functions for <b>LP, MP, S, MN,</b> and <b>LN</b> are shown as below &minus;</p>
+<img src="{% static 'clever/img/bg-img/mem.jpg' %}" alt="FL Membership Functions"/>
+<p>The triangular membership function shapes are most common among various other membership function shapes such as trapezoidal, singleton, and Gaussian.</p>
+<p>Here, the input to 5-level fuzzifier varies from -10 volts to +10 volts. Hence the corresponding output also changes.</p>
+<h2>Example of a Fuzzy Logic System</h2>
+<p>Let us consider an air conditioning system with 5-level fuzzy logic system. This system adjusts the temperature of air conditioner by comparing the room temperature and the target temperature value.</p>
+<img src="{% static 'clever/img/bg-img/bzz.jpg' %}" alt="Fuzzy Logic AC System" />
+<h3>Algorithm</h3>
+<ul class="list">
+<li>Define linguistic Variables and terms (start)</li>
+<li>Construct membership functions for them. (start)</li>
+<li>Construct knowledge base of rules (start)</li>
+<li>Convert crisp data into fuzzy data sets using membership functions. (fuzzification)</li>
+<li>Evaluate rules in the rule base. (Inference Engine)</li>
+<li>Combine results from each rule. (Inference Engine)</li>
+<li>Convert output data into non-fuzzy values. (defuzzification)</li>
+</ul>
+<h3>Development</h3>
+<p><b>Step 1 &minus; Define linguistic variables and terms</b></p>
+<p>Linguistic variables are input and output variables in the form of simple words or sentences. For room temperature, cold, warm, hot, etc., are linguistic terms.</p>
+<p style="padding-left:25%;">Temperature (t) = {very-cold, cold, warm, very-warm, hot}</p>
+<p>Every member of this set is a linguistic term and it can cover some portion of overall temperature values.</p>
+<p><b>Step 2 &minus; Construct membership functions for them</b></p>
+<p>The membership functions of temperature variable are as shown &minus;</p>
+<img src="{% static 'clever/img/bg-img/mem1.jpg' %}" alt="MF of AC System"/>
+<p><b>Step3 &minus; Construct knowledge base rules</b></p>
+<p>Create a matrix of room temperature values versus target temperature values that an air conditioning system is expected to provide.</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;width:20%;vertical-align:middle;">RoomTemp. /Target</th>
+<th style="text-align:center;width:20%;vertical-align:middle;">Very_Cold</th>
+<th style="text-align:center;width:20%;vertical-align:middle;">Cold</th>
+<th style="text-align:center;width:20%;vertical-align:middle;">Warm</th>
+<th style="text-align:center;vertical-align:middle;">Hot</th>
+<th style="text-align:center;vertical-align:middle;">Very_Hot</th>
+</tr>
+<tr>
+<td>Very_Cold</td>
+<td>No_Change</td>
+<td>Heat</td>
+<td>Heat</td>
+<td>Heat</td>
+<td>Heat</td>
+</tr>
+<tr>
+<td>Cold</td>
+<td>Cool</td>
+<td>No_Change</td>
+<td>Heat</td>
+<td>Heat</td>
+<td>Heat</td>
+</tr>
+<tr>
+<td>Warm</td>
+<td>Cool</td>
+<td>Cool</td>
+<td>No_Change</td>
+<td>Heat</td>
+<td>Heat</td>
+</tr>
+<tr>
+<td>Hot</td>
+<td>Cool</td>
+<td>Cool</td>
+<td>Cool</td>
+<td>No_Change</td>
+<td>Heat</td>
+</tr>
+<tr>
+<td>Very_Hot</td>
+<td>Cool</td>
+<td>Cool</td>
+<td>Cool</td>
+<td>Cool</td>
+<td>No_Change</td>
+</tr>
+</table>
+<p>Build a set of rules into the knowledge base in the form of IF-THEN-ELSE structures.</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;width:15%;">Sr. No.</th>
+<th style="text-align:center;width:70%;">Condition</th>
+<th style="text-align:center;width:70%;">Action</th>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1</td>
+<td>IF temperature=(Cold OR Very_Cold) AND target=Warm THEN</td>
+<td style="text-align:center;">Heat</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">2</td>
+<td>IF temperature=(Hot OR Very_Hot) AND target=Warm THEN</td>
+<td style="text-align:center;">Cool</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">3</td>
+<td>IF (temperature=Warm) AND (target=Warm) THEN</td>
+<td style="text-align:center;">No_Change</td>
+</tr>
+</table>
+<p><b>Step 4 &minus; Obtain fuzzy value</b></p>
+<p>Fuzzy set operations perform evaluation of rules. The operations used for OR and AND are Max and Min respectively. Combine all results of evaluation to form a final result. This result is a fuzzy value.</p>
+<p><b>Step 5 &minus; Perform defuzzification</b></p>
+<p>Defuzzification is then performed according to membership function for output variable.</p>
+<img src="{% static 'clever/img/bg-img/def.jpg' %}" alt="DeFuzzied Value" />
+<h2>Application Areas of Fuzzy Logic</h2>
+<p>The key application areas of fuzzy logic are as given &minus;</p>
+<p><b>Automotive Systems</b></p>
+<ul class="list">
+<li>Automatic Gearboxes</li>
+<li>Four-Wheel Steering</li>
+<li>Vehicle environment control</li>
+</ul>
+<p><b>Consumer Electronic Goods</b></p>
+<ul class="list">
+<li>Hi-Fi Systems</li>
+<li>Photocopiers</li>
+<li>Still and Video Cameras</li>
+<li>Television</li>
+</ul>
+<p><b>Domestic Goods</b></p>
+<ul class="list">
+<li>Microwave Ovens</li>
+<li>Refrigerators</li>
+<li>Toasters</li>
+<li>Vacuum Cleaners</li>
+<li>Washing Machines</li>
+</ul>
+<p><b>Environment Control</b></p>
+<ul class="list">
+<li>Air Conditioners/Dryers/Heaters</li>
+<li>Humidifiers</li>
+</ul>
+<h2>Advantages of FLSs</h2>
+<ul class="list">
+<li><p>Mathematical concepts within fuzzy reasoning are very simple.</p></li>
+<li><p>You can modify a FLS by just adding or deleting rules due to flexibility of fuzzy logic.</p></li>
+<li><p>Fuzzy logic Systems can take imprecise, distorted, noisy input information.</p></li>
+<li><p>FLSs are easy to construct and understand.</p></li>
+<li><p>Fuzzy logic is a solution to complex problems in all fields of life, including medicine, as it resembles human reasoning and decision making.</p></li>
+</ul>
+<h2>Disadvantages of FLSs</h2>
+<ul class="list">
+<li>There is no systematic approach to fuzzy system designing.</li>
+<li>They are understandable only when simple.</li>
+<li>They are suitable for the problems which do not need high accuracy.</li>
+</ul>
+            </div>
+
+            <div class="p7" style="border:solid 0px;height:2500px;display:none">
+             <center> <h1>Natural Language Processing</h1></center>
+                <p>Natural Language Processing (NLP) refers to AI method of communicating with an intelligent systems using a natural language such as English.</p>
+<p>Processing of Natural Language is required when you want an intelligent system like robot to perform as per your instructions, when you want to hear decision from a dialogue based clinical expert system, etc.</p>
+<p>The field of NLP involves making computers to perform useful tasks with the natural languages humans use. The input and output of an NLP system can be &minus;</p>
+<ul class="list">
+<li>Speech</li>
+<li>Written Text</li>
+</ul>
+<h2>Components of NLP</h2>
+<p>There are two components of NLP as given &minus;</p>
+<h3>Natural Language Understanding (NLU)</h3>
+<p>Understanding involves the following tasks &minus;</p>
+<ul class="list">
+<li>Mapping the given input in natural language into useful representations.</li>
+<li>Analyzing different aspects of the language.</li>
+</ul>
+<h3>Natural Language Generation (NLG)</h3>
+<p>It is the process of producing meaningful phrases and sentences in the form of natural language from some internal representation.</p>
+<p>It involves &minus;</p>
+<ul class="list">
+<li><p><b>Text planning</b> &minus; It includes retrieving the relevant content from knowledge base.</p></li>
+<li><p><b>Sentence planning</b> &minus; It includes choosing required words, forming meaningful phrases, setting tone of the sentence.</p></li>
+<li><p><b>Text Realization</b> &minus; It is mapping sentence plan into sentence structure.</p></li>
+</ul>
+<p>The NLU is harder than NLG.</p>
+<h2>Difficulties in NLU</h2>
+<p>NL has an extremely rich form and structure.</p>
+<p>It is very ambiguous. There can be different levels of ambiguity &minus;</p>
+<ul class="list">
+<li><p><b>Lexical ambiguity</b> &minus; It is at very primitive level such as word-level.</p></li>
+<li><p>For example, treating the word “board” as noun or verb?</p></li>
+<li><p><b>Syntax Level ambiguity</b> &minus; A sentence can be parsed in different ways.</p></li>
+<li><p>For example, “He lifted the beetle with red cap.” &minus; Did he use cap to lift the beetle or he lifted a beetle that had red cap?</p></li>
+<li><p><b>Referential ambiguity</b> &minus; Referring to something using pronouns. For example, Rima went to Gauri. She said, “I am tired.” &minus; Exactly who is tired?</p></li>
+<li><p>One input can mean different meanings.</p></li>
+<li><p>Many inputs can mean the same thing.</p></li>
+</ul>
+<h2>NLP Terminology</h2>
+<ul class="list">
+<li><p><b>Phonology</b> &minus; It is study of organizing sound systematically.</p></li>
+<li><p><b>Morphology</b> &minus; It is a study of construction of words from primitive meaningful units.</p></li>
+<li><p><b>Morpheme</b> &minus; It is primitive unit of meaning in a language.</p></li>
+<li><p><b>Syntax</b> &minus; It refers to arranging words to make a sentence. It also involves determining the structural role of words in the sentence and in phrases.</p></li>
+<li><p><b>Semantics</b> &minus; It is concerned with the meaning of words and how to combine words into meaningful phrases and sentences.</p></li>
+<li><p><b>Pragmatics</b> &minus; It deals with using and understanding sentences in different situations and how the interpretation of the sentence is affected.</p></li>
+<li><p><b>Discourse</b> &minus; It deals with how the immediately preceding sentence can affect the interpretation of the next sentence.</p></li>
+<li><p><b>World Knowledge</b> &minus; It includes the general knowledge about the world.</p></li>
+</ul>
+<h2>Steps in NLP</h2>
+<p>There are general five steps &minus;</p>
+<ul class="list">
+<li><p><b>Lexical Analysis</b> &minus; It involves identifying and analyzing the structure of words. Lexicon of a language means the collection of words and phrases in a language. Lexical analysis is dividing the whole chunk of txt into paragraphs, sentences, and words.</p></li>
+<li><p><b>Syntactic Analysis (Parsing)</b> &minus; It involves analysis of words in the sentence for grammar and arranging words in a manner that shows the relationship among the words. The sentence such as “The school goes to boy” is rejected by English syntactic analyzer.</p></li>
+</ul>
+<img src="{% static 'clever/img/bg-img/steps.jpg' %}" alt="NLP Steps" />
+<ul class="list">
+<li><p><b>Semantic Analysis</b> &minus; It draws the exact meaning or the dictionary meaning from the text. The text is checked for meaningfulness. It is done by mapping syntactic structures and objects in the task domain. The semantic analyzer disregards sentence such as “hot ice-cream”.</p></li>
+<li><p><b>Discourse Integration</b> &minus; The meaning of any sentence depends upon the meaning of the sentence just before it. In addition, it also brings about the meaning of immediately succeeding sentence.</p></li>
+<li><p><b>Pragmatic Analysis</b> &minus; During this, what was said is re-interpreted on what it actually meant. It involves deriving those aspects of language which require real world knowledge.</p></li>
+</ul>
+<h2>Implementation Aspects of Syntactic Analysis</h2>
+<p>There are a number of algorithms researchers have developed for syntactic analysis, but we consider only the following simple methods &minus;</p>
+<ul class="list">
+<li>Context-Free Grammar</li>
+<li>Top-Down Parser</li>
+</ul>
+<p>Let us see them in detail &minus;</p>
+<h3>Context-Free Grammar</h3>
+<p>It is the grammar that consists rules with a single symbol on the left-hand side of the rewrite rules. Let us create grammar to parse a sentence &minus;</p>
+<p>“The bird pecks the grains”</p>
+<p><b>Articles (DET)</b> &minus; a | an | the</p>
+<p><b>Nouns</b> &minus; bird | birds | grain | grains</p>
+<p><b>Noun Phrase (NP)</b> &minus; Article &plus; Noun | Article &plus; Adjective &plus; Noun</p>
+<p style="padding-left:35%;">= DET N | DET ADJ N</p>
+<p><b>Verbs</b> &minus; pecks | pecking | pecked</p>
+<p><b>Verb Phrase (VP)</b> &minus; NP V | V NP</p>
+<p><b>Adjectives (ADJ)</b> &minus; beautiful | small | chirping</p>
+<p>The parse tree breaks down the sentence into structured parts so that the computer can easily understand and process it. In order for the parsing algorithm to construct this parse tree, a set of rewrite rules, which describe what tree structures are legal, need to be constructed.</p>
+<p>These rules say that a certain symbol may be expanded in the tree by a sequence of other symbols. According to first order logic rule, if there are two strings Noun Phrase (NP) and Verb Phrase (VP), then the string combined by NP followed by VP is a sentence. The rewrite rules for the sentence are as follows &minus;</p>
+<p><b>S &rarr; NP VP</b></p>
+<p><b>NP &rarr; DET N | DET ADJ N</b></p>
+<p><b>VP &rarr; V NP</b></p>
+<b><b>Lexocon &minus;</b></b>
+<p>DET &rarr; a | the</p>
+<p>ADJ &rarr; beautiful | perching</p>
+<p>N &rarr; bird | birds | grain | grains</p>
+<p>V &rarr; peck | pecks | pecking</p>
+<p>The parse tree can be created as shown &minus;</p>
+<img src="{% static 'clever/img/bg-img/nlp1.jpg' %}" alt="NLP Steps" />
+<p>Now consider the above rewrite rules. Since V can be replaced by both, "peck" or "pecks",
+sentences such as "The bird peck the grains" can be wrongly permitted. i. e. the subject-verb
+agreement error is approved as correct.</p>
+<p><b>Merit</b> &minus; The simplest style of grammar, therefore widely used one.</p>
+<p><b>Demerits &minus;</b></p>
+<ul class="list">
+<li><p>They are not highly precise. For example, “The grains peck the bird”, is a syntactically correct according to parser, but even if it makes no sense, parser takes it as a correct sentence.</p></li>
+<li><p>To bring out high precision, multiple sets of grammar need to be prepared. It may require a completely different sets of rules for parsing singular and plural variations, passive sentences, etc., which can lead to creation of huge set of rules that are unmanageable.</p></li>
+</ul>
+<h3>Top-Down Parser</h3>
+<p>Here, the parser starts with the S symbol and attempts to rewrite it into a sequence of <i>terminal symbols</i> that matches the classes of the words in the input sentence until it consists entirely of terminal symbols.</p>
+<p>These are then checked with the input sentence to see if it matched. If not, the process is started over again with a different set of rules. This is repeated until a specific rule is found which describes the structure of the sentence.</p>
+<p><b>Merit</b> &minus; It is simple to implement.</p>
+<p><b>Demerits &minus;</b></p>
+<ul class="list">
+<li>It is inefficient, as the search process has to be repeated if an error occurs.</li>
+<li>Slow speed of working.</li>
+</ul>
+ </div>
+        </div><!--  6 div close --->
+
+    <div class="col-md-3 bll"></div>
+</div>
+</div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

@@ -1,0 +1,173 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:900px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+        <h2> C++ Programming Tutorials</h2>
+              <a href="{% url 'cpHome1' %}">C++ Home</a>
+                <a href="{% url 'cpEnvironmentSetup1' %}">C++ Environment Setup</a>
+                <a href="{% url 'cpBasicSyntax1' %}">C++ Basic Syntax</a>
+                <a href="{% url 'cpComments1' %}">C++ Comments</a>
+                <a href="{% url 'cpDataTypes1' %}">C++ Data Types</a>
+                <a href="{% url 'cpVariableTypes1' %}">C++ Variable Types</a>
+                <a href="{% url 'cpVariableScope1' %}">C++ Variable Scope</a>
+                <a href="{% url 'cpConstantsLiterals1' %}">C++ Constants/Literals</a>
+                <a href="{% url 'cpModifierTypes1' %}">C++ Modifier Types</a>
+                <a href="{% url 'cpStorageClasses1' %}">C++ Storage Classes</a>
+                <a href="{% url 'cpOperators1' %}">C++ Operators</a>
+                <a href="{% url 'cpLoopTypes1' %}">C++ Loop Types</a>
+                <a href="{% url 'cpDecisionMaking1' %}">C++ Decision Making</a>
+                <a href="{% url 'cpFunctions1' %}">C++ Functions</a>
+                <a href="{% url 'cpNumbers1' %}">C++ Numbers</a>
+                <a href="{% url 'cpArrays1' %}">C++ Arrays</a>
+
+
+                </ul>
+
+
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>Comments in C++</h1></center><br>
+            </div>
+            <p>Program comments are explanatory statements that you can include in the C++ code. These comments help anyone reading the source code. All programming languages allow for some form of comments.</p>
+<p>C++ supports single-line and multi-line comments. All characters available inside any comment are ignored by C++ compiler.</p>
+<p>C++ comments start with /* and end with */. For example &minus;</p>
+<pre class="result notranslate">
+/* This is a comment */
+
+/* C++ comments can also
+   * span multiple lines
+*/
+</pre>
+<p>A comment can also start with //, extending to the end of the line. For example &minus;</p>
+<pre class="prettyprint notranslate">
+#include &lt;iostream&gt;
+using namespace std;
+
+main() {
+   cout &lt;&lt; "Hello World"; // prints Hello World
+
+   return 0;
+}
+</pre>
+<p>When the above code is compiled, it will ignore <b>// prints Hello World</b> and final executable will produce the following result &minus;</p>
+<pre class="result notranslate">
+Hello World
+</pre>
+<p>Within a /* and */ comment, // characters have no special meaning. Within a // comment, /* and */ have no special meaning. Thus, you can "nest" one kind of comment within the other kind. For example &minus;</p>
+<pre class="result notranslate">
+/* Comment out printing of Hello World:
+
+cout &lt;&lt; "Hello World"; // prints Hello World
+
+*/
+</pre>
+
+
+           <center><a href="{% url 'cpBasicSyntax1' %}"class="previous">Previous &raquo;</a>
+            <a href="{% url 'cpDataTypes1' %}"s class="next">Next &raquo;</a></center>
+
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

@@ -1,0 +1,276 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:3160px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+                <h2>  C Programming</h2>
+                <a href="{% url 'C1' %}">C - Home</a>
+                <a href="/cprogramming/c_environment_setup.htm">C - Environment Setup</a>
+                <a href="{% url 'ProgramStructure1' %}">C - Program Structure</a>
+                <a href="{% url 'BasicSyntax1' %}">C - Basic Syntax</a>
+                <a href="{% url 'DataTypes1' %}">C - Data Types</a>
+                <a href="{% url 'Variables1' %}">C - Variables</a>
+                  <a href="{% url 'Constants1' %}">C - Constants</a>
+                 <a href="{% url 'StorageClass1' %}">C - Storage Classes</a>
+                <a href="{% url 'Operators1' %}">C - Operators</a>
+                <a href="{% url 'DecisionMaking1' %}">C - Decision Making</a>
+                <a href="{% url 'Loops1' %}">C - Loops</a>
+                <a href="{% url 'Functions1' %}">C - Functions</a>
+                 <a href="{% url 'ScopeRules1' %}">C - Scope Rules</a>
+                <a href="{% url 'Arrays1' %}">C - Arrays</a>
+                 <a href="{% url 'Pointers1' %}">C - Pointers</a>
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>Scope Rules</h1></center>
+
+            </div>
+<p>A scope in any programming is a region of the program where a defined variable can have its existence and beyond that variable it cannot be accessed. There are three places where variables can be declared in C programming language &minus;</p>
+<ul class="list">
+<li><p>Inside a function or a block which is called <b>local</b> variables.</p></li>
+<li><p>Outside of all functions which is called <b>global</b> variables.</p></li>
+<li><p>In the definition of function parameters which are called <b>formal</b> parameters.</p></li>
+</ul>
+<p>Let us understand what are <b>local</b> and <b>global</b> variables, and <b>formal</b> parameters.</p>
+<h2>Local Variables</h2>
+<p>Variables that are declared inside a function or block are called local variables. They can be used only by statements that are inside that function or block of code. Local variables are not known to functions outside their own. The following  example shows how local variables are used. Here all the variables a, b, and c are local to main() function.</p>
+
+<pre class="prettyprint notranslatet">
+#include &lt;stdio.h&gt;
+
+int main () {
+
+  /* local variable declaration */
+  int a, b;
+  int c;
+
+  /* actual initialization */
+  a = 10;
+  b = 20;
+  c = a + b;
+
+  printf ("value of a = %d, b = %d and c = %d\n", a, b, c);
+
+  return 0;
+}
+</pre>
+<h2>Global Variables</h2>
+<p>Global variables are defined outside a function, usually on top of the program. Global variables hold their values throughout the lifetime of your program and they can be accessed inside any of the functions defined for the program.</p>
+<p>A global variable can be accessed by any function. That is, a global variable is available for use throughout your entire program after its declaration. The following program show how global variables are used in a program.</p>
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+
+/* global variable declaration */
+int g;
+
+int main () {
+
+  /* local variable declaration */
+  int a, b;
+
+  /* actual initialization */
+  a = 10;
+  b = 20;
+  g = a + b;
+
+  printf ("value of a = %d, b = %d and g = %d\n", a, b, g);
+
+  return 0;
+}
+</pre>
+<p>A program can have same name for local and global variables but the value of local variable inside a function will take preference. Here is an example &minus;</p>
+
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+
+/* global variable declaration */
+int g = 20;
+
+int main () {
+
+  /* local variable declaration */
+  int g = 10;
+
+  printf ("value of g = %d\n",  g);
+
+  return 0;
+}
+</pre>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+value of g = 10
+</pre>
+<h2>Formal Parameters</h2>
+<p>Formal parameters, are treated as local variables with-in a function and they take precedence over global variables. Following is an example &minus;</p>
+
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+
+/* global variable declaration */
+int a = 20;
+
+int main () {
+
+  /* local variable declaration in main function */
+  int a = 10;
+  int b = 20;
+  int c = 0;
+
+  printf ("value of a in main() = %d\n",  a);
+  c = sum( a, b);
+  printf ("value of c in main() = %d\n",  c);
+
+  return 0;
+}
+
+/* function to add two integers */
+int sum(int a, int b) {
+
+   printf ("value of a in sum() = %d\n",  a);
+   printf ("value of b in sum() = %d\n",  b);
+
+   return a + b;
+}
+</pre>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+value of a in main() = 10
+value of a in sum() = 10
+value of b in sum() = 20
+value of c in main() = 30
+</pre>
+<h2>Initializing Local and Global Variables</h2>
+<p>When a local variable is defined, it is not initialized  by the system, you must initialize it yourself. Global variables are initialized automatically by the system when you define them as follows &minus;</p>
+<table style="text-align:center;" class="table table-bordered">
+<tr>
+<th style="width:50%;text-align:center;">Data Type</th>
+<th style="text-align:center;">Initial Default Value</th>
+</tr>
+<tr>
+<td>int</td>
+<td>0 </td>
+</tr>
+<tr>
+<td>char</td>
+<td>'\0'</td>
+</tr>
+<tr>
+<td>float</td>
+<td>0</td>
+</tr>
+<tr>
+<td>double</td>
+<td>0</td>
+</tr>
+<tr>
+<td>pointer</td>
+<td>NULL</td>
+</tr>
+</table>
+<p>It is a good programming practice to initialize variables properly, otherwise your program may produce unexpected results, because uninitialized variables will take some garbage value already available at their memory location.</p>
+<hr />
+            <center><a href="{% url 'Functions1' %}" class="previous">&laquo; Previous</a>
+            <a href="{% url 'Arrays1' %}" class="next">Next &raquo;</a></center>
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

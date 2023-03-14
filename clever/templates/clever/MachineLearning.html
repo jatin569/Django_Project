@@ -1,0 +1,661 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+    <script type="text/javascript" src="{% static 'clever/jq/jquery-1.10.2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'clever/jq/jquery.min.js' %}"></script>
+    <script>
+        $(document).ready(function(){
+        $(".t1").click(function(){
+        $(".p1").show();
+        $(".p3").hide();
+        $(".p2").hide();
+        $(".p4").hide();
+        $(".p5").hide();
+        $(".p6").hide();
+        });
+
+        $(".t2").click(function(){
+        $(".p1").hide();
+        $(".p3").hide();
+        $(".p2").show();
+        $(".p4").hide();
+        $(".p5").hide();
+         $(".p6").hide();
+        });
+
+         $(".t3").click(function(){
+        $(".p1").hide();
+        $(".p2").hide();
+        $(".p3").show();
+        $(".p4").hide();
+        $(".p5").hide();
+         $(".p6").hide();
+        });
+        $(".t4").click(function(){
+        $(".p1").hide();
+        $(".p2").hide();
+        $(".p3").hide();
+        $(".p4").show();
+        $(".p5").hide();
+        $(".p6").hide();
+        });
+        $(".t5").click(function(){
+        $(".p1").hide();
+        $(".p2").hide();
+        $(".p3").hide();
+        $(".p4").hide();
+        $(".p5").show();
+        $(".p6").hide();
+        });
+        $(".t6").click(function(){
+        $(".p1").hide();
+        $(".p2").hide();
+        $(".p3").hide();
+        $(".p4").hide();
+        $(".p5").hide();
+        $(".p6").show();
+        });
+        });
+
+    </script>
+    <style>
+
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:2000px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+                <h2> Machine Learning with Python</h2>
+                <p class="t1">Introduction</p>
+                <p class="t2">Python libraries for ML</p>
+                <p class="t3">Introduction to Data in ML</p>
+                <p class ="t4"> Applications of ML</p>
+                <p class="t5">Machine Learning and Artificial Intelligence</p>
+                <p class="t6">Artificial Intelligence and its Agents</p>
+
+        </div>
+        </div>
+        <div class="col-md-6 all" style="border:solid 0px ;">
+           <div class="p1" style="border:solid 0px ;height:1400px;">
+                <center><h1>Machine Learning</h1></center>
+
+              <p><strong>Machine Learning</strong> is the field of study that gives computers the capability to learn without being explicitly programmed. ML is one of the most exciting technologies that one would have ever come across. As it is evident from the name, it gives the computer that which makes it more similar to humans: <strong><em>The ability to learn</em></strong>. Machine learning is actively being used today, perhaps in many more places than one would expect. </p>
+<p><img src="{% static 'clever/img/bg-img/zx.png' %}" alt="" width="1000" height="250" class="aligncenter size-full wp-image-264121" /></p>
+<h3>Recent Articles on Machine Learning </h3>
+               <li>Introduction To Machine Learning using Python</li>
+               <p>Machine learning is a type of artificial intelligence (AI) that provides computers with the ability to learn without being explicitly programmed. Machine learning focuses on the development of Computer Programs that can change when exposed to new data. In this article, we&#8217;ll see basics of Machine Learning, and implementation of a simple machine learning algorithm using python.</p>
+               <li> Setting up the environment</li>
+<p>Python community has developed many modules to help programmers implement machine learning. In this article, we will be using numpy, scipy and scikit-learn modules. We can install them using cmd command:</p>
+<pre>pip install numpy scipy scikit-learn </pre>
+<p>A better option would be downloading miniconda or anaconda packages for python, which come prebundled with these packages. </p>
+<p align="center"><strong>Machine Learning overview</strong></p><br/>
+
+<p>Machine learning involves computer to get trained using a given data set, and use this training to predict the properties of a given new data. For example, we can train computer by feeding it 1000 images of cats and 1000 more images which are not of a cat, and tell each time to computer whether a picture is cat or not. Then if we show the computer a new image, then from the above training, computer should be able to tell whether this new image is cat or not.<br />
+Process of training and prediction involves use of specialized algorithms. We feed the training data to an algorithm, and the algorithm uses this training data to give predictions on a new test data. One such algorithm is <a>K-Nearest-Neighbor</a> classification (KNN classification). It takes a test data, and finds k nearest data values to this data from test data set. Then it  selects the neighbor of maximum frequency and gives its properties as the prediction result. For example if the training set is:</p>
+<table border="2">
+<tr>
+<th>petal_size</th>
+<th>flower_type</th>
+</tr>
+<tr>
+<td>1</td>
+<td>a</td>
+</tr>
+<tr>
+<td>2</td>
+<td>b</td>
+</tr>
+<tr>
+<td>1</td>
+<td>a</td>
+</tr>
+<tr>
+<td>2</td>
+<td>b</td>
+</tr>
+<tr>
+<td>3</td>
+<td>c</td>
+</tr>
+<tr>
+<td>4</td>
+<td>d</td>
+</tr>
+<tr>
+<td>3</td>
+<td>c</td>
+</tr>
+<tr>
+<td>2</td>
+<td>b</td>
+</tr>
+<tr>
+<td>5</td>
+<td>a</td>
+</tr>
+</table>
+<p>
+Now we want to predict flower type for petal of size 2.5 cm. So if we decide no. of neighbors (K)=3, we see that the 3 nearest neighbors of 2.5 are 1, 2 and 3. Their frequencies are 2, 3 and 2 respectively. Therefore the neighbor of maximum frequency is 2 and flower type corresponding to it is b. So for a petal of size 2.5, the prediction will be flower type b.</p>
+<p align="center"><strong>Implementing KNN- classification algorithm using Python on IRIS dataset</strong></p>
+</h2>
+<p>Here is a python script which demonstrates knn classification algorithm. Here we use the famous iris flower dataset to train the computer, and then give a new value to the computer to make predictions about it. The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). Four features are measured from each sample: The length and Width of Sepals &amp; Petals, in centimeters.<br />
+We train our program using this dataset, and then use this training to predict species of a iris flower with given measurements. </p>
+<p>Note that this program might not run on Geeksforgeeks IDE, but it can run easily on your local python interpreter, provided, you have installed the required libraries.</p>
+
+
+            </div>
+
+            <div class="p2" style="border:solid 0px;height:5000px;display:none">
+                <center><h1>Best Python libraries for Machine Learning</h1></center>
+                <p>Machine Learning, as the name suggests, is the science of programming a computer by which they are able to learn from different kinds of data. A more general definition given by Arthur Samuel is &#8211; &#8220;Machine Learning is the field of study that gives computers the ability to learn without being explicitly programmed.&#8221; They are typically used to solve various types of life problems.<br />
+In the older days, people used to perform Machine Learning tasks by manually coding all the algorithms and mathematical and statistical formula. This made the process time consuming, tedious and inefficient. But in the modern days, it is become very much easy and efficient compared to the olden days by various python libraries, frameworks, and modules. Today, Python is one of the most popular programming languages for this task and it has replaced many languages in the industry, one of the reason is its vast collection of libraries. Python libraries that used in Machine Learning are:</p>
+<h1></h1>
+<li>Numpy</li>
+<li>Scipy</li>
+<li>Scikit-learn</li>
+<li>Theano</li>
+<li>TensorFlow</li>
+<li>Keras</li>
+<li>PyTorch</li>
+
+<h4 style="text-align: center">Numpy</h4>
+    <center><p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/image5-1.jpeg" alt="" width="400" height="225" class="aligncenter size-full wp-image-843317" /><br /></p></center>
+                NumPy is a very popular python library for large multi-dimensional array and matrix processing, with the help of a large collection of high-level mathematical functions. It is very useful for fundamental scientific computations in Machine Learning. It is particularly useful for linear algebra, Fourier transform, and random number capabilities. High-end libraries like TensorFlow uses NumPy internally for manipulation of Tensors.</p>
+# Python program using NumPy<br>
+# for some basic mathematical<br>
+# operations<br>
+<br>
+import numpy as np<br>
+<br>
+# Creating two arrays of rank 2<br>
+x = np.array([[1, 2], [3, 4]])<br>
+y = np.array([[5, 6], [7, 8]])<br>
+<br>
+# Creating two arrays of rank 1<br>
+v = np.array([9, 10])<br>
+w = np.array([11, 12])<br>
+<br>
+# Inner product of vectors<br>
+print(np.dot(v, w), "\n")<br>
+<br>
+# Matrix and Vector product<br>
+print(np.dot(x, v), "\n")<br>
+<br>
+# Matrix and matrix product<br>
+print(np.dot(x, y))<br>
+Output:<br>
+<br>
+219<br>
+<br>
+[29 67]<br>
+<br>
+[[19 22]<br>
+ [43 50]]<br>
+<h4 style="text-align: center">SciPy</h4>
+<center><p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/image6.png" alt="" width="268" height="93" class="aligncenter size-full wp-image-843320" /><br />
+SciPy is a very popular library among Machine Learning enthusiasts as it contains different modules for optimization, linear algebra, integration and statistics. There is a difference between the SciPy library and the SciPy stack. The SciPy is one of the core packages that make up the SciPy stack. SciPy is also very useful for image manipulation.</p><br/>
+
+                <center><p><strong>Original image:</strong><br /></p>
+                <center><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/cat-1-1-300x240.jpg" alt="" width="300" height="240" class="alignnone size-medium wp-image-843355" /><br /></center>
+                <center><strong>Tinted image:</strong><br /></center>
+                <center><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/image15-300x240.jpg" alt="" width="300" height="240" class="alignnone size-medium wp-image-843361" /><br /></center>
+                <center><strong>Resized tinted image:</strong><br /></center>
+<center><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/cat_tinted_resized-1.jpg" alt="resized_tinted_image" /></center>
+<br>
+<h4 style="text-align: center">Scikit-learn</h4>
+<p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/image7-1.png" alt="" width="150" height="81" class="aligncenter size-full wp-image-843334" /><br />
+Skikit-learn is one of the most popular ML libraries for classical ML algorithms. It is built on top of two basic Python libraries, viz., NumPy and SciPy. Scikit-learn supports most of the supervised and unsupervised learning algorithms. Scikit-learn can also be used for data-mining and data-analysis, which makes it a great tool who is starting out with ML.</p>
+# Python script using Scikit-learn<br>
+# for Decision Tree Clasifier<br>
+<br>
+# Sample Decision Tree Classifier<br>
+from sklearn import datasets<br>
+from sklearn import metrics<br>
+from sklearn.tree import DecisionTreeClassifier<br>
+<br>
+# load the iris datasets<br>
+dataset = datasets.load_iris()<br>
+<br>
+# fit a CART model to the data<br>
+model = DecisionTreeClassifier()<br>
+model.fit(dataset.data, dataset.target)<br>
+print(model)<br>
+<br>
+# make predictions<br>
+expected = dataset.target<br>
+predicted = model.predict(dataset.data)<br>
+<br>
+# summarize the fit of the model<br>
+print(metrics.classification_report(expected, predicted))<br>
+print(metrics.confusion_matrix(expected, predicted))<br>
+Output:<br>
+<br>
+DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,<br>
+            max_features=None, max_leaf_nodes=None,<br>
+            min_impurity_decrease=0.0, min_impurity_split=None,<br>
+            min_samples_leaf=1, min_samples_split=2,<br>
+            min_weight_fraction_leaf=0.0, presort=False, random_state=None,<br>
+            splitter='best')<br>
+              precision    recall  f1-score   support<br>
+
+            <br>0 :-     1.00      1.00      1.00        50
+           <br> 1 :-     1.00      1.00      1.00        50
+           <br>2  :-     1.00      1.00      1.00        50
+
+   <br> micro avg :-     1.00      1.00      1.00       150
+    <br> macro avg :-    1.00      1.00      1.00       150
+<br> weighted avg :-     1.00      1.00      1.00       150
+<br>
+<br>[[50  0  0]
+<br> [ 0 50  0]
+ <br>[ 0  0 50]]
+<h4 style="text-align: center">Theano</h4>
+<p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/image8-2.png" alt="" width="210" height="70" class="aligncenter size-full wp-image-843452" /><br />
+We all know that Machine Learning is basically mathematics and statistics. Theano is a popular python library that is used to define, evaluate and optimize mathematical expressions involving multi-dimensional arrays in an efficient manner. It is achieved by optimizing the utilization of CPU and GPU. It is extensively used for unit-testing and self-verification to detect and diagnose different types of errors. Theano is a very powerful library that has been used in large-scale computationally intensive scientific projects for a long time but is simple and approachable enough to be used by individuals for their own projects.</p>
+# Python program using Theano <br>
+# for computing a Logistic  <br>
+# Function <br>
+  <br>
+import theano <br>
+import theano.tensor as T <br>
+x = T.dmatrix('x')<br>
+s = 1 / (1 + T.exp(-x)) <br>
+                <br>
+logistic = theano.function([x], s) <br>
+logistic([[0, 1], [-1, -2]])<br>
+Output:<br>
+<br>
+array([[0.5, 0.73105858],<br>
+       [0.26894142, 0.11920292]])<br>
+<h4 style="text-align: center">TensorFlow</h4>
+<p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/image10-2-300x181.jpg" alt="" width="300" height="181" class="aligncenter size-medium wp-image-843381" /><br />
+TensorFlow is a very popular open-source library for high performance numerical computation developed by the Google Brain team in Google. As the name suggests, Tensorflow is a framework that involves defining and running computations involving tensors. It can train and run deep neural networks that can be used to develop several AI applications. TensorFlow is widely used in the field of deep learning research and application.</p>
+#  Python program using TensorFlow <br>
+#  for multiplying two arrays <br>
+  <br>
+# import `tensorflow`<br>
+import tensorflow as tf<br>
+<br>
+# Initialize two constants <br>
+x1 = tf.constant([1, 2, 3, 4])<br>
+x2 = tf.constant([5, 6, 7, 8])<br>
+<br>
+# Multiply<br>
+result = tf.multiply(x1, x2)<br>
+<br>
+# Intialize the Session<br>
+sess = tf.Session()<br>
+<br>
+# Print the result<br>
+print(sess.run(result))<br>
+<br>
+# Close the session<br>
+sess.close()<br>
+    <br>
+Output:<br>
+
+
+<br>
+
+
+[ 5 12 21 32]<br>
+<h4 style="text-align: center">Keras</h4>
+<p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/keras-logo-2018-large-1200-1-300x87.png" alt="" width="300" height="87" class="aligncenter size-medium wp-image-843427" /><br />
+Keras is a very popular Machine Learning library for Python. It is a high-level neural networks API capable of running on top of TensorFlow, CNTK, or Theano. It can run seamlessly on both CPU and GPU. Keras makes it really for ML beginners to build and design a Neural Network. One of the best thing about Keras is that it allows for easy and fast prototyping.</p>
+<p>For more details refer to <a href="https://keras.io/" rel="noopener" target="_blank"> documentation</a>.<br />
+&nbsp;</p>
+<h4 style="text-align: center">PyTorch</h4>
+<p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/image11.png" alt="" width="300" height="210" class="aligncenter size-full wp-image-843347" /><br />
+PyTorch is a popular open-source Machine Learning library for Python based on Torch, which is an open-source Machine Learning library which is implemented in C with a wrapper in Lua. It has an extensive choice of tools and libraries that supports on Computer Vision, Natural Language Processing(NLP) and many more ML programs. It allows developers to perform computations on Tensors with GPU acceleration and also helps in creating computational graphs.</p>
+
+    # Python program using PyTorch<br>
+# for defining tensors fit a<br>
+# two-layer network to random<br>
+# data and calculating the loss<br>
+        <br>
+import torch<br>
+
+<br>
+dtype = torch.float<br>
+    <br>
+device = torch.device("cpu")<br>
+    <br>
+# device = torch.device("cuda:0") Uncomment this to run on GPU<br>
+<br>
+# N is batch size; D_in is input dimension;<br>
+# H is hidden dimension; D_out is output dimension.<br>
+    <br>
+N, D_in, H, D_out = 64, 1000, 100, 10<br>
+
+# Create random input and output data<br>
+    <br>
+x = torch.randn(N, D_in, device = device, dtype = dtype)<br>
+y = torch.randn(N, D_out, device = device, dtype = dtype)<br>
+<br>
+# Randomly initialize weights<br>
+    <br>
+w1 = torch.randn(D_in, H, device = device, dtype = dtype)<br>
+w2 = torch.randn(H, D_out, device = device, dtype = dtype)<br>
+
+learning_rate = 1e-6<br>
+for t in range(500):<br>
+    # Forward pass: compute predicted y<br>
+    h = x.mm(w1)<br>
+    h_relu = h.clamp(min = 0)<br>
+    y_pred = h_relu.mm(w2)<br>
+    <br>
+
+    # Compute and print loss<br>
+    loss = (y_pred - y).pow(2).sum().item()<br>
+    print(t, loss)<br>
+<br>
+    # Backprop to compute gradients of w1 and w2 with respect to loss<br>
+    grad_y_pred = 2.0 * (y_pred - y)<br>
+    grad_w2 = h_relu.t().mm(grad_y_pred)<br>
+    grad_h_relu = grad_y_pred.mm(w2.t())<br>
+    grad_h = grad_h_relu.clone()<br>
+    grad_h[h < 0] = 0<br>
+    grad_w1 = x.t().mm(grad_h)<br>
+<br>
+    # Update weights using gradient descent<br>
+    w1 -= learning_rate * grad_w1<br>
+    w2 -= learning_rate * grad_w2<br>
+Output:<br>
+
+0 47168344.0<br>
+1 46385584.0<br>
+2 43153576.0<br>
+...<br>
+...<br>
+...<br>
+497 3.987660602433607e-05<br>
+498 3.945609932998195e-05<br>
+499 3.897604619851336e-05<br>
+                </center>
+</center>
+            </div>
+
+            <div class="p3" style="border:solid 0px;height:1000px;display:none">
+                <center><h1>Introduction to Data in ML</h1></center>
+<p><strong>DATA :</strong> It can be any unprocessed fact, value, text, sound or picture that is not being interpreted and analyzed. Data is the most important part of all Data Analytics, Machine Learning, Artificial Intelligence. Without data, we can&#8217;t train any model and all modern research and automation will go vain. Big Enterprises are spending loads of money just to gather as much certain data as possible.<br />
+<strong>Example:</strong> Why did Facebook acquire WhatsApp by paying a huge price of $19 billion?<br />
+The answer is very simple and logical &#8211; it is to have access to the users&#8217; information that Facebook may not have but WhatsApp will have. This information of their users is of paramount importance to Facebook as it will facilitate the task of improvement in their services.<br />
+<strong>INFORMATION :</strong> Data that has been interpreted and manipulated and has now some meaningful inference for the users.<br />
+<strong>KNOWLEDGE :</strong> Combination of inferred information, experiences, learning and insights. Results in awareness or concept building for an individual or organization.</p>
+<p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/DATA-1.png" alt="" width="574" height="85" class="aligncenter size-full wp-image-400289" /></p>
+<p><strong>How we split data in Machine Learning?</strong></p>
+<ul>
+<li><strong>Training Data:   </strong>The part of data we use to train our model. This is the data which your model actually sees(both input and output) and learn from.</li>
+<li><strong>Validation Data: </strong>The part of data which is used to do a frequent evaluation of model, fit on training dataset along with improving involved hyperparameters (initially set parameters before the model begins learning). This data plays it&#8217;s part when the model is actually training.</li>
+<li><strong>Testing Data:    </strong>Once our model is completely trained, testing data provides the unbiased evaluation. When we feed in the inputs of Testing data, our model will predict some values(without seeing actual output). After prediction, we evaluate our model by comparing it with actual output present in the testing data. This is how we evaluate and see how much our model has learned from the experiences feed in as training data, set at the time of training.</li>
+</ul>
+<p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/Types-of-Data-in-ML.png" alt="" width="500" height="170" class="aligncenter size-full wp-image-400726" /></p>
+<p>Consider an example:<br />
+There&#8217;s a Shopping Mart Owner who conducted a survey for which he has a long list of questions and answers that he had asked from the customers, this list of questions and answers is <strong>DATA</strong>. Now every time when he want to infer anything and can&#8217;t just go through each and every question of thousands of customers to find something relevant as it would be time-consuming and not helpful. In order to reduce this overhead and time wastage and to make work easier, data is manipulated through software, calculations, graphs etc. as per own convenience, this inference from manipulated data is <strong>Information</strong>. So, Data is must for Information. Now <strong>Knowledge</strong> has its role in differentiating between two individuals having same information. Knowledge is actually not a technical content but is linked to human thought process.</p><br/>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- post_top_responsive -->
+          <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-9465609616171866"
+          data-ad-slot="4501693235"
+          data-ad-format="auto"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <br/>
+
+<p><strong>Properties of Data &#8211; </strong></p>
+<ol>
+<li><strong>Volume   : </strong>Scale of Data. With growing world population and technology at exposure, huge data is being generated each and every millisecond. </li>
+<li><strong>Variety  : </strong>Different forms of data &#8211; healthcare, images, videos, audio clippings. </li>
+<li><strong>Velocity : </strong>Rate of data streaming and generation. </li>
+<li><strong>Value    : </strong>Meaningfulness of data in terms of information which researchers can infer from it. </li>
+<li><strong>Veracity : </strong>Certainty and correctness in data we are working on. </li>
+</ol>
+<p><strong>Some facts about Data:</strong></p>
+<ul>
+<li>As compared to 2005, 300 times i.e. 40 Zettabytes (1ZB=10^21 bytes) of data will be generated by 2020. </li>
+<li>By 2011, healthcare sector has a data of 161 Billion Gigabytes</li>
+<li>400 Million tweets are sent by about 200 million active users per day</li>
+<li>Each month, more than 4 Billion hours of video streaming is done by the users. </li>
+<li>30 Billion different types of contents are shared every month by the user. </li>
+<li>It is reported that about 27% of data is inaccurate and so 1 in 3 business idealists or leaders don&#8217;t trust the information on which they are making decisions. </li>
+</ul>
+                <li>The above-mentioned facts are just a glimpse of the actually existing huge data statistics. When we talk in terms of real world scenario, the size of data currently present and is getting generated each and every moment is beyond our mental horizons to imagine.</li>
+            </div>
+
+<div class="p4" style="border:solid 0px;height:1000px;display:none">
+                <center><h1> Applications of ML </h1></center>
+    <strong>Introduction</strong></p>
+<p style="text-align: justify;">Machine learning is one of the most exciting technologies that one would have ever come across. As it is evident from the name, it gives the computer that which makes it more similar to humans: The ability to learn. Machine learning is actively being used today, perhaps in many more places than one would expect. We probably use a learning algorithm dozens of time without even knowing it. Applications of Machine Learning include:</p>
+<ul style="text-align: justify;">
+<li><strong>Web Search Engine:</strong> One of the reasons why search engines like google, bing etc work so well is because the system has learnt how to rank pages through a complex learning algorithm.</li>
+</ul>
+<ul style="text-align: justify;">
+<li><strong>Photo tagging Applications:</strong> Be it facebook or any other photo tagging application, the ability to tag friends makes it even more happening. It is all possible because of a face recognition algorithm that runs behind the application.</li>
+</ul>
+<ul style="text-align: justify;">
+<li><strong>Spam Detector:</strong> Our mail agent like Gmail or Hotmail does a lot of hard work for us in classifying the mails and moving the spam mails to spam folder. This is again achieved by a spam classifier running in the back end of mail application.</li>
+</ul>
+<p style="text-align: justify;">Today, companies are using Machine Learning to improve business decisions,increase productivity, detect disease, forecast weather, and do many more things. With the exponential growth of technology, we not only need better tools to understand the data we currently have, but we also need to prepare ourselves for the data we will have. To achieve this goal we need to build intelligent machines. We can write a program to do simple things. But for most of times Hardwiring Intelligence in it is difficult. Best way to do it is to have some way for machines to learn things themselves. A mechanism for learning &#8211; if a machine can learn from input then it does the hard work for us. This is where Machine Learning comes in action. Some examples of machine learning are:</p>
+<ul style="text-align: justify;">
+<li><strong>Database Mining for growth of automation:</strong> Typical applications include Web-click data for better UX( User eXperience), Medical records for better automation in healthcare, biological data and many more.</li>
+</ul>
+<ul style="text-align: justify;">
+<li><strong>Applications that cannot be programmed:</strong> There are some tasks that cannot be programmed as the computers we use are not modelled that way. Examples include Autonomous Driving, Recognition tasks from unordered data (Face Recognition/ Handwriting Recognition), Natural language Processing, computer Vision etc.</li>
+<li><strong>Understanding Human Learning:</strong> This is the closest we have understood and mimicked the human brain. It is the start of a new revolution, The real AI. Now, After a brief insight lets come to a more formal definition of Machine Learning</li>
+<li><strong>Arthur Samuel(1959):</strong> “Machine Learning is a field of study that gives computers, the ability to learn without explicitly being programmed.”Samuel wrote a Checker playing program which could learn over time. At first it could be easily won. But over time, it learnt all the board position that would eventually lead him to victory or loss and thus became a better chess player than Samuel itself. This was one of the most early attempts of defining Machine Learning and is somewhat less formal.</li>
+<li><strong>Tom Michel(1999):</strong> “A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.” This is a more formal and mathematical definition. For the previous Chess program
+<ul>
+<li>E is number of games.</li>
+<li>T is playing chess against computer.</li>
+<li>P is win/loss by computer.</li>
+</ul>
+</li>
+</ul>
+</div>
+
+            <div class="p5" style="border:solid 0px;height:1000px;display:none">
+                <center><h1>Machine Learning and Artificial Intelligence</h1></center>
+                Machine Learning and Artificial Intelligence are creating a huge buzz worldwide. The plethora of applications in Artificial Intelligence have changed the face of technology. These terms Machine Learning and Artificial Intelligence are often used interchangeably. However, there is a stark difference between the two that is still unknown to the industry professionals.<br />
+Let’s start by taking an example of Virtual Personal Assistants which have been familiar to most of us from quite some time now.</p>
+<p><b> Working of Virtual Personal Assistants &#8211;</b><br />
+<strong>Siri</strong>(part of Apple Inc.&#8217;s iOS, watchOS, macOS, and tvOS operating systems),<strong> Google Now</strong> (a feature of Google Search offering predictive cards with information and daily updates in the Google app for Android and iOS.), <strong>Cortana</strong> (Cortana is a virtual assistant created by Microsoft for Windows 10) are intelligent digital personal assistants on the platforms like iOS, Android and Windows respectively. To put it plainly, they help to find relevant information when requested using voice. For instance, for answering queries like ‘What’s the temperature today?’ or ‘What is the way to the nearest supermarket’ etc. and the assistant will react by searching information, transferring that information from the phone or sending commands to various other applications.</p>
+<p>AI is critical in these applications, as they gather data on the user&#8217;s request and utilize that data to perceive speech in a better manner and serve the user with answers that are customized to his inclination. <strong>Microsoft says that Cortana &#8220;consistently finds out about its user&#8221; and that it will in the end build up the capacity to anticipate users’ needs and cater to them.</strong> Virtual assistants process a tremendous measure of information from an assortment of sources to find out about users and be more compelling in helping them arrange and track their data. Machine learning is a vital part of these personal assistants as they gather and refine the data based on user&#8217;s past participation with them. Thereon, this arrangement of information is used to render results that are custom-made to user&#8217;s inclinations.</p>
+<p>Roughly speaking, Artificial Intelligence (AI) is when a computer algorithm does intelligent work. On the other hand, Machine Learning is a part of AI that learns from the data that also involves the information gathered from the previous experiences and allows the computer program to change its behavior accordingly. <strong>Artificial Intelligence is the superset of Machine Learning</strong> i.e. all the Machine Learning is Artificial Intelligence but not all the AI is Machine Learning.<br />
+<br /></br> </p>
+<table width="100%" style="table-layout:fixed;">
+<thead>
+<tr>
+<th style="padding:8px;background-color:#4CB96B;text-align:centre;">Artificial Intelligence</th>
+<th style="padding:8px;background-color:#4CB96B;text-align:centre;">Machine Learning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">AI manages more comprehensive issues of automating a system. This computerization should be possible by utilizing any field such as image processing, cognitive science, neural systems, machine learning etc.</p>
+</td>
+<td style="text-align:left;">Machine Learning (ML) manages influencing user&#8217;s machine to gain from the external environment. This external environment can be sensors, electronic segments, external storage gadgets and numerous other devices.
+</td>
+</tr>
+<tr>
+<td style="background-color:rgba(183,223,182,0.4);text-align:left;">AI manages the making of machines, frameworks and different gadgets savvy by enabling them to think and do errands as all people generally do.</td>
+<td style="background-color:rgba(183,223,182,0.4);text-align:left;">What ML does, depends on the user input or a query requested by the client, the framework checks whether it is available in the knowledge base or not. If it is available, it will restore the outcome to the user related with that query, however if it isn&#8217;t stored initially, the machine will take in the user input and will enhance its knowledge base, to give a better value to the end user</td>
+</tr>
+</tbody>
+</table>
+<p><b> Future Scope &#8211;</b></p>
+<ul>
+<li>Artificial Intelligence is here to stay and is going nowhere. It digs out the facts from algorithms for a meaningful execution of various decisions and goals predetermined by a firm.</li>
+<li> Artificial Intelligence and Machine Learning are likely to replace the current mode of technology that we see these days, for example, traditional programming packages like <strong>ERP</strong> and <strong>CRM</strong> are certainly losing their charm.</li>
+<li>Firms like Facebook, Google are investing a hefty amount in AI to get the desired outcome at a relatively lower computational time.</li>
+<li>Artificial Intelligence is something that is going to redefine the world of software and IT in the near future.</li>
+</ul>
+
+            </div>
+
+             <div class="p6" style="border:solid 0px;height:5000px;display:none">
+                <center><h1>Artificial Intelligence and its Agents</h1></center>
+
+			<p>Artificial intelligence is defined as study of rational agents. A rational agent could be anything which makes decisions, like a person, firm, machine, or software. It carries out an action with the best outcome after considering past and current percepts(agent’s perceptual inputs at a given instance).<br />
+An AI system is composed of an <strong>agent and its environment</strong>. The agents act in their environment. The environment may contain other agents. An agent is anything that can be viewed as :</p>
+<ul>
+<li> perceiving its environment through <strong>sensors</strong> and</li>
+<li> acting upon that environment through <strong>actuators</strong></li>
+</ul>
+<p><strong>Note</strong> : Every agent can perceive its own actions (but not always the effects)<br />
+<img src="https://www.geeksforgeeks.org/wp-content/uploads/AI1.png" alt="" class="aligncenter size-medium wp-image-176733" srcset="https://www.geeksforgeeks.org/wp-content/uploads/AI1.png 488w, https://www.geeksforgeeks.org/wp-content/uploads/AI1-300x241.png 300w" sizes="(max-width: 488px) 100vw, 488px" /><br />
+To understand the structure of Intelligent Agents, we should be familiar with <em>Architecture</em> and <em>Agent Program</em>. <strong>Architecture</strong> is the machinery that the agent executes on. It is a device with sensors and actuators, for example : a robotic car, a camera, a PC. <strong>Agent program</strong> is an implementation of an agent function. An <strong>agent function</strong> is a map from the percept sequence(history of all that an agent has perceived till date) to an action.</p>
+<blockquote><p>Agent = Architecture + Agent Program</p></blockquote>
+<p>Examples of Agent:-<br />
+A <strong>software agent</strong> has Keystrokes, file contents, received network packages which act as sensors and displays on the screen, files, sent network packets acting as actuators.<br />
+A <strong>Human agent</strong> has eyes, ears, and other organs which act as sensors and hands, legs, mouth, and other body parts acting as actuators.<br />
+A <strong>Robotic agent</strong> has Cameras and infrared range finders which act as sensors and various motors acting as actuators.<br />
+<img src="https://www.geeksforgeeks.org/wp-content/uploads/ai2.png" alt=""class="aligncenter size-medium wp-image-176752" srcset="https://www.geeksforgeeks.org/wp-content/uploads/ai2.png 534w, https://www.geeksforgeeks.org/wp-content/uploads/ai2-300x207.png 300w" sizes="(max-width: 534px) 100vw, 534px" /></p>
+<h2> Types of Agents </h2>
+<p>Agents can be grouped into four classes based on their degree of perceived intelligence and capability :</p><br/>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- post_top_responsive -->
+          <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-9465609616171866"
+          data-ad-slot="4501693235"
+          data-ad-format="auto"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <br/>
+
+<ul>
+<li>Simple Reflex Agents</li>
+<li>Model-Based Reflex Agents</li>
+<li>Goal-Based Agents</li>
+<li>Utility-Based Agents</li>
+</ul>
+<h3>Simple reflex agents</h3>
+<p>Simple reflex agents ignore the rest of the percept history and act only on the basis of the <strong>current percept</strong>. Percept history is the history of all that an agent has perceived till date. The agent function is based on the <strong>condition-action rule</strong>. A condition-action rule is a rule that maps a state i.e, condition to an action. If the condition is true, then the action is taken, else not. This agent function only succeeds when the environment is fully observable. For simple reflex agents operating in partially observable environments, infinite loops are often unavoidable. It may be possible to escape from infinite loops if the agent can randomize its actions. Problems with Simple reflex agents are : </p>
+<ul>
+<li>Very limited intelligence.</li>
+<li>No knowledge of non-perceptual parts of state.</li>
+<li>Usually too big to generate and store.</li>
+<li>If there occurs any change in the environment, then the collection of rules need to be updated.</li>
+</ul>
+<p><img src="https://www.geeksforgeeks.org/wp-content/uploads/ai3-1.png" alt="" class="alignnone size-medium wp-image-176778" srcset="https://www.geeksforgeeks.org/wp-content/uploads/ai3-1.png 744w, https://www.geeksforgeeks.org/wp-content/uploads/ai3-1-300x154.png 300w, https://www.geeksforgeeks.org/wp-content/uploads/ai3-1-660x339.png 660w" sizes="(max-width: 744px) 100vw, 744px" /></p>
+<h3>Model-based reflex agents</h3>
+<p>It works by finding a rule whose condition matches the current situation. A model-based agent can handle <strong>partially observable environments</strong> by use of model about the world. The agent has to keep track of <strong>internal state</strong> which is adjusted by each percept and that depends on the percept history. The current state is stored inside the agent which maintains some kind of structure describing the part of the world which cannot be seen. Updating the state requires the information about :</p>
+<ul>
+<li>how the world evolves in-dependently from the agent, and</li>
+<li>how the agent actions affects the world.</li>
+</ul>
+<p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/art1.png" alt="" width="612" height="354" class="aligncenter size-full wp-image-311381" /></p>
+<h3>Goal-based agents</h3>
+<p>These kind of agents take decision based on how far they are currently from their <strong>goal</strong>(description of desirable situations). Their every action is intended to reduce its distance from goal. This allows the agent a way to choose among multiple possibilities, selecting the one which reaches a goal state. The knowledge that supports its decisions is represented explicitly and can be modified, which makes these agents more flexible. They usually require search and planning. The goal based agent&#8217;s behavior can easily be changed.<br />
+<img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/art2.png" alt="" width="612" height="354" class="aligncenter size-full wp-image-311419" /></p>
+<h3>Utility-based agents</h3>
+<p>The agents which are developed having their end uses as building blocks are called utility based agents. When there are multiple possible alternatives, then to decide which one is best, utility based agents are used.They choose actions based on a <strong>preference (utility)</strong> for each state. Sometimes achieving the desired goal is not enough. We may look for quicker, safer, cheaper trip to reach a destination. Agent happiness should be taken into consideration. Utility describes how <strong>&#8220;happy&#8221;</strong> the agent is. Because of the uncertainty in the world, a utility agent chooses the action that maximizes the expected utility. A utility function maps a state onto a real number which describes the associated degree of happiness.<br />
+<img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/art3.png" alt="" width="612" height="464" class="aligncenter size-full wp-image-311420" /></p>
+<br/><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+             </div>
+        </div><!--  6 div close --->
+
+    <div class="col-md-3 bll"></div>
+</div>
+</div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

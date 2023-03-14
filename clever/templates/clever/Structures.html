@@ -1,0 +1,372 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:5200px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+                <h2>  C Programming</h2>
+                <a href="{% url 'C1' %}">C - Home</a>
+                <a href="{% url 'EnvironmentSetup1' %}">C - Environment Setup</a>
+                <a href="{% url 'ProgramStructure1' %}">C - Program Structure</a>
+                <a href="{% url 'BasicSyntax1' %}">C - Basic Syntax</a>
+                <a href="{% url 'DataTypes1' %}">C - Data Types</a>
+                <a href="{% url 'Variables1' %}">C - Variables</a>
+                  <a href="{% url 'Constants1' %}">C - Constants</a>
+                 <a href="{% url 'StorageClass1' %}">C - Storage Classes</a>
+                <a href="{% url 'Operators1' %}">C - Operators</a>
+                <a href="{% url 'DecisionMaking1' %}">C - Decision Making</a>
+                <a href="{% url 'Loops1' %}">C - Loops</a>
+                <a href="{% url 'Functions1' %}">C - Functions</a>
+                 <a href="{% url 'ScopeRules1' %}">C - Scope Rules</a>
+                <a href="{% url 'Arrays1' %}">C - Arrays</a>
+                 <a href="{% url 'Pointers1' %}">C - Pointers</a>
+                <a href="{% url 'Strings1' %}">C - Strings</a>
+                <a href="{% url 'Structures1' %}">C - Structures</a>
+                 <a href="{% url 'Unions1' %}">C - Unions</a>
+                <a href="{% url 'BitField1' %}">C - Bit Fields</a>
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>Structures In C</h1></center>
+
+            </div>
+<p>Arrays allow to define type of variables that can hold several data items of the same kind. Similarly <b>structure</b> is another user defined data type available in C that allows to combine data items of different kinds.</p>
+<p>Structures are used to represent a record. Suppose you want to keep track of your books in a library. You might want to track the following attributes about each book &minus;</p>
+
+<li>Title</li>
+<li>Author</li>
+<li>Subject</li>
+<li>Book ID</li>
+
+<h2>Defining a Structure</h2>
+<p>To define a structure, you must use the <b>struct</b> statement. The struct statement defines a new data type, with more than one member. The format of the struct statement is as follows &minus;</p>
+<pre class="prettyprint notranslate">
+struct [structure tag] {
+
+   member definition;
+   member definition;
+   ...
+   member definition;
+} [one or more structure variables];
+</pre>
+<p>The <b>structure tag</b> is optional and each member definition is a normal variable definition, such as int i; or float f; or any other valid variable definition. At the end of the structure's definition, before the final semicolon, you can specify one or more structure variables but it is optional. Here is the way you would declare the Book structure &minus;</p>
+<pre class="prettyprint notranslate">
+struct Books {
+   char  title[50];
+   char  author[50];
+   char  subject[100];
+   int   book_id;
+} book;
+</pre>
+<h2>Accessing Structure Members</h2>
+<p>To access any member of a structure, we use the <b>member access operator (.)</b>. The member access operator is coded as a period between the structure variable name and the structure member that we wish to access. You would use the keyword <b>struct</b> to define variables of structure type. The following example shows how to use a structure in a program &minus;</p>
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+struct Books {
+   char  title[50];
+   char  author[50];
+   char  subject[100];
+   int   book_id;
+};
+
+int main( ) {
+
+   struct Books Book1;        /* Declare Book1 of type Book */
+   struct Books Book2;        /* Declare Book2 of type Book */
+
+   /* book 1 specification */
+   strcpy( Book1.title, "C Programming");
+   strcpy( Book1.author, "Nuha Ali");
+   strcpy( Book1.subject, "C Programming Tutorial");
+   Book1.book_id = 6495407;
+
+   /* book 2 specification */
+   strcpy( Book2.title, "Telecom Billing");
+   strcpy( Book2.author, "Zara Ali");
+   strcpy( Book2.subject, "Telecom Billing Tutorial");
+   Book2.book_id = 6495700;
+
+   /* print Book1 info */
+   printf( "Book 1 title : %s\n", Book1.title);
+   printf( "Book 1 author : %s\n", Book1.author);
+   printf( "Book 1 subject : %s\n", Book1.subject);
+   printf( "Book 1 book_id : %d\n", Book1.book_id);
+
+   /* print Book2 info */
+   printf( "Book 2 title : %s\n", Book2.title);
+   printf( "Book 2 author : %s\n", Book2.author);
+   printf( "Book 2 subject : %s\n", Book2.subject);
+   printf( "Book 2 book_id : %d\n", Book2.book_id);
+
+   return 0;
+}
+</pre>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+Book 1 title : C Programming
+Book 1 author : Nuha Ali
+Book 1 subject : C Programming Tutorial
+Book 1 book_id : 6495407
+Book 2 title : Telecom Billing
+Book 2 author : Zara Ali
+Book 2 subject : Telecom Billing Tutorial
+Book 2 book_id : 6495700
+</pre>
+<h2>Structures as Function Arguments</h2>
+<p>You can pass a structure as a function argument in the same way as you pass any other variable or pointer.</p>
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+struct Books {
+   char  title[50];
+   char  author[50];
+   char  subject[100];
+   int   book_id;
+};
+
+/* function declaration */
+void printBook( struct Books book );
+
+int main( ) {
+
+   struct Books Book1;        /* Declare Book1 of type Book */
+   struct Books Book2;        /* Declare Book2 of type Book */
+
+   /* book 1 specification */
+   strcpy( Book1.title, "C Programming");
+   strcpy( Book1.author, "Nuha Ali");
+   strcpy( Book1.subject, "C Programming Tutorial");
+   Book1.book_id = 6495407;
+
+   /* book 2 specification */
+   strcpy( Book2.title, "Telecom Billing");
+   strcpy( Book2.author, "Zara Ali");
+   strcpy( Book2.subject, "Telecom Billing Tutorial");
+   Book2.book_id = 6495700;
+
+   /* print Book1 info */
+   printBook( Book1 );
+
+   /* Print Book2 info */
+   printBook( Book2 );
+
+   return 0;
+}
+
+void printBook( struct Books book ) {
+
+   printf( "Book title : %s\n", book.title);
+   printf( "Book author : %s\n", book.author);
+   printf( "Book subject : %s\n", book.subject);
+   printf( "Book book_id : %d\n", book.book_id);
+}
+</pre>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+Book title : C Programming
+Book author : Nuha Ali
+Book subject : C Programming Tutorial
+Book book_id : 6495407
+Book title : Telecom Billing
+Book author : Zara Ali
+Book subject : Telecom Billing Tutorial
+Book book_id : 6495700
+</pre>
+<h2>Pointers to Structures</h2>
+<p>You can define pointers to structures in the same way as you define pointer to any other variable &minus;</p>
+<pre class="result notranslate">
+struct Books *struct_pointer;
+</pre>
+<p>Now, you can store the address of a structure variable in the above defined pointer variable. To find the address of a structure variable, place the '&amp'; operator before the structure's name as follows &minus;</p>
+<pre class="prettyprint notranslate">
+struct_pointer = &amp;Book1;
+</pre>
+<p>To access the members of a structure using a pointer to that structure, you must use the &rarr; operator as follows &minus;</p>
+<pre class="prettyprint notranslate">
+struct_pointer-&gt;title;
+</pre>
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+struct Books {
+   char  title[50];
+   char  author[50];
+   char  subject[100];
+   int   book_id;
+};
+
+/* function declaration */
+void printBook( struct Books *book );
+int main( ) {
+
+   struct Books Book1;        /* Declare Book1 of type Book */
+   struct Books Book2;        /* Declare Book2 of type Book */
+
+   /* book 1 specification */
+   strcpy( Book1.title, "C Programming");
+   strcpy( Book1.author, "Nuha Ali");
+   strcpy( Book1.subject, "C Programming Tutorial");
+   Book1.book_id = 6495407;
+
+   /* book 2 specification */
+   strcpy( Book2.title, "Telecom Billing");
+   strcpy( Book2.author, "Zara Ali");
+   strcpy( Book2.subject, "Telecom Billing Tutorial");
+   Book2.book_id = 6495700;
+
+   /* print Book1 info by passing address of Book1 */
+   printBook( &amp;Book1 );
+
+   /* print Book2 info by passing address of Book2 */
+   printBook( &amp;Book2 );
+
+   return 0;
+}
+
+void printBook( struct Books *book ) {
+
+   printf( "Book title : %s\n", book-&gt;title);
+   printf( "Book author : %s\n", book-&gt;author);
+   printf( "Book subject : %s\n", book-&gt;subject);
+   printf( "Book book_id : %d\n", book-&gt;book_id);
+}
+</pre>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+Book title : C Programming
+Book author : Nuha Ali
+Book subject : C Programming Tutorial
+Book book_id : 6495407
+Book title : Telecom Billing
+Book author : Zara Ali
+Book subject : Telecom Billing Tutorial
+Book book_id : 6495700
+</pre>
+<h2>Bit Fields</h2>
+<p>Bit Fields allow the packing of data in a structure. This is especially useful when memory or data storage is at a premium. Typical examples include &minus;</p>
+<ul class="list">
+<li><p>Packing several objects into a machine word. e.g. 1 bit flags can be compacted.</p></li>
+<li><p>Reading external file formats -- non-standard file formats could be read in, e.g., 9-bit integers.</p></li>
+</ul>
+<p>C allows us to do this in a structure definition by putting :bit length after the variable. For example &minus;</p>
+<pre class="prettyprint notranslate">
+struct packed_struct {
+   unsigned int f1:1;
+   unsigned int f2:1;
+   unsigned int f3:1;
+   unsigned int f4:1;
+   unsigned int type:4;
+   unsigned int my_int:9;
+} pack;
+</pre>
+<p>Here, the packed_struct contains 6 members: Four 1 bit flags f1..f3, a 4-bit type and a 9-bit my_int.</p>
+<p>C automatically packs the above bit fields as compactly as possible, provided that the maximum length of the field is less than or equal to the integer word length of the computer. If this is not the case, then some compilers may allow memory overlap for the fields while others would store the next field in the next word.</p>
+<hr />
+            <center><a href="{% url 'Strings1' %}" class="previous">&laquo; Previous</a>
+            <a href="{% url 'Unions1' %}" class="next">Next &raquo;</a></center>
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

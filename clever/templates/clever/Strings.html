@@ -1,0 +1,241 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:2460px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+                <h2>  C Programming</h2>
+                <a href="{% url 'C1' %}">C - Home</a>
+                <a href="{% url 'EnvironmentSetup1' %}">C - Environment Setup</a>
+                <a href="{% url 'ProgramStructure1' %}">C - Program Structure</a>
+                <a href="{% url 'BasicSyntax1' %}">C - Basic Syntax</a>
+                <a href="{% url 'DataTypes1' %}">C - Data Types</a>
+                <a href="{% url 'Variables1' %}">C - Variables</a>
+                  <a href="{% url 'Constants1' %}">C - Constants</a>
+                 <a href="{% url 'StorageClass1' %}">C - Storage Classes</a>
+                <a href="{% url 'Operators1' %}">C - Operators</a>
+                <a href="{% url 'DecisionMaking1' %}">C - Decision Making</a>
+                <a href="{% url 'Loops1' %}">C - Loops</a>
+                <a href="{% url 'Functions1' %}">C - Functions</a>
+                 <a href="{% url 'ScopeRules1' %}">C - Scope Rules</a>
+                <a href="{% url 'Arrays1' %}">C - Arrays</a>
+                 <a href="{% url 'Pointers1' %}">C - Pointers</a>
+                <a href="{% url 'Strings1' %}">C - Strings</a>
+                <a href="{% url 'Structures1' %}">C - Structures</a>
+                 <a href="{% url 'Unions1' %}">C - Unions</a>
+                <a href="{% url 'BitField1' %}">C - Bit Fields</a>
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>Strings In C</h1></center>
+
+            </div>
+<p>Strings are actually one-dimensional array of characters terminated by a <b>null</b> character '\0'. Thus a null-terminated string contains the characters that comprise the string followed by a <b>null</b>.</p>
+<p>The following declaration and initialization create a string consisting of the word "Hello". To hold the null character at the end of the array, the size of the character array containing the string is one more than the number of characters in the word "Hello."</p>
+<pre class="result notranslate">
+char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+</pre>
+<p>If you follow the rule of array initialization then you can write the above statement as follows &minus;</p>
+<pre class="result notranslate">
+char greeting[] = "Hello";
+</pre>
+<p>Following is the memory presentation of the above defined string in C/C++ &minus;</p>
+<center><img src="{% static 'clever/img/bg-img/str.jpg' %}" alt="String Presentation in C/C++"/></center><br>
+<p>Actually, you do not place the <i>null</i> character at the end of a string constant. The C compiler automatically places the '\0' at the end of the string when it initializes the array. Let us try to print the above mentioned string &minus;</p>
+
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+
+int main () {
+
+   char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+   printf("Greeting message: %s\n", greeting );
+   return 0;
+}
+</pre>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+Greeting message: Hello
+</pre>
+<p>C supports a wide range of functions that manipulate null-terminated strings &minus;</p>
+<table class="table table-bordered">
+<tr>
+<th>Sr.No.</th>
+<th style="text-align:center;">Function &amp; Purpose</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><p><b>strcpy(s1, s2);</b></p>
+<p>Copies string s2 into string s1.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><p><b>strcat(s1, s2);</b></p>
+<p>Concatenates string s2 onto the end of string s1.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><p><b>strlen(s1);</b></p>
+<p>Returns the length of string s1.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">4</td>
+<td><p><b>strcmp(s1, s2);</b></p>
+<p>Returns 0 if s1 and s2 are the same; less than 0 if s1&lt;s2; greater than 0 if s1&gt;s2.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">5</td>
+<td><p><b>strchr(s1, ch);</b></p>
+<p>Returns a pointer to the first occurrence of character ch in string s1.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">6</td>
+<td><p><b>strstr(s1, s2);</b></p>
+<p>Returns a pointer to the first occurrence of string s2 in string s1.</p>
+</td>
+</tr>
+</table>
+<p>The following example uses some of the above-mentioned functions &minus;</p>
+
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main () {
+
+   char str1[12] = "Hello";
+   char str2[12] = "World";
+   char str3[12];
+   int  len ;
+
+   /* copy str1 into str3 */
+   strcpy(str3, str1);
+   printf("strcpy( str3, str1) :  %s\n", str3 );
+
+   /* concatenates str1 and str2 */
+   strcat( str1, str2);
+   printf("strcat( str1, str2):   %s\n", str1 );
+
+   /* total lenghth of str1 after concatenation */
+   len = strlen(str1);
+   printf("strlen(str1) :  %d\n", len );
+
+   return 0;
+}
+</pre>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+strcpy( str3, str1) :  Hello
+strcat( str1, str2):   HelloWorld
+strlen(str1) :  10
+</pre>
+<hr />
+            <center><a href="{% url 'Pointers1' %}" class="previous">&laquo; Previous</a>
+            <a href="{% url 'Structures1' %}" class="next">Next &raquo;</a></center>
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

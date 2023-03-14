@@ -1,0 +1,175 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:1770px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+        <h2> C++ Programming Tutorials</h2>
+               <a href="{% url 'cpHome1' %}">C++ Home</a>
+                <a href="{% url 'cpEnvironmentSetup1' %}">C++ Environment Setup</a>
+                <a href="{% url 'cpBasicSyntax1' %}">C++ Basic Syntax</a>
+                <a href="{% url 'cpComments1' %}">C++ Comments</a>
+                <a href="{% url 'cpDataTypes1' %}">C++ Data Types</a>
+                <a href="{% url 'cpVariableTypes1' %}">C++ Variable Types</a>
+                <a href="{% url 'cpVariableScope1' %}">C++ Variable Scope</a>
+                <a href="{% url 'cpConstantsLiterals1' %}">C++ Constants/Literals</a>
+                <a href="{% url 'cpModifierTypes1' %}">C++ Modifier Types</a>
+                <a href="{% url 'cpStorageClasses1' %}">C++ Storage Classes</a>
+                <a href="{% url 'cpOperators1' %}">C++ Operators</a>
+                <a href="{% url 'cpLoopTypes1' %}">C++ Loop Types</a>
+                <a href="{% url 'cpDecisionMaking1' %}">C++ Decision Making</a>
+                <a href="{% url 'cpFunctions1' %}">C++ Functions</a>
+                <a href="{% url 'cpNumbers1' %}">C++ Numbers</a>
+                <a href="{% url 'cpArrays1' %}">C++ Arrays</a>
+
+
+
+
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>C++ Tutorial</h1></center><br>
+                        <center> <img src="{% static 'clever/img/bg-img/n.png' %}" alt=""></center><br>
+            </div>
+
+                    C++ is a statically typed, compiled, general-purpose, case-sensitive, free-form programming language that supports procedural, object-oriented, and generic programming.
+
+C++ is regarded as a middle-level language, as it comprises a combination of both high-level and low-level language features.<br>
+
+C++ was developed by Bjarne Stroustrup starting in 1979 at Bell Labs in Murray Hill, New Jersey, as an enhancement to the C language and originally named C with Classes but later it was renamed C++ in 1983.<br>
+
+C++ is a superset of C, and that virtually any legal C program is a legal C++ program.<br>
+
+Note − A programming language is said to use static typing when type checking is performed during compile-time as opposed to run-time.−
+
+                       <h2>Object-Oriented Programming</h2>
+<p>C++ fully supports object-oriented programming, including the four pillars of object-oriented development &minus;</p>
+<h2></h2>
+<li>Encapsulation</li>
+<li>Data hiding</li>
+<li>Inheritance</li>
+<li>Polymorphism</li>
+
+<h2>Standard Libraries</h2>
+<p>Standard C++ consists of three important parts &minus;</p>
+<h2></h2>
+<li>The core language giving all the building blocks including variables, data types and literals, etc.</li>
+<li>The C++ Standard Library giving a rich set of functions manipulating files, strings, etc.</li>
+<li>The Standard Template Library (STL) giving a rich set of methods manipulating data structures, etc.</li>
+            <h2>The ANSI Standard</h2>
+<p>The ANSI standard is an attempt to ensure that C++ is portable; that code you write for Microsoft's compiler will compile without errors, using a compiler on a Mac, UNIX, a Windows box, or an Alpha.</p>
+<p>The ANSI standard has been stable for a while, and all the major C++ compiler manufacturers support the ANSI standard.</p>
+<h2>Learning C++</h2>
+<p>The most important thing while learning C++ is to focus on concepts.</p>
+<p>The purpose of learning a programming language is to become a better programmer; that is, to become more effective at designing and implementing new systems and at maintaining old ones.</p>
+<p>C++ supports a variety of programming styles. You can write in the style of Fortran, C, Smalltalk, etc., in any language. Each style can achieve its aims effectively while maintaining runtime and space efficiency.</p>
+<h2>Use of C++</h2>
+<p>C++ is used by hundreds of thousands of programmers in essentially every application domain.</p>
+<p>C++ is being highly used to write device drivers and other software that rely on direct manipulation of hardware under realtime constraints.</p>
+<p>C++ is widely used for teaching and research because it is clean enough for successful teaching of basic concepts.</p>
+<p>Anyone who has used either an Apple Macintosh or a PC running Windows has indirectly used C++ because the primary user interfaces of these systems are written in C++.</p>
+<hr/>
+
+           <center><a href="{% url 'cpEnvironmentSetup1' %}" class="next">Next &raquo;</a></center>
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

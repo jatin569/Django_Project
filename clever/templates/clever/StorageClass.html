@@ -1,0 +1,233 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:2700px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+                <h2>  C Programming</h2>
+                <a href="{% url 'C1' %}">C - Home</a>
+                <a href="{% url 'EnvironmentSetup1' %}">C - Environment Setup</a>
+                <a href="{% url 'ProgramStructure1' %}">C - Program Structure</a>
+                <a href="{% url 'BasicSyntax1' %}">C - Basic Syntax</a>
+                <a href="{% url 'DataTypes1' %}">C - Data Types</a>
+                <a href="{% url 'Variables1' %}">C - Variables</a>
+                  <a href="{% url 'Constants1' %}">C - Constants</a>
+                 <a href="{% url 'StorageClass1' %}">C - Storage Classes</a>
+                <a href="{% url 'Operators1' %}">C - Operators</a>
+                <a href="{% url 'DecisionMaking1' %}">C - Decision Making</a>
+                <a href="{% url 'Loops1' %}">C - Loops</a>
+                <a href="{% url 'Functions1' %}">C - Functions</a>
+                 <a href="{% url 'ScopeRules1' %}">C - Scope Rules</a>
+                <a href="{% url 'Arrays1' %}">C - Arrays</a>
+                 <a href="{% url 'Pointers1' %}">C - Pointers</a>
+                <a href="{% url 'Strings1' %}">C - Strings</a>
+                <a href="{% url 'Structures1' %}">C - Structures</a>
+                 <a href="{% url 'Unions1' %}">C - Unions</a>
+                <a href="{% url 'BitField1' %}">C - Bit Fields</a>
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>Storage Classes</h1></center>
+
+            </div>
+<p>A storage class defines the scope (visibility) and life-time of variables and/or functions within a C Program. They precede the type that they modify. We have four different storage classes in a C program &minus;</p>
+
+<li>auto</li>
+<li>register</li>
+<li>static</li>
+<li>extern</li>
+
+<h2>The auto Storage Class</h2>
+<p>The <b>auto</b> storage class is the default storage class for all local variables.</p>
+<pre class="prettyprint notranslate">
+{
+   int mount;
+   auto int month;
+}
+</pre>
+<p>The example above defines two variables with in the same storage class. 'auto' can only be used within functions, i.e., local variables.</p>
+<h2>The register Storage Class</h2>
+<p>The <b>register</b> storage class is used to define local variables that should be stored in a register instead of RAM. This means that the variable has a maximum size equal to the register size (usually one word) and can't have the unary '&amp;' operator applied to it (as it does not have a memory location).</p>
+<pre class="prettyprint notranslate">
+{
+   register int  miles;
+}
+</pre>
+<p>The register should only be used for variables that require quick access such as counters. It should also be noted that defining 'register' does not mean that the variable will be stored in a register. It means that it MIGHT be stored in a register depending on hardware and implementation restrictions.</p>
+<h2>The static Storage Class</h2>
+<p>The <b>static</b> storage class instructs the compiler to keep a local variable in existence during the life-time of the program instead of creating and destroying it each time it comes into and goes out of scope. Therefore, making local variables static allows them to maintain their values between function calls.</p>
+<p>The static modifier may also be applied to global variables. When this is done, it causes that variable's scope to be restricted to the file in which it is declared.</p>
+<p>In C programming, when <b>static</b> is used on a global variable, it causes only one copy of that member to be shared by all the objects of its class.</p>
+
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+
+/* function declaration */
+void func(void);
+
+static int count = 5; /* global variable */
+
+main() {
+
+   while(count--) {
+      func();
+   }
+
+   return 0;
+}
+
+/* function definition */
+void func( void ) {
+
+   static int i = 5; /* local static variable */
+   i++;
+
+   printf("i is %d and count is %d\n", i, count);
+}
+</pre>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+i is 6 and count is 4
+i is 7 and count is 3
+i is 8 and count is 2
+i is 9 and count is 1
+i is 10 and count is 0
+</pre>
+<h2>The extern Storage Class</h2>
+<p>The <b>extern</b> storage class is used to give a reference of a global variable that is visible to ALL the program files. When you use 'extern', the variable cannot be initialized however, it points the variable name at a storage location that has been previously defined.</p>
+<p>When you have multiple files and you define a global variable or function, which will also be used in other files, then <i>extern</i> will be used in another file to provide the reference of defined variable or function. Just for understanding, <i>extern</i> is used to declare a global variable or function  in another file.</p>
+<p>The extern modifier is most commonly used when there are two or more files sharing the same global variables or functions as explained below.</p>
+<p><b>First File: main.c</b></p>
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+
+int count ;
+extern void write_extern();
+
+main() {
+   count = 5;
+   write_extern();
+}
+</pre>
+<p><b>Second File: support.c</b></p>
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+
+extern int count;
+
+void write_extern(void) {
+   printf("count is %d\n", count);
+}
+</pre>
+<p>Here, <i>extern</i> is being used to declare <i>count</i> in the second file, where as it has its definition in the first file, main.c. Now, compile these two files as follows &minus;</p>
+<pre class="result notranslate">
+$gcc main.c support.c
+</pre>
+<p>It will produce the executable program <b>a.out</b>. When this program is executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+count is 5
+</pre>
+            <center><a href="{% url 'Constants1' %}" class="previous">&laquo; Previous</a>
+            <a href="% url 'Operators1' %}" class="next">Next &raquo;</a></center>
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

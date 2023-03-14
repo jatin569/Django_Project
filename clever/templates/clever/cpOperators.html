@@ -1,0 +1,544 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:7800px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+        <h2> C++ Programming Tutorials</h2>
+                <a href="{% url 'cpHome1' %}">C++ Home</a>
+                <a href="{% url 'cpEnvironmentSetup1' %}">C++ Environment Setup</a>
+                <a href="{% url 'cpBasicSyntax1' %}">C++ Basic Syntax</a>
+                <a href="{% url 'cpComments1' %}">C++ Comments</a>
+                <a href="{% url 'cpDataTypes1' %}">C++ Data Types</a>
+                <a href="{% url 'cpVariableTypes1' %}">C++ Variable Types</a>
+                <a href="{% url 'cpVariableScope1' %}">C++ Variable Scope</a>
+                <a href="{% url 'cpConstantsLiterals1' %}">C++ Constants/Literals</a>
+                <a href="{% url 'cpModifierTypes1' %}">C++ Modifier Types</a>
+                <a href="{% url 'cpStorageClasses1' %}">C++ Storage Classes</a>
+                <a href="{% url 'cpOperators1' %}">C++ Operators</a>
+                <a href="{% url 'cpLoopTypes1' %}">C++ Loop Types</a>
+                <a href="{% url 'cpDecisionMaking1' %}">C++ Decision Making</a>
+                <a href="{% url 'cpFunctions1' %}">C++ Functions</a>
+                <a href="{% url 'cpNumbers1' %}">C++ Numbers</a>
+                <a href="{% url 'cpArrays1' %}">C++ Arrays</a>
+
+
+                </ul>
+
+
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>Operators in C++</h1></center><br>
+            </div>
+            <p>An operator is a symbol that tells the compiler to perform specific mathematical or logical manipulations. C++ is rich in built-in operators and provide the following types of operators &minus;</p>
+<h2></h2>
+<li>Arithmetic Operators</li>
+<li>Relational Operators</li>
+<li>Logical Operators</li>
+<li>Bitwise Operators</li>
+<li>Assignment Operators</li>
+<li>Misc Operators</li>
+
+<p>This chapter will examine the arithmetic, relational, logical, bitwise, assignment and other operators one by one.</p>
+<h2>Arithmetic Operators</h2>
+<p>There are following arithmetic operators supported by C++ language &minus;</p>
+<p>Assume variable A holds 10 and variable B holds 20, then &minus;</p>
+<p><a href="/cplusplus/cpp_arithmatic_operators.htm" title="Arithmetic Operators in C++">Show Examples</a></p>
+<table class="table table-bordered">
+<tr>
+<th width="10%" style="text-align:center;">Operator</th>
+<th width="45%" style="text-align:center;">Description</th>
+<th style="text-align:center;">Example</th>
+</tr>
+<tr>
+<td style="text-align:center;">+</td>
+<td>Adds two operands</td>
+<td style="text-align:center;">A + B will give 30</td>
+</tr>
+<tr>
+<td class="ts">-</td>
+<td>Subtracts second operand from the first</td>
+<td class="ts">A - B will give -10</td>
+</tr>
+<tr>
+<td style="text-align:center;">*</td>
+<td>Multiplies both operands</td>
+<td style="text-align:center;">A * B will give 200</td>
+</tr>
+<tr>
+<td style="text-align:center;">/</td>
+<td>Divides numerator by de-numerator</td>
+<td style="text-align:center;">B / A will give 2</td>
+</tr>
+<tr>
+<td class="ts">%</td>
+<td>Modulus Operator and remainder of after an integer division</td>
+<td class="ts">B % A will give 0</td>
+</tr>
+<tr>
+<td class="ts">++</td>
+<td><a href="/cplusplus/cpp_increment_decrement_operators.htm" title="Increment operator in C++">Increment operator</a>, increases integer value by one</td>
+<td class="ts">A++ will give 11</td>
+</tr>
+<tr>
+<td class="ts">--</td>
+<td><a href="/cplusplus/cpp_increment_decrement_operators.htm" title="Decrement operator in C++">Decrement operator</a>, decreases integer value by one</td>
+<td class="ts">A-- will give 9</td>
+</tr>
+</table>
+<h2>Relational Operators</h2>
+<p>There are following relational operators supported by C++ language</p>
+<p>Assume variable A holds 10 and variable B holds 20, then &minus;</p>
+<p><a href="/cplusplus/cpp_relational_operators.htm" title="Relational Operators in C++">Show Examples</a></p>
+<table class="table table-bordered">
+<tr>
+<th width="10%" style="text-align:center;">Operator</th>
+<th width="45%" style="text-align:center;">Description</th>
+<th style="text-align:center;">Example</th>
+</tr>
+<tr>
+<td class="ts">==</td>
+<td>Checks if the values of two operands are equal or not, if yes then condition becomes true.</td>
+<td class="ts">(A == B) is not true.</td>
+</tr>
+<tr>
+<td class="ts">!=</td>
+<td>Checks if the values of two operands are equal or not, if values are not equal then condition becomes true.</td>
+<td class="ts">(A != B) is true.</td>
+</tr>
+<tr>
+<td class="ts">&gt;</td>
+<td>Checks if the value of left  operand is greater than the value of right operand, if yes then condition becomes true.</td>
+<td class="ts">(A &gt; B) is not true.</td>
+</tr>
+<tr>
+<td class="ts">&lt;</td>
+<td>Checks if the value of left  operand is less than the value of right operand, if yes then condition becomes true.</td>
+<td class="ts">(A &lt; B) is true.</td>
+</tr>
+<tr>
+<td class="ts">&gt;=</td>
+<td>Checks if the value of left  operand is greater than or equal to the value of right operand, if yes then condition becomes true.</td>
+<td class="ts">(A &gt;= B) is not true.</td>
+</tr>
+<tr>
+<td class="ts">&lt;=</td>
+<td>Checks if the value of left  operand is less than or equal to the value of right operand, if yes then condition becomes true.</td>
+<td class="ts">(A &lt;= B) is true.</td>
+</tr>
+</table>
+<h2>Logical Operators</h2>
+<p>There are following logical operators supported by C++ language.</p>
+<p>Assume variable A holds 1 and variable B holds 0, then &minus;</p>
+<p><a href="/cplusplus/cpp_logical_operators.htm" title="Logical Operators in C++">Show Examples</a></p>
+<table class="table table-bordered">
+<tr>
+<th width="10%" style="text-align:center;">Operator</th>
+<th width="45%" style="text-align:center;">Description</th>
+<th style="text-align:center;">Example</th>
+</tr>
+<tr>
+<td class="ts">&amp;&amp;</td>
+<td>Called Logical AND  operator. If both the operands are non-zero, then condition becomes true.</td>
+<td class="ts">(A &amp;&amp; B) is false.</td>
+</tr>
+<tr>
+<td class="ts">||</td>
+<td>Called Logical OR Operator. If any of the two operands is non-zero, then condition becomes true.</td>
+<td class="ts">(A || B) is true.</td>
+</tr>
+<tr>
+<td class="ts">!</td>
+<td>Called Logical NOT Operator. Use to reverses the logical state of its operand. If a condition is true, then Logical NOT operator will make false.</td>
+<td class="ts">!(A &amp;&amp; B) is true.</td>
+</tr>
+</table>
+<h2>Bitwise Operators</h2>
+<p>Bitwise operator works on bits and perform bit-by-bit operation. The truth tables for &amp;, |, and ^ are as follows &minus;</p>
+<table class="table table-bordered" style="text-align:center;">
+<tr>
+<th style="text-align:center;width:20%">p</th>
+<th style="text-align:center;width:20%">q</th>
+<th style="text-align:center;width:20%">p &amp; q</th>
+<th style="text-align:center;width:20%">p | q</th>
+<th style="text-align:center;width:20%">p ^ q</th>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<p>Assume if A = 60; and B = 13; now in binary format they will be as follows &minus;</p>
+<p>A = 0011 1100</p>
+<p>B = 0000 1101</p>
+<p>-----------------</p>
+<p>A&amp;B = 0000 1100</p>
+<p>A|B = 0011 1101</p>
+<p>A^B = 0011 0001</p>
+<p>~A&nbsp; = 1100 0011</p>
+<p>The Bitwise operators supported by C++ language are listed in the following table. Assume variable A holds 60 and variable B holds 13, then &minus;</p>
+<p><a href="/cplusplus/cpp_bitwise_operators.htm" title="Bitwise Operators in C++">Show Examples</a></p>
+<table class="table table-bordered">
+<tr>
+<th width="10%" style="text-align:center;">Operator</th>
+<th width="45%" style="text-align:center;">Description</th>
+<th style="text-align:center;">Example</th>
+</tr>
+<tr>
+<td class="ts">&amp;</td>
+<td>Binary AND Operator copies a bit to the result if it exists in both operands. </td>
+<td style="vertical-align:middle;">(A &amp; B) will give 12 which is 0000 1100</td>
+</tr>
+<tr>
+<td class="ts">|</td>
+<td>Binary OR Operator copies a bit if it exists in either operand.</td>
+<td>(A | B) will give 61 which is 0011 1101</td>
+</tr>
+<tr>
+<td class="ts">^</td>
+<td>Binary XOR Operator copies the bit if it is set in one operand but not both.</td>
+<td style="vertical-align:middle;">(A ^ B) will give 49 which is 0011 0001</td>
+</tr>
+<tr>
+<td class="ts">~</td>
+<td>Binary Ones Complement Operator is unary and has the effect of 'flipping' bits. </td>
+<td>(~A ) will give -61 which is 1100 0011 in 2's complement form due to a signed binary number.</td>
+</tr>
+<tr>
+<td class="ts">&lt;&lt;</td>
+<td>Binary Left Shift Operator. The left operands value is moved left by the number of bits specified by the right operand.</td>
+<td style="vertical-align:middle;">A &lt;&lt; 2 will give 240 which is 1111 0000</td>
+</tr>
+<tr>
+<td class="ts">&gt;&gt;</td>
+<td>Binary Right Shift Operator. The left operands value is moved right by the number of bits specified by the right operand.</td>
+<td style="vertical-align:middle;">A &gt;&gt; 2 will give 15 which is 0000 1111</td>
+</tr>
+</table>
+<h2>Assignment Operators</h2>
+<p>There are following assignment operators supported by C++ language &minus;</p>
+<p><a href="/cplusplus/cpp_assignment_operators.htm" title="Assignment Operators in C++">Show Examples</a></p>
+<table class="table table-bordered">
+<tr>
+<th width="10%" style="text-align:center;">Operator</th>
+<th width="48%" style="text-align:center;">Description</th>
+<th style="text-align:center;">Example</th>
+</tr>
+<tr>
+<td class="ts">=</td>
+<td>Simple assignment operator, Assigns values from right side operands to left side operand.</td>
+<td style="vertical-align:middle;">C = A + B will assign value of A + B into C</td>
+</tr>
+<tr>
+<td class="ts">+=</td>
+<td>Add AND assignment operator, It adds right operand to the left operand and assign the result to left operand.</td>
+<td style="vertical-align:middle;">C += A is equivalent to C = C + A</td>
+</tr>
+<tr>
+<td class="ts">-=</td>
+<td>Subtract AND assignment operator, It subtracts right operand from the left operand and assign the result to left operand.</td>
+<td style="vertical-align:middle;">C -= A is equivalent to C = C - A</td>
+</tr>
+<tr>
+<td class="ts">*=</td>
+<td>Multiply AND assignment operator, It multiplies right operand with the left operand and assign the result to left operand.</td>
+<td style="vertical-align:middle;">C *= A is equivalent to C = C * A</td>
+</tr>
+<tr>
+<td class="ts">/=</td>
+<td>Divide AND assignment operator, It divides left operand with the right operand and assign the result to left operand.</td>
+<td style="vertical-align:middle;">C /= A is equivalent to C = C / A</td>
+</tr>
+<tr>
+<td class="ts">%=</td>
+<td>Modulus AND assignment operator, It takes modulus using two operands and assign the result to  left operand.</td>
+<td style="vertical-align:middle;">C %= A is equivalent to C = C % A</td>
+</tr>
+<tr>
+<td class="ts">&lt;&lt;=</td>
+<td>Left shift AND assignment operator.</td>
+<td style="vertical-align:middle;">C &lt;&lt;= 2 is same as C = C &lt;&lt; 2</td>
+</tr>
+<tr>
+<td class="ts">&gt;&gt;=</td>
+<td>Right shift AND assignment operator.</td>
+<td style="vertical-align:middle;">C &gt;&gt;= 2 is same as C = C &gt;&gt; 2</td>
+</tr>
+<tr>
+<td class="ts">&amp;=</td>
+<td>Bitwise AND assignment operator.</td>
+<td style="vertical-align:middle;">C &amp;= 2 is same as C = C &amp; 2</td>
+</tr>
+<tr>
+<td class="ts">^=</td>
+<td>Bitwise exclusive OR and assignment operator.</td>
+<td style="vertical-align:middle;">C ^= 2 is same as C = C ^ 2</td>
+</tr>
+<tr>
+<td class="ts">|=</td>
+<td>Bitwise inclusive OR and assignment operator.</td>
+<td style="vertical-align:middle;">C |= 2 is same as C = C | 2</td>
+</tr>
+</table>
+<h2>Misc Operators</h2>
+<p>The following table lists some other operators that C++ supports.</p>
+<table class="table table-bordered">
+<tr>
+<th>Sr.No</th>
+<th style="text-align:center;">Operator &amp; Description</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><p><b>sizeof</b></p>
+<p><a href="/cplusplus/cpp_sizeof_operator.htm">sizeof operator</a> returns the size of a variable. For example, sizeof(a), where ‘a’ is integer, and will return 4.</p></td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><p><b>Condition ? X : Y</b></p>
+<p><a href="/cplusplus/cpp_conditional_operator.htm">Conditional operator (?)</a>. If Condition is true then it returns value of X otherwise returns value of Y.</p></td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><p><b>,</b></p>
+<p><a href="/cplusplus/cpp_comma_operator.htm">Comma operator</a> causes a sequence of operations to be performed. The value of the entire comma expression is the value of the last expression of the comma-separated list.</p></td>
+</tr>
+<tr>
+<td class="ts">4</td>
+<td><p><b>. (dot) and  -&gt; (arrow)</b></p>
+<p><a href="/cplusplus/cpp_member_operators.htm">Member operators</a> are used to reference individual members of classes, structures, and unions.</p></td>
+</tr>
+<tr>
+<td class="ts">5</td>
+<td><p><b>Cast</b></p>
+<p><a href="/cplusplus/cpp_casting_operators.htm">Casting operators</a> convert one data type to another. For example, int(2.2000) would return 2.</p></td>
+</tr>
+<tr>
+<td class="ts">6</td>
+<td><p><b>&amp;</b></p>
+<p><a href="/cplusplus/cpp_pointer_operators.htm">Pointer operator &amp;</a> returns the address of a variable. For example &amp;a; will give actual address of the variable.</p></td>
+</tr>
+<tr>
+<td class="ts">7</td>
+<td><p><b>*</b></p>
+<p><a href="/cplusplus/cpp_pointer_operators.htm">Pointer operator *</a> is pointer to a variable. For example *var; will pointer to a variable var.</p></td>
+</tr>
+</table>
+<h2>Operators Precedence in C++</h2>
+<p>Operator precedence determines the grouping of terms in an expression. This affects how an expression is evaluated. Certain operators have higher precedence than others; for example, the multiplication operator has higher precedence than the addition operator &minus;</p>
+<p>For example x = 7 + 3 * 2; here, x is assigned 13, not 20 because operator * has higher precedence than +, so it first gets multiplied with 3*2 and then adds into 7.</p>
+<p>Here, operators with the highest precedence appear at the top of the table, those with the lowest appear at the bottom. Within an expression, higher precedence operators will be evaluated first.</p>
+<p><a href="/cplusplus/cpp_operators_precedence.htm" title="Operators Precedence in C++">Show Examples</a></p>
+<table class="table table-bordered" style="text-align:center;">
+<tr>
+<th style="text-align:center;">Category&nbsp;</th>
+<th style="text-align:center;">Operator&nbsp;</th>
+<th style="text-align:center;">Associativity&nbsp;</th>
+</tr>
+<tr>
+<td>Postfix&nbsp;</td>
+<td>() [] -&gt; .  ++   - - &nbsp;</td>
+<td>Left to right&nbsp;</td>
+</tr>
+<tr>
+<td>Unary&nbsp;</td>
+<td>+  -   !  ~  ++  - - (type)*  &amp; sizeof&nbsp;</td>
+<td>Right to left&nbsp;</td>
+</tr>
+<tr>
+<td>Multiplicative &nbsp;</td>
+<td>*  /  %&nbsp;</td>
+<td>Left to right&nbsp;</td>
+</tr>
+<tr>
+<td>Additive &nbsp;</td>
+<td>+  -&nbsp;</td>
+<td>Left to right&nbsp;</td>
+</tr>
+<tr>
+<td>Shift &nbsp;</td>
+<td>&lt;&lt; &gt;&gt;&nbsp;</td>
+<td>Left to right&nbsp;</td>
+</tr>
+<tr>
+<td>Relational &nbsp;</td>
+<td>&lt; &lt;=  &gt; &gt;=&nbsp;</td>
+<td>Left to right&nbsp;</td>
+</tr>
+<tr>
+<td>Equality &nbsp;</td>
+<td>==  !=&nbsp;</td>
+<td>Left to right&nbsp;</td>
+</tr>
+<tr>
+<td>Bitwise AND&nbsp;</td>
+<td>&amp;&nbsp;</td>
+<td>Left to right&nbsp;</td>
+</tr>
+<tr>
+<td>Bitwise XOR&nbsp;</td>
+<td>^&nbsp;</td>
+<td>Left to right&nbsp;</td>
+</tr>
+<tr>
+<td>Bitwise OR&nbsp;</td>
+<td>|&nbsp;</td>
+<td>Left to right&nbsp;</td>
+</tr>
+<tr>
+<td>Logical AND&nbsp;</td>
+<td>&amp;&amp;&nbsp;</td>
+<td>Left to right&nbsp;</td>
+</tr>
+<tr>
+<td>Logical OR&nbsp;</td>
+<td>||&nbsp;</td>
+<td>Left to right&nbsp;</td>
+</tr>
+<tr>
+<td>Conditional&nbsp;</td>
+<td>?:&nbsp;</td>
+<td>Right to left&nbsp;</td>
+</tr>
+<tr>
+<td>Assignment&nbsp;</td>
+<td>=  +=  -=  *=  /=  %=&gt;&gt;=  &lt;&lt;=  &amp;=  ^=   |=&nbsp;</td>
+<td>Right to left&nbsp;</td>
+</tr>
+<tr>
+<td>Comma&nbsp;</td>
+<td>,&nbsp;</td>
+<td>Left to right&nbsp;</td>
+</tr>
+</table>
+<hr />
+
+
+            <center><a href="{% url 'cpStorageClasses1' %}" class="previous">&laquo; Previous</a>
+            <a href="{% url 'cpLoopTypes1' %}" class="next">Next &raquo;</a></center>
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

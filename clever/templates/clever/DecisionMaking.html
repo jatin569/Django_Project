@@ -1,0 +1,184 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:1800px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+                <h2>  C Programming</h2>
+                <a href="{% url 'C1' %}">C - Home</a>
+                <a href="{% url 'EnvironmentSetup1' %}">C - Environment Setup</a>
+                <a href="{% url 'ProgramStructure1' %}">C - Program Structure</a>
+                <a href="{% url 'BasicSyntax1' %}">C - Basic Syntax</a>
+                <a href="{% url 'DataTypes1' %}">C - Data Types</a>
+                <a href="{% url 'Variables1' %}">C - Variables</a>
+                  <a href="{% url 'Constants1' %}">C - Constants</a>
+                 <a href="{% url 'StorageClass1' %}">C - Storage Classes</a>
+                <a href="{% url 'Operators1' %}">C - Operators</a>
+                <a href="{% url 'DecisionMaking1' %}">C - Decision Making</a>
+                <a href="{% url 'Loops1' %}">C - Loops</a>
+                <a href="{% url 'Functions1' %}">C - Functions</a>
+                 <a href="{% url 'ScopeRules1' %}">C - Scope Rules</a>
+                <a href="{% url 'Arrays1' %}">C - Arrays</a>
+                 <a href="{% url 'Pointers1' %}">C - Pointers</a>
+                <a href="{% url 'Strings1' %}">C - Strings</a>
+                <a href="{% url 'Structures1' %}">C - Structures</a>
+                 <a href="{% url 'Unions1' %}">C - Unions</a>
+                <a href="{% url 'BitField1' %}">C - Bit Fields</a>
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>Decision Making</h1></center>
+
+            </div>
+           <p>Decision making structures require that the programmer specifies one or more conditions to be evaluated or tested by the program, along with a statement or statements to be executed if the condition is determined to be true, and optionally, other statements to be executed if the condition is determined to be false.</p>
+<p>Show below is the general form of a typical decision making structure found in most of the programming languages &minus;</p>
+<center><img src="{% static 'clever/img/bg-img/dm.jpg' %}" alt="Decision making statements in C" /></center>
+<p>C programming language assumes any <b>non-zero</b> and <b>non-null</b> values as <b>true</b>, and if it is either <b>zero</b> or <b>null</b>, then it is assumed as <b>false</b> value.</p>
+<p>C programming language provides the following types of decision making statements.</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">Sr.No.</th>
+<th style="text-align:center;">Statement &amp; Description</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><a href="/cprogramming/if_statement_in_c.htm">if statement</a>
+<p>An <b>if statement</b> consists of a boolean expression followed by one or more statements.</p></td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><a href="/cprogramming/if_else_statement_in_c.htm">if...else statement</a>
+<p>An <b>if statement</b> can be followed by an optional <b>else statement</b>, which executes when the Boolean expression is false.</p></td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><a href="/cprogramming/nested_if_statements_in_c.htm">nested if statements</a>
+<p>You can use one <b>if</b> or <b>else if</b> statement inside another <b>if</b> or <b>else if</b> statement(s).</p></td>
+</tr>
+<tr>
+<td class="ts">4</td>
+<td><a href="/cprogramming/switch_statement_in_c.htm">switch statement</a>
+<p>A <b>switch</b> statement allows a variable to be tested for equality against a list of values.</p></td>
+</tr>
+<tr>
+<td class="ts">5</td>
+<td><a href="/cprogramming/nested_switch_statements_in_c.htm">nested switch statements</a>
+<p>You can use one <b>switch</b> statement inside another <b>switch</b> statement(s).</p></td>
+</tr>
+</table>
+<h2>The ? : Operator</h2>
+<p>We have covered <b>conditional operator ? :</b> in the previous chapter which can be used to replace <b>if...else</b> statements. It has the following general form &minus;</p>
+<pre class="result notranslate">
+Exp1 ? Exp2 : Exp3;
+</pre>
+<p>Where Exp1, Exp2, and Exp3 are expressions. Notice the use and placement of the colon.</p>
+<p>The value of a ? expression is determined like this &minus;</p>
+<ul class="list">
+<li><p>Exp1 is evaluated. If it is true, then Exp2 is evaluated and becomes the value of the entire ? expression.</p></li>
+<li><p>If Exp1 is false, then Exp3 is evaluated and its value becomes the value of the expression.</p></li>
+</ul>
+<hr />
+            <center><a href="{% url 'Operators1' %}" class="previous">&laquo; Previous</a>
+            <a href="{% url 'Loops1' %}" class="next">Next &raquo;</a></center>
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

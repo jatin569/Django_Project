@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+    <script type="text/javascript" src="{% static 'clever/jq/jquery-1.10.2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'clever/jq/jquery.min.js' %}"></script>
+    <script>
+        $(document).ready(function(){
+        $(".t1").click(function(){
+        $(".p1").show();
+        $(".p2").hide();
+        $(".p3").hide();
+        $(".p4").hide();
+        $(".p5").hide();
+        $(".p6").hide();
+        $(".p7").hide();
+        });
+
+        $(".t2").click(function(){
+        $(".p1").hide();
+        $(".p3").hide();
+        $(".p2").show();
+        $(".p4").hide();
+         $(".p5").hide();
+        $(".p6").hide();
+        $(".p7").hide();
+
+        });
+
+         $(".t3").click(function(){
+        $(".p1").hide();
+        $(".p2").hide();
+        $(".p3").show();
+         $(".p4").hide();
+          $(".p5").hide();
+        $(".p6").hide();
+        $(".p7").hide();
+        });
+
+         $(".t4").click(function(){
+        $(".p1").hide();
+        $(".p2").hide();
+        $(".p4").show();
+         $(".p3").hide();
+          $(".p5").hide();
+        $(".p6").hide();
+        $(".p7").hide();
+        });
+
+         $(".t5").click(function(){
+        $(".p1").hide();
+        $(".p2").hide();
+        $(".p5").show();
+         $(".p3").hide();
+          $(".p4").hide();
+        $(".p6").hide();
+        $(".p7").hide();
+        });
+         $(".t6").click(function(){
+        $(".p1").hide();
+        $(".p2").hide();
+        $(".p6").show();
+         $(".p3").hide();
+          $(".p5").hide();
+        $(".p4").hide();
+        $(".p7").hide();
+        });
+         $(".t7").click(function(){
+        $(".p1").hide();
+        $(".p2").hide();
+        $(".p4").hide();
+         $(".p3").hide();
+          $(".p5").hide();
+        $(".p6").hide();
+        $(".p7").show();
+        });
+        });
+
+    </script>
+    <style>
+
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:4400px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+<body>
+
+<div class="container-fluid">
+
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+                <h2> Operating System Topics</h2>
+                <p class="t1">Basic</p>
+                <p class="t2">Types Of OS</p>
+                <p class="t3">Process</p>
+                <p class ="t4">States Of Process</p>
+                <p class="t5">Process Synchronization</p>
+                <p class="t6">Deadlock</p>
+                <p class="t7">Banker's Algorithm</p>
+
+
+        </div>
+        </div>
+       <div class="col-md-6 all" style="border:solid 0px ;">
+           <div class="p1" style="border:solid 0px ;height:2500px;">
+                <center><h1>Operating System </h1></center>
+                <p>An operating system acts as an intermediary between the user of a computer and computer hardware. The purpose of an operating system is to provide an environment in which a user can execute programs in a convenient and efficient manner.</p>
+<p>An operating system is software that manages the computer hardware. The hardware must provide appropriate mechanisms to ensure the correct operation of the computer system and to prevent user programs from interfering with the proper operation of the system.</p>
+<p><b>Operating System &#8211;</b> Definition:</p>
+
+<li>An operating system is a program that controls the execution of application programs and acts as an interface between the user of a computer and the computer hardware.</li>
+<li>A more common definition is that the operating system is the one program running at all times on the computer (usually called the kernel), with all else being application programs.</li>
+<li>An operating system is concerned with the allocation of resources and services, such as memory, processors, devices and information. The operating system correspondingly includes programs to manage these resources, such as a traffic controller, a scheduler, memory management module, I/O programs, and a file system.</li>
+<br>
+<p><b>Functions of Operating system &#8211;</b> Operating system performs three functions:</p>
+
+<li><b>Convenience:</b> An OS makes a computer more convenient to use.</li>
+<li><b>Efficiency:</b> An OS allows the computer system resources to be used in an efficient manner.</li>
+<li><b>Ability to Evolve:</b> An OS should be constructed in such a way as to permit the effective development, testing and introduction of new system functions without at the same time interfering with service.</li>
+               <br>     <p><b>Operating system as User Interface &#8211;</b></p>
+
+        <br/>
+
+
+<li>User</li>
+<li>System and application programs</li>
+<li>Operating system</li>
+<li>Hardware</li>
+
+<p>Every general purpose computer consists of the hardware, operating system, system programs, and application programs. The hardware consists of memory, CPU, ALU, and I/O devices, peripheral device and storage device. System program consists of compilers, loaders, editors, OS etc. The application program consists of business programs, database programs.</p>
+<p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/os.png" alt="" width="512" height="384" class="aligncenter size-full wp-image-302885" /><br />
+Fig1: Conceptual view of a computer system</p>
+<p>Every computer must have an operating system to run other programs. The operating system coordinates the use of the hardware among the various system programs and application programs for a various users. It simply provides an environment within which other programs can do useful work.</p>
+<p>The operating system is a set of special programs that run on a computer system that allows it to work properly. It performs basic tasks such as recognizing input from the keyboard, keeping track of files and directories on the disk, sending output to the display screen and controlling peripheral devices.<br />
+OS is designed to serve two basic purposes:</p>
+
+<li>It controls the allocation and use of the computing System’s resources among the various user and tasks.</li>
+<li>It provides an interface between the computer hardware and the programmer that simplifies and makes feasible for coding, creation, debugging of application programs.</li>
+
+<p>The Operating system must support the following tasks. The task are:</p>
+
+<li>Provides the facilities to create, modification of programs and data files using an editor.</li>
+<li>Access to the compiler for translating the user program from high level language to machine language.</li>
+<li>Provide a loader program to move the compiled program code to the computer’s memory for execution.</li>
+<li>Provide routines that handle the details of I/O programming.</li>
+<br>
+<p><b>I/O System Management &#8211;</b><br />
+The module that keeps track of the status of devices is called the I/O traffic controller. Each I/O device has a device handler that resides in a separate process associated with that device.<br />
+The I/O subsystem consists of</p>
+
+<li>A memory Management component that includes buffering caching and spooling.</li>
+<li>A general device driver interface.</li>
+
+<p>Drivers for specific hardware devices.</p>
+<p><b>Assembler &#8211;</b><br />
+Input to an assembler is an assembly language program. Output is an object program plus information that enables the loader to prepare the object program for execution. At one time, the computer programmer had at his disposal a basic machine that interpreted, through hardware, certain fundamental instructions. He would program this computer by writing a series of ones and Zeros (Machine language), place them into the memory of the machine.</p>
+<p><b>Compiler &#8211;</b><br />
+ The High level languages- examples are FORTRAN, COBAL, ALGOL and PL/I are processed by compilers and interpreters. A compiler is a program that accepts a source program in a “high-level language “and produces a corresponding object program. An interpreter is a program that appears to execute a source program as if it was machine language. The same name (FORTRAN, COBAL etc.) is often used designate both a compiler and its associated language.</p>
+<p><b>Loader &#8211;</b><br />
+A Loader is a routine that loads an object program and prepares it for execution. There are various loading schemes: absolute, relocating and direct-linking. In general, the loader must load, relocate and link the object program. Loader is a program that places programs into memory and prepares them for execution. In a simple loading scheme, the assembler outputs the machine language translation of a program on a secondary devices and a loader is places in core. The loader places into memory the machine language version of the user’s program and transfers control to it. Since the loader program is much smaller than the assembler, those makes more core available to user’s program.</p>
+<p><b>History of Operating system &#8211;</b><br />
+ Operating system has been evolving through the years. Following Table shows the history of OS.</p>
+<table>
+<tr>
+<th>Generation</th>
+<th>Year</th>
+<th>Electronic device used</th>
+<th>Types of OS Device</th>
+</tr>
+<tr>
+<td>First</td>
+<td>1945-55</td>
+<td>Vaccum Tubes</td>
+<td>Plug Boards</td>
+</tr>
+<tr>
+<td>Secondt</td>
+<td>1955-65</td>
+<td>Transistors</td>
+<td>Batch Systems</td>
+</tr>
+<tr>
+<td>Third</td>
+<td>1965-80</td>
+<td>Integerated Circuits(IC)</td>
+<td>Multiprogramming</td>
+</tr>
+<tr>
+<td>Fourth</td>
+<td>Since 1980</td>
+<td>Large Scale Integration</td>
+<td>PC</td>
+</tr>
+</table>
+<p><b><a href="https://www.geeksforgeeks.org/operating-system-types-operating-systems-awaiting-author/">Types of Operating System</a> &#8211;</b></p>
+
+<li>Batch Operating System- Sequence of jobs in a program on a computer without manual interventions.</li>
+<li>Time sharing operating System- allows many users to share the computer resources.(Max utilization of the resources).</li>
+<li>Distributed operating System- Manages a group of different computers and make appear to be a single computer.</li>
+<li>Network operating system- computers running in different operating system can participate in common network (It is used for security purpose).</li>
+<li>Real time operating system – meant applications to fix the deadlines.</li>
+<br>
+               <p><b>Examples of Operating System are &#8211;</b></p>
+
+<li>Windows (GUI based, PC)</li>
+<li>GNU/Linux (Personal, Workstations, ISP, File and print server, Three-tier client/Server)</li>
+<li>macOS (Macintosh), used for Apple&#8217;s personal computers and work stations (MacBook, iMac).</li>
+<li>Android (Google&#8217;s Operating System for smartphones/tablets/smartwatches)</li>
+<li>iOS (Apple&#8217;s OS for iPhone, iPad and iPod Touch) </li>
+
+
+
+            </div>
+
+            <div class="p2" style="border:solid 0px;height:2500px;display:none">
+                <center><h1>Types Of OS</h1></center>
+<p>An Operating System performs all the basic tasks like managing file,process, and memory. Thus operating system acts as manager of all the resources, i.e. <strong>resource manager</strong>. Thus operating system becomes an interface between user and machine.</p>
+<p><strong>Types of Operating Systems:</strong> Some of the widely used operating systems are as follows-</p>
+<p><strong>1. Batch Operating System &#8211;</strong><br />
+This type of operating system do not interact with the computer directly. There is an operator which takes similar jobs having same requirement and group them into batches. It is the responsibility of operator to sort the jobs with similar needs.</p>
+<p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/BatchOS.jpeg" width="600" height="307" class="aligncenter size-full" /></p>
+<p>        <strong>Advantages of Batch Operating System:</strong></p><br/>
+
+        <br/>
+
+
+<li>It is very difficult to guess or know the time required by any job to complete. Processors of the batch systems knows how long the job would be when it is in queue</li>
+<li>Multiple users can share the batch systems</li>
+<li>The idle time batch system is very less</li>
+<li>It is easy to manage large work repeatedly in batch systems</li>
+
+<p>        <strong>Disadvantages of Batch Operating System:</strong></p>
+
+<li>The computer operators should be well known with batch systems</li>
+<li>Batch systems are hard to debug</li>
+<li>It is sometime costly</li>
+<li>The other jobs will have to wait for an unknown time if any job fails</li>
+
+<p><strong>Examples of Batch based Operating System:</strong> Payroll System, Bank Statements etc.</p>
+<p><strong>2. Time-Sharing Operating Systems &#8211;</strong><br />
+Each task has given some time to execute, so that all the tasks work smoothly. Each user gets time of CPU as they use single system. These systems are also known as Multitasking Systems. The task can be from single user or from different users also. The time that each task gets to execute is called quantum. After this time interval is over OS switches over to next task.</p>
+<p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/Time-Share.jpeg" width="600" height="313" class="aligncenter size-full" /></p>
+<p><strong>Advantages of Time-Sharing OS: </strong></p>
+
+<li>Each task gets an equal opportunity</li>
+<li>Less chances of duplication of software</li>
+<li>CPU idle time can be reduced</li>
+
+<p><strong>Disadvantages of Time-Sharing OS:</strong></p>
+
+<li>Reliability problem</li>
+<li>One must have to take care of security and integrity of user programs and data</li>
+<li>Data communication problem</li>
+
+<p><strong>Examples of Time-Sharing OSs are:</strong> Multics, Unix etc.</p>
+<p><strong>3. Distributed Operating System &#8211;</strong><br />
+These types of operating system is a recent advancement in the world of computer technology and are being widely accepted all-over the world and, that too, with a great pace. Various autonomous interconnected computers communicate each other using a shared communication network. Independent systems possess their own memory unit and CPU. These are referred as <strong>loosely coupled systems</strong> or distributed systems. These systems processors differ in sizes and functions. The major benefit of working with these types of operating system is that it is always possible that one user can access the files or software which are not actually present on his system but on some other system connected within this network i.e., remote access is enabled within the devices connected in that network.</p>
+<p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/Distributed.jpeg" width="620" height="535" class="aligncenter size-full" /></p>
+<p><strong>Advantages of Distributed Operating System:</strong></p><br/>
+
+        <br/>
+
+
+<li>Failure of one will not affect the other network communication, as all systems are independent from each other</li>
+<li>Electronic mail increases the data exchange speed</li>
+<li>Since resources are being shared, computation is highly fast and durable</li>
+<li>Load on host computer reduces</li>
+<li>These systems are easily scalable as many systems can be easily added to the network</li>
+<li>Delay in data processing reduces</li>
+
+<p><strong>Disadvantages of Distributed Operating System:</strong></p>
+
+<li>Failure of the main network will stop the entire communication</li>
+<li>To establish distributed systems the language which are used are not well defined yet</li>
+<li>These types of systems are not readily available as they are very expensive. Not only that the underlying software is highly complex and not understood well yet</li>
+
+<p><strong>Examples of Distributed Operating System are-</strong> LOCUS etc.</p>
+<p><strong>4. Network Operating System &#8211;</strong><br />
+These systems runs on a server and provides the capability to manage data, users, groups, security, applications, and other networking functions. These type of operating systems allows shared access of files, printers, security, applications, and other networking functions over a small private network. One more important aspect of Network Operating Systems is that all the users are well aware of the underlying configuration, of all other users within the network, their individual connections etc. and that’s why these computers are popularly known as <strong>tightly coupled systems</strong>.</p>
+<p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/Network-OS.jpeg" width="582" height="657" class="aligncenter size-full" /></p>
+<p><strong>Advantages of Network Operating System:</strong></p>
+
+<li>Highly stable centralized servers</li>
+<li>Security concerns are handled through servers</li>
+<li>New technologies and hardware up-gradation are easily integrated to the system</li>
+<li>Server access are possible remotely from different locations and types of systems</li>
+
+<p><strong>Disadvantages of Network Operating System:</strong></p>
+
+<li>Servers are costly</li>
+<li>User has to depend on central location for most operations</li>
+<li>Maintenance and updates are required regularly</li>
+
+<p><strong>Examples of Network Operating System are:</strong> Microsoft Windows Server 2003, Microsoft Windows Server 2008, UNIX, Linux, Mac OS X, Novell NetWare, and BSD etc.</p>
+</div>
+
+            <div class="p3" style="border:solid 0px;height:2500px;display:none">
+                <center><h1>Process Management</h1></center>
+             <p><strong>Program vs Process</strong><br />
+A process is a program in execution. For example, when we write a program in C or C++ and compile it, the compiler creates binary code. The original code and binary code are both programs. When we actually run the binary code, it becomes a process.</p>
+<p><!--more--> A process is an &#8216;active&#8217; entity, as opposed to a program, which is considered to be a &#8216;passive&#8217; entity. A single program can create many processes when run multiple times; for example, when we open a .exe or binary file multiple times, multiple instances begin (multiple processes are created).</p>
+<p><strong>What does a process look like in memory?</strong><br />
+<a href="https://www.geeksforgeeks.org/wp-content/uploads/gq/2015/06/process.png"><img src="https://www.geeksforgeeks.org/wp-content/uploads/gq/2015/06/process.png" alt="process" width="212" height="347" class="alignnone size-full wp-image-17196" /></a></p><br/>
+
+        <br/>
+
+<p><em><strong>Text Section</strong>:</em>A Process, sometimes known as the Text Section, also includes the current activity represented by the value of the <em><strong>Program Counter</strong></em>.<br />
+<em><strong>Stack</strong>:</em> The Stack contains the temporary data, such as function parameters, returns addresses, and local variables.<br />
+<em><strong>Data Section</strong>:</em> Contains the global variable.<br />
+<em><strong>Heap Section</strong>:</em> Dynamically allocated memory to process during its run time.<br />
+Refer <a href="https://www.geeksforgeeks.org/memory-layout-of-c-program/">this </a>for more details on sections.</p>
+<br/>
+
+        <br/>
+
+<p><strong>Attributes or Characteristics of a Process</strong><br />
+A process has following attributes.</p>
+<pre><strong>1. Process Id:</strong>    A unique identifier assigned by the operating system
+<strong>2. Process State:</strong> Can be ready, running, etc.
+<strong>3. CPU registers:</strong> Like the Program Counter (CPU registers must be saved and
+                  restored when a process is swapped in and out of CPU)
+<strong>5. Accounts information:</strong>
+<strong>6. I/O status information:</strong> For example, devices allocated to the process,
+                           open files, etc
+<strong>8. CPU scheduling information:</strong> For example, Priority (Different processes
+                               may have different priorities, for example
+                               a short process may be assigned a low priority
+                               in the shortest job first scheduling)</pre>
+<p>All of the above attributes of a process are also known as the<em><strong>context of the process</strong></em>.<br />
+Every process has its own <a href="http://en.wikipedia.org/wiki/Process_control_block" target="_blank">program control block</a>(PCB), i.e each process will have a unique PCB. All of the above attributes are part of the PCB.</p>
+<p> </p><br/>
+
+        <br/>
+
+<p><strong>States of Process:</strong><br />
+<p>A process is in one of the following states:</p>
+<pre><strong>1. New:</strong> Newly Created Process (or) being-created process.
+
+<strong>2. Ready:</strong> After creation process moves to Ready state, i.e. the
+          process is ready for execution.
+
+<strong>3. Run:</strong> Currently running process in CPU (only one process at
+        a time can be under execution in a single processor).
+
+<strong>4. Wait (or Block):</strong> When a process requests I/O access.
+
+<strong>5. Complete (or Terminated):</strong> The process completed its execution.
+
+<strong>6. Suspended Ready:</strong> When the ready queue becomes full, some processes
+                    are moved to suspended ready state
+
+<strong>7. Suspended Block:</strong> When waiting queue becomes full.</pre>
+<p><a href="https://www.geeksforgeeks.org/wp-content/uploads/gq/2015/06/process-states1.png"><img src="https://www.geeksforgeeks.org/wp-content/uploads/gq/2015/06/process-states1.png" alt="process-states" width="411" height="301" class="alignnone size-full wp-image-17199" /></a></p>
+<p><strong>Context Switching</strong><br />
+The process of saving the context of one process and loading the context of another process is known as Context Switching. In simple terms, it is like loading and unloading the process from running state to ready state.</p>
+<p><strong>When does context switching happen?</strong><br />
+1. When a high-priority process comes to ready state (i.e. with higher priority than the running process)<br />
+2. An Interrupt occurs<br />
+3. User and kernel mode switch (It is not necessary though)<br />
+4. Preemptive CPU scheduling used.</p>
+<p><strong>Context Switch vs Mode Switch</strong><br />
+A mode switch occurs when CPU privilege level is changed, for example when a system call is made or a fault occurs. The kernel works in more a privileged mode than a standard user task. If a user process wants to access things which are only accessible to the kernel, a mode switch must occur. The currently executing process need not be changed during a mode switch.<br />
+A mode switch typically occurs for a process context switch to occur. Only the kernel can cause a context switch.</p>
+<p><strong>CPU-Bound vs I/O-Bound Processes:</strong><br />
+A CPU-bound process requires more CPU time or spends more time in the running state.<br />
+An I/O-bound process requires more I/O time and less CPU time. An I/O-bound process spends more time in the waiting state.</p>
+<p> </p>
+<p><strong>Exercise:</strong><br />
+<strong>1.</strong> Which of the following need not necessarily be saved on a context switch between processes? (GATE-CS-2000)<br />
+(A) General purpose registers<br />
+(B) Translation lookaside buffer<br />
+(C) Program counter<br />
+(D) All of the above</p><br/>
+
+        <br/>
+
+<p><strong>Answer (B)</strong></p>
+<p><strong>Explanation:</strong><br />
+In a process context switch, the state of the first process must be saved somehow, so that when the scheduler gets back to the execution of the first process, it can restore this state and continue. The state of the process includes all the registers that the process may be using, especially the program counter, plus any other operating system-specific data that may be necessary. A translation look-aside buffer (TLB) is a CPU cache that memory management hardware uses to improve virtual address translation speed. A TLB has a fixed number of slots that contain page table entries, which map virtual addresses to physical addresses. On a context switch, some TLB entries can become invalid, since the virtual-to-physical mapping is different. The simplest strategy to deal with this is to completely flush the TLB.</p>
+<p><strong>2.</strong> The time taken to switch between user and kernel modes of execution is t1 while the time taken to switch between two processes is t2. Which of the following is TRUE? (GATE-CS-2011)<br />
+(A) t1 &gt; t2<br />
+(B) t1 = t2<br />
+(C) t1 &lt; t2<br />
+(D) nothing can be said about the relation between t1 and t2.</p>
+<p><strong>Answer: (C)</strong><br />
+<b>Explanation:</b> Process switching involves mode switch. Context switching can occur only in kernel mode.</p>
+
+            </div>
+          <div class="p4" style="border:solid 0px;height:2500px;display:none">
+             <center> <h1>States Of Process</h1></center>
+States of a process are as following:</p>
+<p><img src="https://www.geeksforgeeks.org/wp-content/uploads/gq/2015/06/process-states1.png" width="411" height="301" class="aligncenter size-full" /></p>
+
+<li><b>New (Create) &#8211;</b> In this step, process is about to be created but not yet created, it is the program which is present in secondary memory that will be picked up by OS to create the process.
+</li>
+<li><b>Ready &#8211;</b> New -&gt; Ready to run. After creation of a process, the process enters the ready state i.e. the process is loaded into the main memory. The process here is ready to run and is waiting to get the CPU time for its execution. Processes that are ready for execution by the CPU are maintained in a queue for ready processes.
+</li>
+<li><b>Run &#8211;</b> The process is chosen by CPU for execution and the instructions within the process are executed by any one of the available CPU cores.
+</li>
+<li><b>Blocked or wait &#8211;</b> Whenever the process requests access to I/O or needs an input from user or needs access to a critical region(the lock for which is already acquired) it enters the blocked or wait state. The process continues to wait in the main memory and does not require CPU. Once the I/O operation is completed the process goes to ready state.
+</li>
+<li><b>Terminated or completed &#8211;</b> Process is killed as well as PCB is deleted.
+</li>
+<li><b>Suspend ready &#8211;</b> Process that were initially in ready state but were swapped out of main memory(refer Virtual Memory topic) and placed onto external storage by scheduler are said to be in suspend ready state. The process will transition back to ready state whenever the process is again brought onto the main memory.
+</li>
+<li><b>Suspend wait or suspend blocked &#8211;</b> Similar to suspend ready but uses the process which was performing I/O operation and lack of main memory caused them to move to secondary memory.<br />
+When work is finished it may go to suspend ready.
+</li>
+
+<p><b>CPU and IO Bound Processes:</b><br />
+If process is intensive in terms of CPU operations then it is called CPU bound process. Similarly, If process is intensive in terms of I/O operations then it is called IO bound process.</p>
+<p><b>Types of schedulers:</b></p>
+
+<li><b>Long term &#8211; performance &#8211;</b> Makes decision about how many processes should be made to stay in the ready state this decides the degree of multiprogramming. Once decision is taken it lasts for long time hence called long term scheduler.
+</li>
+<li><b>Short term – Context switching time &#8211;</b> Short term scheduler will decide which process to be executed next and then it will call dispatcher. Dispatcher is a software that moves process from ready to run and vice versa. In other words, it is context switching.
+</li>
+<li><b>Medium term – Swapping time &#8211;</b> Suspension decision is taken by medium term scheduler. Medium term scheduler is used for swapping that is moving the process from main memory to secondary and vice versa.
+</li>
+
+<p><b>Multiprogramming &#8211;</b> We have many processes ready to run. There are two types of multiprogramming:</p>
+
+<li><b>Pre-emption &#8211;</b> Process is forcefully removed from CPU. Pre-emption is also called as time sharing or multitasking.
+</li>
+<li><b>Non pre-emption &#8211;</b> Processes are not removed until they complete the execution.
+</li>
+
+<p><b>Degree of multiprogramming &#8211;</b><br />
+The number of process that can reside in the ready state at maximum decides the degree of multiprogramming, e.g., if degree of programming = 100 means 100 processes can reside in the ready state at maximum.</p>
+
+          </div>
+             <div class="p5" style="border:solid 0px;height:2500px;display:none">
+             <center> <h1>Process Synchronization</h1></center>
+<p>On the basis of synchronization, processes are categorized as one of the following two types:</p>
+
+<li><strong>Independent Process</strong> : Execution of one process does not affects the execution of other processes.</li>
+<li><strong>Cooperative Process</strong> : Execution of one process affects the execution of other processes.</li>
+
+<p>Process synchronization problem arises in the case of Cooperative process also because resources are shared in Cooperative processes.<br />
+&nbsp;<br />
+<strong>Critical Section Problem</strong></p>
+<p>Critical section is a code segment that can be accessed by only one process at a time. Critical section contains shared variables which need to be synchronized to maintain consistency of data variables.<br />
+<a href="https://www.geeksforgeeks.org/wp-content/uploads/gq/2015/06/critical-section-problem.png"><img src="https://www.geeksforgeeks.org/wp-content/uploads/gq/2015/06/critical-section-problem.png" alt="critical section problem" width="345" height="386" class="aligncenter size-full wp-image-24619" /></a></p>
+<p>In the entry section, the process requests for entry in the <strong>Critical Section.</strong></p>
+<br/>
+        
+        <br/>
+            
+<p>Any solution to the critical section problem must satisfy three requirements:</p>
+
+<li><strong>Mutual Exclusion</strong> : If a process is executing in its critical section, then no other process is allowed to execute in the critical section.</li>
+<li><strong>Progress</strong> : If no process is in the critical section, then no other process from outside can block it from entering the critical section.</li>
+<li><strong>Bounded Waiting</strong> :  A bound must exist on the number of times that other processes are allowed to enter their critical sections after a process has made a request to enter its critical section and before that request is granted.</li>
+
+<p>&nbsp;<br />
+<strong>Peterson&#8217;s Solution</strong><br />
+Peterson&#8217;s Solution is a classical software based solution to the critical section problem.</p>
+<p>In Peterson&#8217;s solution, we have two shared variables:</p>
+
+<li>boolean flag[i] :Initialized to FALSE, initially no one is interested in entering the critical section</li>
+<li>int turn : The process whose turn is to enter the critical section.</li>
+
+<p><a href="https://www.geeksforgeeks.org/wp-content/uploads/gq/2015/06/peterson.png"><img src="https://www.geeksforgeeks.org/wp-content/uploads/gq/2015/06/peterson.png" alt="peterson" width="492" height="478" class="aligncenter size-full wp-image-24623" /></a><br />
+&nbsp;<br />
+Peterson&#8217;s Solution preserves all three conditions :</p>
+
+<li>Mutual Exclusion is assured as only one process can access the critical section at any time.</li>
+<li>Progress is also assured, as a process outside the critical section does not blocks other processes from entering the critical section.</li>
+<li>Bounded Waiting is preserved as every process gets a fair chance.</li>
+<p>&nbsp;<br />
+Disadvantages of Peterson’s Solution</p>
+
+<li>It involves Busy waiting</li>
+<li>It is limited to 2 processes.</li>
+
+<p>&nbsp;</p>
+<p><strong>TestAndSet</strong><br />
+TestAndSet is a hardware solution to the synchronization problem. In TestAndSet, we have a shared lock variable which can take either of the two values, 0 or 1.</p>
+<pre>0 Unlock
+1 Lock
+</pre>
+<p>Before entering into the critical section, a process inquires about the lock. If it is locked, it keeps on waiting till it become free and if it is not locked, it takes the lock and executes the  critical section.</p>
+<p>In TestAndSet, Mutual exclusion and progress are preserved but bounded waiting cannot be preserved.<br />
+&nbsp;<br />
+<strong>Question :</strong> The enter_CS() and leave_CS() functions to implement critical section of a process are realized using test-and-set instruction as follows:</p>
+<pre>
+int TestAndSet(int &amp;lock) {
+    int initial = lock;
+    lock = 1;
+    return initial;
+}
+
+void enter_CS(X)
+{
+  while test-and-set(X) ;
+}
+
+void leave_CS(X)
+{
+  X = 0;
+}
+</pre>
+<p>In the above solution, X is a memory location associated with the CS and is initialized to 0. Now, consider the following statements:<br />
+I. The above solution to CS problem is deadlock-free<br />
+II. The solution is starvation free.<br />
+III. The processes enter CS in FIFO order.<br />
+IV. More than one process can enter CS at the same time.<br />
+&nbsp;<br />
+Which of the above statements is TRUE?<br />
+(A) I<br />
+(B) II and III<br />
+(C) II and IV<br />
+(D) IV</p>
+<p><a href="http://quiz.geeksforgeeks.org/gate-gate-cs-2009-question-33/" target="_blank">Click here for the Solution</a>.<br />
+&nbsp;true<br />
+<strong>Semaphores</strong></p>
+<p>A Semaphore is an integer variable, which can be accessed only through two operations <em>wait()</em> and <em>signal()</em>.<br />
+There are two types of semaphores : Binary Semaphores and Counting Semaphores</p>
+
+<li>Binary Semaphores : They can only be either 0 or 1. They are also known as mutex locks, as the locks can provide mutual exclusion. All the processes can share the same mutex semaphore that is initialized to 1. Then, a process has to wait until the lock becomes 0. Then, the process can make the mutex semaphore 1 and start its critical section. When it completes its critical section, it can reset the value of mutex semaphore to 0 and some other process can enter its critical section.</li>
+<li>Counting Semaphores : They can have any value and are not restricted over a certain domain. They can be used to control access a resource that has a limitation on the number of simultaneous accesses. The semaphore can be initialized to the number of instances of the resource. Whenever a process wants to use that resource, it checks if the number of remaining instances is more than zero, i.e., the process has an instance available. Then, the process can enter its critical section thereby decreasing the value of the counting semaphore by 1. After the process is over with the use of the instance of the resource, it can leave the critical section thereby adding 1 to the number of available instances of the resource.</li>
+
+<p>true</p>
+             </div>
+
+            <div class="p6" style="border:solid 0px;height:2500px;display:none">
+             <center> <h1>Deadlock</h1></center>
+<p>A process in operating systems uses different resources and uses resources in following way.<br />
+1) Requests a resource<br />
+2) Use the resource<!--more--><br />
+2) Releases the resource</p>
+<p></br><br />
+<em><strong>Deadlock </strong></em>is a situation where a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process.<br />
+Consider an example when two trains are coming toward each other on same track and there is only one track, none of the trains can move once they are in front of each other. Similar situation occurs in operating systems when there are two or more processes hold some resources and wait for resources held by other(s). For example, in the below diagram, Process 1 is holding Resource 1 and waiting for resource 2 which is acquired by process 2, and process 2 is waiting for resource 1.</p>
+<br/>
+
+        <br/>
+
+<p><a href="https://www.geeksforgeeks.org/wp-content/uploads/gq/2015/06/deadlock.png"><img class="alignnone size-full wp-image-17318" src="https://www.geeksforgeeks.org/wp-content/uploads/gq/2015/06/deadlock.png" alt="deadlock" width="400" height="320" /></a></p>
+<p></br><br />
+<strong>Deadlock can arise if following four conditions hold simultaneously (Necessary Conditions) </strong><br />
+<em><strong>Mutual Exclusion:</strong></em> One or more than one resource are non-sharable (Only one process can use at a time)<br />
+<em><strong>Hold and Wait:</strong> </em>A process is holding at least one resource and waiting for resources.<br />
+<em><strong>No Preemption:</strong></em> A resource cannot be taken from a process unless the process releases the resource.<br />
+<em><strong>Circular Wait:</strong></em> A set of processes are waiting for each other in circular form.</p>
+<p></br><br />
+<strong>Methods for handling deadlock</strong><br />
+There are three ways to handle deadlock<br />
+1) Deadlock prevention or avoidance: The idea is to not let the system into deadlock state.</p>
+<p>2) Deadlock detection and recovery: Let deadlock occur, then do preemption to handle it once occurred.</p>
+<p>3) Ignore the problem all together: If deadlock is very rare, then let it happen and reboot the system. This is the approach that both Windows and UNIX take.</p>
+<p></br><br />
+<strong>Exercise:</strong><br />
+<strong>  1)</strong> Suppose n processes, P1, …. Pn share m identical resource units, which can be reserved and released one at a time. The maximum resource requirement of process Pi is Si, where Si &gt; 0. Which one of the following is a sufficient condition for ensuring that deadlock does not occur? (GATE CS 2005)</p>
+<p><img class="alignnone" src="https://www.geeksforgeeks.org/wp-content/uploads/gate2009OS.png" alt="" width="560" height="78" /><br />
+<b>(A)</b> A<br />
+<b>(B)</b> B<br />
+<b>(C)</b> C<br />
+<b>(D)</b> D</p>
+
+            </div>
+
+            <div class="p7" style="border:solid 0px;height:2500px;display:none">
+             <center> <h1>Banker's Algorithm</h1></center>
+<p>The banker’s algorithm is a resource allocation and deadlock avoidance algorithm that tests for safety by simulating the allocation for predetermined maximum possible amounts of all resources, then makes an “s-state” check to test for possible activities, before deciding whether allocation should be allowed to continue.</p>
+<p>Following <strong>Data structures</strong> are used to implement the Banker’s Algorithm:</p>
+<p>Let <strong>‘n’ </strong>be the number of processes in the system and <strong>‘m’ </strong>be the number of resources types.</p>
+<p><strong>Available : </strong></p>
+
+<li>It is a 1-d array of size <strong>‘m’</strong> indicating the number of available resources of each type.</li>
+<li>Available[ j ] = k means there are <strong>‘k’</strong> instances of resource type <strong>R<sub>j</sub></strong></li>
+
+<p><strong>Max :</strong></p>
+
+<li>It is a 2-d array of size ‘<strong>n*m’ </strong>that defines the maximum demand of each process in a system.</li>
+<li>Max[ i, j ] = k means process <strong>P<sub>i</sub></strong> may request at most <strong>‘k’</strong> instances of resource type <strong>R<sub>j.</sub></strong></li>
+
+<p><strong>Allocation :</strong></p>
+
+<li>It is a 2-d array of size<strong> ‘n*m’ </strong>that defines the number of resources of each type currently allocated to each process.</li>
+<li>Allocation[ i, j ] = k means process <strong>P<sub>i</sub></strong> is currently allocated <strong>‘k’</strong> instances of resource type <strong>R<sub>j</sub></strong></li>
+
+<p><strong>Need :</strong></p>
+
+<li> It is a 2-d array of size <strong>‘n*m’</strong> that indicates the remaining resource need of each process.</li>
+<li>Need [ i,  j ] = k means process <strong>P<sub>i</sub></strong> currently need <strong>‘k’</strong> instances of resource type <strong>R<sub>j</sub></strong></li>
+<p> for its execution.</p>
+<li>Need [ i,  j ] = Max [ i,  j ] – Allocation [ i,  j ]</li>
+
+<br/>
+        
+        <br/>
+
+<p>Allocation<sub>i</sub> specifies the resources currently allocated to process P<sub>i</sub> and Need<sub>i</sub> specifies the additional resources that process P<sub>i</sub> may still request to complete its task.</p>
+<p>Banker&#8217;s algorithm consist of Safety algorithm and Resource request algorithm</p>
+<p><b><span style="font-family: arial,helvetica,sans-serif">Safety Algorithm</span></b></p>
+<p>The algorithm for finding out whether or not a system is in a safe state can be described as follows:</p>
+<blockquote><p>
+1) Let Work and Finish be vectors of length &#8216;m&#8217; and &#8216;n&#8217; respectively.<br />
+Initialize: Work = Available<br />
+Finish[i] = false; for i=1, 2, 3, 4&#8230;.n</p>
+<p></p>
+<p>2) Find an i such that both<br />
+a) Finish[i] = false<br />
+b) Need<sub>i</sub> &lt;= Work<br />
+if no such i exists goto step (4)</p>
+<p></p>
+<p>3) Work = Work + Allocation[i]<br />
+Finish[i] = true<br />
+goto step (2)</p>
+<p></p>
+<p>4) if Finish [i] = true for all i<br />
+then the system is in a safe state
+</p></blockquote>
+<p></p>
+<p><strong>Resource-Request Algorithm</strong></p>
+<p>Let Request<sub>i</sub> be the request array for process P<sub>i</sub>. Request<sub>i </sub>[j] = k means process P<sub>i</sub> wants k instances of resource type R<sub>j</sub>. When a request for resources is made by process P<sub>i</sub>, the following actions are taken:</p>
+<blockquote>
+<p>1) If Request<sub>i</sub> &lt;= Need<sub>i</sub><br />
+Goto step (2) ; otherwise, raise an error condition, since the process has exceeded its maximum claim.</p>
+<p></p>
+<p>2) If Request<sub>i</sub> &lt;= Available<br />
+Goto step (3); otherwise, P<sub>i</sub> must wait, since the resources are not available.</p>
+<p></p>
+<p>3) Have the system pretend to have allocated the requested resources to process Pi by modifying the state as<br />
+follows:<br />
+Available = Available &#8211; Requesti<br />
+Allocation<sub>i</sub> = Allocation<sub>i</sub> + Request<sub>i</sub><br />
+Need<sub>i</sub> = Need<sub>i</sub>&#8211; Request<sub>i</sub></p>
+</blockquote>
+<p></p>
+<p><strong>Example:</strong></p>
+<p><strong>Considering a system with five processes P<sub>0</sub> through P<sub>4</sub> and three resources types A, B, C. Resource type A has 10 instances, B has 5 instances and type C has 7 instances. Suppose at time t<sub>0</sub> following snapshot of the system has been taken:</strong></p>
+<p><a href="https://www.geeksforgeeks.org/wp-content/uploads/gq/2016/01/safety.png"><img class="alignnone size-full wp-image-22841" src="https://www.geeksforgeeks.org/wp-content/uploads/gq/2016/01/safety.png" alt="safety" width="472" height="220" /></a></p>
+<p><strong>Question1. What will be the content of the Need matrix?</strong></p>
+<p>Need [i, j] = Max [i, j] – Allocation [i, j]</p>
+<p>So, the content of Need Matrix is:</p>
+<p><a href="https://www.geeksforgeeks.org/wp-content/uploads/gq/2016/01/unnamed.png"><img class="alignnone size-full wp-image-22842" src="https://www.geeksforgeeks.org/wp-content/uploads/gq/2016/01/unnamed.png" alt="unnamed" width="228" height="211" /></a></p>
+<p><strong>Question2.  Is the system in safe state? If Yes, then what is the safe sequence?</strong></p>
+<p>Applying the Safety algorithm on the given system,</p>
+<p><a href="https://www.geeksforgeeks.org/wp-content/uploads/gq/2016/01/questionsolved.png"><img class="alignnone size-large wp-image-22843" src="https://www.geeksforgeeks.org/wp-content/uploads/gq/2016/01/questionsolved-1024x632.png" alt="questionsolved" width="665" height="410" /></a></p>
+<p><strong>Question3. What will happen if process P<sub>1 </sub>requests one additional instance of resource type A and two instances of resource type C?</strong></p>
+<p><a href="https://www.geeksforgeeks.org/wp-content/uploads/gq/2016/01/Allocation.png"><img src="https://www.geeksforgeeks.org/wp-content/uploads/gq/2016/01/Allocation.png" alt="allocation" width="770" height="394" class="aligncenter size-full wp-image-28365" /></a></p>
+<p>We must determine whether this new system state is safe. To do so, we again execute Safety algorithm on the above data structures.</p>
+<p><a href="https://www.geeksforgeeks.org/wp-content/uploads/gq/2016/01/Q31.png"><img class="alignnone size-large wp-image-22845" src="https://www.geeksforgeeks.org/wp-content/uploads/gq/2016/01/Q31-1024x636.png" alt="Q31" width="665" height="413" /></a></p>
+<p>Hence the new system state is safe, so we can immediately grant the request for process <strong> P<sub>1 .</sub></strong></p>
+            </div>
+        </div><!--  6 div close --->
+
+    <div class="col-md-3 bll"></div>
+</div>
+</div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

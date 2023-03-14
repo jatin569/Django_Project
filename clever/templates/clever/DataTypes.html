@@ -1,0 +1,319 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:3900px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+                <h2> C Programming</h2>
+                <a href="{% url 'C1' %}">C - Home</a>
+                <a href="{% url 'EnvironmentSetup1' %}">C - Environment Setup</a>
+                <a href="{% url 'ProgramStructure1' %}">C - Program Structure</a>
+                <a href="{% url 'BasicSyntax1' %}">C - Basic Syntax</a>
+                <a href="{% url 'DataTypes1' %}">C - Data Types</a>
+                <a href="{% url 'Variables1' %}">C - Variables</a>
+                  <a href="{% url 'Constants1' %}">C - Constants</a>
+                 <a href="{% url 'StorageClass1' %}">C - Storage Classes</a>
+                <a href="{% url 'Operators1' %}">C - Operators</a>
+                <a href="{% url 'DecisionMaking1' %}">C - Decision Making</a>
+                <a href="{% url 'Loops1' %}">C - Loops</a>
+                <a href="{% url 'Functions1' %}">C - Functions</a>
+                 <a href="{% url 'ScopeRules1' %}">C - Scope Rules</a>
+                <a href="{% url 'Arrays1' %}">C - Arrays</a>
+                 <a href="{% url 'Pointers1' %}">C - Pointers</a>
+                <a href="{% url 'Strings1' %}">C - Strings</a>
+                <a href="{% url 'Structures1' %}">C - Structures</a>
+                 <a href="{% url 'Unions1' %}">C - Unions</a>
+                <a href="{% url 'BitField1' %}">C - Bit Fields</a>
+
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>Data Types</h1></center>
+
+            </div>
+            <p>Data types in c refer to an extensive system used for declaring variables or functions of different types. The type of a variable determines how much space it occupies in storage and how the bit pattern stored is interpreted.</p>
+<p>The types in C can be classified as follows &minus;</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">Sr.No.</th>
+<th style="text-align:center;">Types &amp; Description</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><p><b>Basic Types</b></p>
+<p>They are arithmetic types and are further classified into: (a) integer types and (b) floating-point types.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><p><b>Enumerated types</b></p>
+<p>They are again arithmetic types and they are used to define variables that can only assign certain discrete integer values throughout the program.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><p><b>The type void</b></p>
+<p>The type specifier <i>void</i> indicates that no value is available.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">4</td>
+<td><p><b>Derived types</b></p>
+<p>They include (a) Pointer types, (b) Array types, (c) Structure types, (d) Union types and (e) Function types.</p>
+</td>
+</tr>
+</table>
+<p>The array types and structure types are referred collectively as the aggregate types. The type of a function specifies the type of the function's return value. We will see the basic types in the following section, where as other types will be covered in the upcoming chapters.</p>
+<h2>Integer Types</h2>
+<p>The following table provides the details of standard integer types with their storage sizes and value ranges &minus;</p>
+<table style="text-align:center;" class="table table-bordered">
+<tr>
+<th style="width:23%;text-align:center;">Type</th>
+<th style="width:20%;text-align:center;">Storage size</th>
+<th style="text-align:center;">Value range</th>
+</tr>
+<tr>
+<td>char</td>
+<td>1 byte</td>
+<td>-128 to 127 or 0 to 255</td>
+</tr>
+<tr>
+<td>unsigned char</td>
+<td>1 byte</td>
+<td>0 to 255</td>
+</tr>
+<tr>
+<td>signed char</td>
+<td>1 byte</td>
+<td>-128 to 127</td>
+</tr>
+<tr>
+<td style="vertical-align:middle;">int</td>
+<td style="vertical-align:middle;">2 or 4 bytes</td>
+<td>-32,768 to 32,767 or -2,147,483,648 to 2,147,483,647</td>
+</tr>
+<tr>
+<td>unsigned int</td>
+<td>2 or 4 bytes</td>
+<td>0 to 65,535 or 0 to 4,294,967,295</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2 bytes</td>
+<td>-32,768 to 32,767</td>
+</tr>
+<tr>
+<td>unsigned short</td>
+<td>2 bytes</td>
+<td>0 to 65,535</td>
+</tr>
+<tr>
+<td>long</td>
+<td>4 bytes</td>
+<td>-2,147,483,648 to 2,147,483,647</td>
+</tr>
+<tr>
+<td>unsigned long</td>
+<td>4 bytes</td>
+<td>0 to 4,294,967,295</td>
+</tr>
+</table>
+<p>To get the exact size of a type or a variable on a particular platform, you can use the <b>sizeof</b> operator. The expressions <i>sizeof(type)</i> yields the storage size of the object or type in bytes. Given below is an example to get the size of int type on any machine &minus;</p>
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+#include &lt;limits.h&gt;
+
+int main() {
+   printf("Storage size for int : %d \n", sizeof(int));
+
+   return 0;
+}
+</pre>
+<p>When you compile and execute the above program, it produces the following result on Linux &minus;</p>
+<pre class="result notranslate">
+Storage size for int : 4
+</pre>
+<h2>Floating-Point Types</h2>
+<p>The following table provide the details of standard floating-point types with storage sizes and value ranges and their precision &minus;</p>
+<table style="text-align:center;" class="table table-bordered">
+<tr>
+<th style="text-align:center;">Type</th>
+<th style="text-align:center;">Storage size</th>
+<th style="text-align:center;">Value range</th>
+<th style="text-align:center;">Precision</th>
+</tr>
+<tr>
+<td>float</td>
+<td>4 byte</td>
+<td>1.2E-38 to 3.4E+38</td>
+<td>6 decimal places</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8 byte</td>
+<td>2.3E-308 to 1.7E+308</td>
+<td>15 decimal places</td>
+</tr>
+<tr>
+<td>long double</td>
+<td>10 byte</td>
+<td>3.4E-4932 to 1.1E+4932</td>
+<td>19 decimal places</td>
+</tr>
+</table>
+<p>The header file float.h defines macros that allow you to use these values and other details about the binary representation of real numbers in your programs. The following example prints the storage space taken by a float type and its range values &minus;</p>
+    <pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+#include &lt;float.h&gt;
+
+int main() {
+   printf("Storage size for float : %d \n", sizeof(float));
+   printf("Minimum float positive value: %E\n", FLT_MIN );
+   printf("Maximum float positive value: %E\n", FLT_MAX );
+   printf("Precision value: %d\n", FLT_DIG );
+
+   return 0;
+}
+</pre>
+<p>When you compile and execute the above program, it produces the following result on Linux &minus;</p>
+<pre class="result notranslate">
+Storage size for float : 4
+Minimum float positive value: 1.175494E-38
+Maximum float positive value: 3.402823E+38
+Precision value: 6
+</pre>
+<h2>The void Type</h2>
+<p>The void type specifies that no value is available. It is used in three kinds of situations &minus;</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">Sr.No.</th>
+<th style="text-align:center;">Types &amp; Description</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><p><b>Function returns as void</b></p>
+<p>There are various functions in C which do not return any value or you can say they return void. A function with no return value has the return type as void. For example, <b>void exit (int status);</b></p>
+</td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><p><b>Function arguments as void</b></p>
+<p>There are various functions in C which do not accept any parameter. A function with no parameter can accept a void. For example, <b>int rand(void);</b></p>
+</td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><p><b>Pointers to void</b></p>
+<p>A pointer of type void * represents the address of an object, but not its type. For example, a memory allocation function <b>void *malloc( size_t size );</b> returns a pointer to void which can be casted to any data type.</p>
+</td>
+</tr>
+</table>
+<hr />
+
+            <br><center><iframe width="600" height="400" src="https://www.youtube.com/embed/j1u3V6pzwEI">
+</iframe></center><br>
+
+            <center><a href="{% url 'BasicSyntax1' %}" class="previous">&laquo; Previous</a>
+            <a href="{% url 'Variables1' %}" class="next">Next &raquo;</a></center>
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

@@ -1,0 +1,246 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:2950px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+        <h2> C++ Programming Tutorials</h2>
+                <a href="{% url 'cpHome1' %}">C++ Home</a>
+                <a href="{% url 'cpEnvironmentSetup1' %}">C++ Environment Setup</a>
+                <a href="{% url 'cpBasicSyntax1' %}">C++ Basic Syntax</a>
+                <a href="{% url 'cpComments1' %}">C++ Comments</a>
+                <a href="{% url 'cpDataTypes1' %}">C++ Data Types</a>
+                <a href="{% url 'cpVariableTypes1' %}">C++ Variable Types</a>
+                <a href="{% url 'cpVariableScope1' %}">C++ Variable Scope</a>
+                <a href="{% url 'cpConstantsLiterals1' %}">C++ Constants/Literals</a>
+                <a href="{% url 'cpModifierTypes1' %}">C++ Modifier Types</a>
+                <a href="{% url 'cpStorageClasses1' %}">C++ Storage Classes</a>
+                <a href="{% url 'cpOperators1' %}">C++ Operators</a>
+                <a href="{% url 'cpLoopTypes1' %}">C++ Loop Types</a>
+                <a href="{% url 'cpDecisionMaking1' %}">C++ Decision Making</a>
+                <a href="{% url 'cpFunctions1' %}">C++ Functions</a>
+                <a href="{% url 'cpNumbers1' %}">C++ Numbers</a>
+                <a href="{% url 'cpArrays1' %}">C++ Arrays</a>
+
+
+                </ul>
+
+
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>C++ Arrays</h1></center><br>
+            </div>
+            <p>C++ provides a data structure, <b>the array</b>, which stores a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.</p>
+<p>Instead of declaring individual variables, such as number0, number1, ..., and number99, you declare one array variable such as numbers and use numbers[0], numbers[1], and ..., numbers[99] to represent individual variables. A specific element in an array is accessed by an index. </p>
+<p>All arrays consist of contiguous memory locations. The lowest address corresponds to the first element and the highest address to the last element.</p>
+<h2>Declaring Arrays</h2>
+<p>To declare an array in C++, the programmer specifies the type of the elements and the number of elements required by an array as follows &minus;</p>
+<pre class="result notranslate">
+type arrayName [ arraySize ];
+</pre>
+<p>This is called a single-dimension array. The <b>arraySize</b> must be an integer constant greater than zero and <b>type</b> can be any valid C++ data type. For example, to declare a 10-element array called balance of type double,
+use this statement &minus;</p>
+<pre class="result notranslate">
+double balance[10];
+</pre>
+<h2>Initializing Arrays</h2>
+<p>You can initialize C++ array elements either one by one or using a single statement as follows &minus;</p>
+<pre class="result notranslate">
+double balance[5] = {1000.0, 2.0, 3.4, 17.0, 50.0};
+</pre>
+<p>The number of values between braces { } can not be larger than the number of elements that we declare for the array between square brackets [ ]. Following is an example to assign a single element of the array &minus;</p>
+<p>If you omit the size of the array, an array just big enough to hold the initialization is created.  Therefore, if you write &minus;</p>
+<pre class="result notranslate">
+double balance[] = {1000.0, 2.0, 3.4, 17.0, 50.0};
+</pre>
+<p>You will create exactly the same array as you did in the previous example.</p>
+<pre class="result notranslate">
+balance[4] = 50.0;
+</pre>
+<p>The above statement assigns element number 5<sup>th</sup> in the array a value of 50.0. Array with 4<sup>th</sup> index will be 5<sup>th</sup>, i.e., last element because all arrays have 0 as the index of their first element which is also called base index. Following is the pictorial representaion of the same array we discussed above &minus;</p>
+            <centre><img src="{% static 'clever/img/bg-img/t.jpg' %}" alt="Array Presentation" /></centre>
+<h2>Accessing Array Elements</h2>
+<p>An element is accessed by indexing the array name. This is done by placing the index of the element within square brackets after the name of the array. For example &minus;</p>
+<pre class="result notranslate">
+double salary = balance[9];
+</pre>
+<p>The above statement will take 10<sup>th</sup> element from the array and assign the value to salary variable. Following is an example, which will use all the above-mentioned three concepts viz. declaration, assignment and accessing arrays &minus;</p>
+<pre class="prettyprint notranslate">
+#include &lt;iostream&gt;
+using namespace std;
+
+#include &lt;iomanip&gt;
+using std::setw;
+
+int main () {
+
+   int n[ 10 ]; // n is an array of 10 integers
+
+   // initialize elements of array n to 0
+   for ( int i = 0; i &lt; 10; i++ ) {
+      n[ i ] = i + 100; // set element at location i to i + 100
+   }
+   cout &lt;&lt; "Element" &lt;&lt; setw( 13 ) &lt;&lt; "Value" &lt;&lt; endl;
+
+   // output each array element's value
+   for ( int j = 0; j &lt; 10; j++ ) {
+      cout &lt;&lt; setw( 7 )&lt;&lt; j &lt;&lt; setw( 13 ) &lt;&lt; n[ j ] &lt;&lt; endl;
+   }
+
+   return 0;
+}
+</pre>
+<p>This program makes use of <b>setw()</b> function to format the output. When the above code is compiled and executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+Element        Value
+      0          100
+      1          101
+      2          102
+      3          103
+      4          104
+      5          105
+      6          106
+      7          107
+      8          108
+      9          109
+</pre>
+<h2>Arrays in C++</h2>
+<p>Arrays are important to C++ and should need lots of more detail. There are following few important concepts, which should be clear to a C++ programmer &minus;</p>
+<table class="table table-bordered">
+<tr>
+<th>Sr.No</th>
+<th style="text-align:center;">Concept &amp; Description</th>
+</tr>
+<tr>
+<td class="">1</td>
+<td><a>Multi-dimensional arrays</a>
+<p>C++ supports multidimensional arrays. The simplest form of the multidimensional array is the two-dimensional array.</p></td>
+</tr>
+<tr>
+<td class="">2</td>
+<td><a>Pointer to an array</a>
+<p>You can generate a pointer to the first element of an array by simply specifying the array name, without any index.</p></td>
+</tr>
+<tr>
+<td class="">3</td>
+<td><a >Passing arrays to functions</a>
+<p>You can pass to the function a pointer to an array by specifying the array's name without an index.</p></td>
+</tr>
+<tr>
+<td class="">4</td>
+<td><a >Return array from functions</a>
+<p>C++ allows a function to return an array.</p></td>
+</tr>
+</table>
+<hr />
+
+
+
+
+
+
+            <center><a href="{% url 'cpNumbers1' %}" class="previous">&laquo; Previous</a>
+            <a></a></center>
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

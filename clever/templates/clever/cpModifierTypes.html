@@ -1,0 +1,203 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:1850px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+        <h2> C++ Programming Tutorials</h2>
+               <a href="{% url 'cpHome1' %}">C++ Home</a>
+                <a href="{% url 'cpEnvironmentSetup1' %}">C++ Environment Setup</a>
+                <a href="{% url 'cpBasicSyntax1' %}">C++ Basic Syntax</a>
+                <a href="{% url 'cpComments1' %}">C++ Comments</a>
+                <a href="{% url 'cpDataTypes1' %}">C++ Data Types</a>
+                <a href="{% url 'cpVariableTypes1' %}">C++ Variable Types</a>
+                <a href="{% url 'cpVariableScope1' %}">C++ Variable Scope</a>
+                <a href="{% url 'cpConstantsLiterals1' %}">C++ Constants/Literals</a>
+                <a href="{% url 'cpModifierTypes1' %}">C++ Modifier Types</a>
+                <a href="{% url 'cpStorageClasses1' %}">C++ Storage Classes</a>
+                <a href="{% url 'cpOperators1' %}">C++ Operators</a>
+                <a href="{% url 'cpLoopTypes1' %}">C++ Loop Types</a>
+                <a href="{% url 'cpDecisionMaking1' %}">C++ Decision Making</a>
+                <a href="{% url 'cpFunctions1' %}">C++ Functions</a>
+                <a href="{% url 'cpNumbers1' %}">C++ Numbers</a>
+                <a href="{% url 'cpArrays1' %}">C++ Arrays</a>
+
+
+                </ul>
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>C++ Modifier Types</h1></center><br>
+            </div>
+            <p>C++ allows the <b>char, int, </b> and <b>double</b> data types to have modifiers preceding them. A modifier is used to alter the meaning of the base type so that it more precisely fits the needs of various situations.</p>
+<p>The data type modifiers are listed here &minus;</p>
+<ul class="list">
+<li>signed</li>
+<li>unsigned</li>
+<li>long</li>
+<li>short</li>
+</ul>
+<p>The modifiers <b>signed, unsigned, long,</b> and <b>short</b> can be applied to integer base types. In addition, <b>signed</b> and <b>unsigned</b> can be applied to char, and <b>long</b> can be applied to double.</p>
+<p>The modifiers <b>signed</b> and <b>unsigned</b> can also be used as prefix to <b>long</b> or <b>short</b> modifiers. For example, <b>unsigned long int</b>.</p>
+<p>C++ allows a shorthand notation for declaring <b>unsigned, short,</b> or <b>long</b> integers. You can simply use the word <b>unsigned, short,</b> or <b>long,</b> without <b>int</b>. It automatically implies <b>int</b>. For example, the following two statements both declare unsigned integer variables.</p>
+<pre class="result notranslate">
+unsigned x;
+unsigned int y;
+</pre>
+<p>To understand the difference between the way signed and unsigned integer modifiers are interpreted by C++, you should run the following short program &minus;</p>
+
+<pre class="prettyprint notranslate">
+#include &lt;iostream&gt;
+using namespace std;
+
+/* This program shows the difference between
+   * signed and unsigned integers.
+*/
+int main() {
+   short int i;           // a signed short integer
+   short unsigned int j;  // an unsigned short integer
+
+   j = 50000;
+
+   i = j;
+   cout &lt;&lt; i &lt;&lt; " " &lt;&lt; j;
+
+   return 0;
+}
+</pre>
+<p>When this program is run, following is the output &minus;</p>
+<pre class="result notranslate">
+-15536 50000
+</pre>
+<p>The above result is because the bit pattern that represents 50,000 as a short unsigned integer is interpreted as -15,536 by a short.</p>
+<h2>Type Qualifiers in C++</h2>
+<p>The type qualifiers provide additional information about the variables they precede.</p>
+<table class="table table-bordered">
+<tr>
+<th>Sr.No</th>
+<th style="text-align:center;">Qualifier &amp; Meaning</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><p><b>const</b></p>
+<p>Objects of type <b>const</b> cannot be changed by your program during execution.</p></td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><p><b>volatile</b></p>
+<p>The modifier <b>volatile</b> tells the compiler that a variable's value may be changed in ways not explicitly specified by the program.</p></td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><p><b>restrict</b></p>
+<p>A pointer qualified by <b>restrict</b> is initially the only means by which the object it points to can be accessed. Only C99 adds a new type qualifier called restrict.</p></td>
+</tr>
+</table>
+<hr />
+
+
+
+            <center><a href="{% url 'cpConstantsLiterals1' %}" class="previous">&laquo; Previous</a>
+            <a href="{% url 'cpStorageClasses1' %}" class="next">Next &raquo;</a></center>
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

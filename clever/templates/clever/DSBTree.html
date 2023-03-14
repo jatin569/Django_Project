@@ -1,0 +1,136 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:700px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+                <h2> Data Structure Topics</h2>
+                <a href="{% url 'DataStructure1' %}">Array</a>
+                <a href="{% url 'DSLinkList1' %}">Linked List</a>
+                <a href="{% url 'DStack1' %}">Stack</a>
+                <a href="{% url 'DSQueue1' %}">Queue</a>
+                <a href="{% url 'DSBTree1' %}">Binary Tree</a>
+                <a href="{% url 'DSBSTree1' %}">Binary Search Tree</a>
+                <a href="{% url 'DSHeap1' %}">Heap</a>
+                <a href="{% url 'DSHashing1' %}">Hashing</a>
+                <a href="{% url 'DSGraph1' %}">Graph</a>
+                <a href="{% url 'DSMatrix1' %}">Matrix</a>
+
+
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>Binary Tree Data Structure </h1></center>
+
+            </div>
+           <p>A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.</p>
+<p><center><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/binary-tree-to-DLL.png" alt="" width="420" height="314" class="aligncenter size-full wp-image-178302" srcset="https://www.geeksforgeeks.org/wp-content/uploads/binary-tree-to-DLL.png 420w, https://www.geeksforgeeks.org/wp-content/uploads/binary-tree-to-DLL-300x224.png 300w" sizes="(max-width: 420px) 100vw, 420px" /></center></p>
+<p>A Binary Tree node contains following parts.</p>
+
+<li>Data</li>
+<li>Pointer to left child</li>
+<li>
+Pointer to right child</li>
+      <center><a href="{% url 'DSQueue1' %}" class="previous">&laquo; Previous</a>
+                          <a href="{% url 'DSBSTree1' %}" class="next">Next &raquo;</a></center>
+
+        </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

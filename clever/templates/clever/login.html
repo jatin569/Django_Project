@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *Must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Clever - Education &amp; Courses Template | Home</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'clever/img/core-img/favicon.ico' %}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'clever/style.css' %}">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        
+        <!-- Navbar Area -->
+        <div class="clever-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Menu -->
+                <nav class="classy-navbar justify-content-between" id="cleverNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand" href="index.html"><img src="{% static 'clever/img/core-img/logo.png' %}" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+
+                        <!-- Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="#">Languages</a>
+                                    <ul class="dropdown">
+                                        <li><a href="index.html">C</a></li>
+                                        <li><a href="courses.html">C++</a></li>
+                                        <li><a href="single-course.html">java</a></li>
+                                        <li><a href="Projects.html">Python</a></li>
+                                        <li><a href="blog.html">Html</a></li>
+                                        <li><a href="blog-details.html">CSS</a></li>
+                                        <li><a href="regular-page.html">JavaScript</a></li>
+                                        <li><a href="contact.html">PHP</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">CS Subjects</a>
+                                    <ul class="dropdown">
+                                        <li><a href="datastructure.html">Data Structure</a></li>
+                                        <li><a href="Algorithm.html">Algorithm</a></li>
+                                        <li><a href="Computer Network.html">Computer Network</a></li>
+                                        <li><a href="Operating System.html">Operating System</a></li>
+                                        <li><a href="Theory Of Computation.html">TOC</a></li>
+                                        <li><a href="DBMS.html">DBMS</a></li>
+                                    </ul>
+                                <li><a href="Projects.html">Projects</a></li>
+                                <li><a href="GATE.html">GATE</a></li>
+                                <li><a href="blog.html">Practice</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+
+                            </ul>
+
+                            <!-- Search Button -->
+                            <div class="search-area">
+                                <form action="#" method="post">
+                                    <input type="search" name="search" id="search" placeholder="Search">
+                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+
+                            <!-- Register / Login -->
+                            <div class="login-state d-flex align-items-center">
+                                <div class="user-name mr-30">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hello User</a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
+                                            <a class="dropdown-item" href="#">Profile</a>
+                                            <a class="dropdown-item" href="#">Account Info</a>
+                                            <a class="dropdown-item" href="index.html">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Hero Area Start ##### -->
+    <section class="hero-area bg-img bg-overlay-2by5" style="background-image: url({% static 'clever/img/bg-img/jg1.jpg' %});">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <!-- Hero Content -->
+                    <div class="hero-content text-center">
+                        <h2>Let's Study Together</h2>
+                        <a href="#" class="btn clever-btn">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Hero Area End ##### -->
+  <!-- ##### Popular Courses Start ##### -->
+    <section class="popular-courses-area section-padding-100-0" style="background-image: url({% static 'clever/img/core-img/texture.png' %});">
+        <div class="container">
+           <!-- <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h3></h3>
+                    </div>
+                </div>
+            </div>
+                    -->
+            <div class="row">
+                <!-- Single Popular Course -->
+                <div class="col-3 col-md-3 col-lg-3">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="250ms">
+                        <img src="{% static 'clever/img/bg-img/j4.jpg' %}" alt="">
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>Programming Languages</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Popular Course -->
+                <div class="col-1 col-md-1 col-lg-3">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="500ms">
+                        <img src="{% static 'clever/img/bg-img/c2.jpg' %}" alt="">
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>Computer Science</h4>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Popular Course -->
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="750ms">
+                        <img src="{% static 'clever/img/bg-img/c3.jpg' %}" alt="">
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>Artificial Intelligence</h4>
+                          
+                        </div>
+                        
+                    </div>
+                </div>
+                 <!-- Single Popular Course -->
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="750ms">
+                        <img src="{% static 'clever/img/bg-img/j5.jpg' %}" alt="">
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>Machine<br> 
+                            Learning</h4>
+                          
+                        </div>
+                        
+                    </div>
+                </div>
+                 <!-- Single Popular Course -->
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="750ms">
+                        <img src="{% static 'clever/img/bg-img/j6.jpg' %}" alt="">
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>Big Data</h4>
+                          
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- Single Popular Course -->
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="500ms">
+                        <img src="{% static 'clever/img/bg-img/j7.jpg' %}" alt="">
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>Ethical Hacking</h4>
+                            
+                        </div>
+                    </div>
+                </div>
+                 <!-- Single Popular Course -->
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="250ms">
+                        <img src="{% static 'clever/img/bg-img/j8.jpg' %}" alt="">
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>HTML</h4>
+                        </div>
+                    </div>
+                </div>
+                  <!-- Single Popular Course -->
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="500ms">
+                        <img src="{% static 'clever/img/bg-img/j9.jpg' %}" alt="">
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>GATE</h4>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Popular Courses End ##### -->
+
+ <!-- ##### About Start ##### -->
+  <section class="About-area section-padding-100-0">
+         <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h3>About us</h3>
+                        <p> Welcome to our website, where you'll find a wealth of information about all the programming languages and many popular subjects and you can buy the projects in cheap prices.<br> We created this website to help you gain a better understanding of your study problem.In this website you can search anything about your subjects and watch videos of that topic. We're here to educate you. We hope you take advantage of this resource and visit us often. Be sure to add our site to your list of "favorites" in your Internet browser. We frequently update our information.</p>
+                    </div>
+                </div>
+            </div>
+        
+    </section>
+    <!-- ##### About End ##### -->
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <!-- Top Footer Area -->
+        <div class="top-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Footer Logo -->
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="{% static 'clever/img/core-img/logo2.png' %}" alt=""></a>
+                        </div>
+                        <!-- Copywrite -->
+                        <p><a href="#"><!-- Link back to Towqeer can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://Towqeers.com" target="_blank">Towqeer</a>
+                            <!-- Link back to Towqeer can't be removed. Template is licensed under CC BY 3.0. --></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer Area -->
+        <div class="bottom-footer-area d-flex justify-content-between align-items-center">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <a href="#"><span>Email:</span>towqeer32@gmail.com</a>
+            </div>
+            <!-- Follow Us -->
+            <div class="follow-us">
+                <span>Follow us</span>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</body>
+
+</html>

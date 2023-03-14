@@ -1,0 +1,297 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:4500px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+        <h2> C++ Programming Tutorials</h2>
+                <a href="{% url 'cpHome1' %}">C++ Home</a>
+                <a href="{% url 'cpEnvironmentSetup1' %}">C++ Environment Setup</a>
+                <a href="{% url 'cpBasicSyntax1' %}">C++ Basic Syntax</a>
+                <a href="{% url 'cpComments1' %}">C++ Comments</a>
+                <a href="{% url 'cpDataTypes1' %}">C++ Data Types</a>
+                <a href="{% url 'cpVariableTypes1' %}">C++ Variable Types</a>
+                <a href="{% url 'cpVariableScope1' %}">C++ Variable Scope</a>
+                <a href="{% url 'cpConstantsLiterals1' %}">C++ Constants/Literals</a>
+                <a href="{% url 'cpModifierTypes1' %}">C++ Modifier Types</a>
+                <a href="{% url 'cpStorageClasses1' %}">C++ Storage Classes</a>
+                <a href="{% url 'cpOperators1' %}">C++ Operators</a>
+                <a href="{% url 'cpLoopTypes1' %}">C++ Loop Types</a>
+                <a href="{% url 'cpDecisionMaking1' %}">C++ Decision Making</a>
+                <a href="{% url 'cpFunctions1' %}">C++ Functions</a>
+                <a href="{% url 'cpNumbers1' %}">C++ Numbers</a>
+                <a href="{% url 'cpArrays1' %}">C++ Arrays</a>
+
+
+                </ul>
+
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>C++ Functions</h1></center><br>
+            </div>
+            <p>A function is a group of statements that together perform a task. Every C++ program has at least one function, which is <b>main()</b>, and all the most trivial programs can define additional functions.</p>
+<p>You can divide up your code into separate functions. How you divide up your code among different functions is up to you, but logically the division usually is such that each function performs a specific task.</p>
+<p>A function <b>declaration</b> tells the compiler about a function's name, return type, and parameters. A function <b>definition</b> provides the actual body of the function.</p>
+<p>The C++ standard library provides numerous built-in functions that your program can call. For example, function <b>strcat()</b> to concatenate two strings, function <b>memcpy()</b> to copy one memory location to another location and many more functions.</p>
+<p>A function is known with various names like a method or a sub-routine or a procedure etc.</p>
+<h2>Defining a Function</h2>
+<p>The general form of a C++ function definition is as follows &minus;</p>
+<pre class="result notranslate">
+return_type function_name( parameter list ) {
+   body of the function
+}
+</pre>
+<p>A C++ function definition consists of a function header and a function body. Here are all the parts of a function &minus;</p>
+<ul class="list">
+<li><p><b>Return Type</b> &minus; A function may return a value. The <b>return_type</b> is the data type of the value the function returns. Some functions perform the desired operations without returning a value. In this case, the return_type is the keyword <b>void</b>.</p></li>
+<li><p><b>Function Name</b> &minus; This is the actual name of the function. The function name and the parameter list together constitute the function signature.</p></li>
+<li><p><b>Parameters</b> &minus; A parameter is like a placeholder. When a function is invoked, you pass a value to the parameter. This value is referred to as actual parameter or argument. The parameter list refers to the type, order, and number of the parameters of a function. Parameters are optional; that is, a function may contain no parameters.</p></li>
+<li><p><b>Function Body</b> &minus; The function body contains a collection of statements that define what the function does.</p></li>
+</ul>
+<h2>Example</h2>
+<p>Following is the source code for a function called <b>max()</b>. This function takes two parameters num1 and num2 and return the biggest of both &minus;</p>
+<pre class="result notranslate">
+// function returning the max between two numbers
+
+int max(int num1, int num2) {
+   // local variable declaration
+   int result;
+
+   if (num1 &gt; num2)
+      result = num1;
+   else
+      result = num2;
+
+   return result;
+}
+</pre>
+<h2>Function Declarations</h2>
+<p>A function <b>declaration</b> tells the compiler about a function name and how to call the function. The actual body of the function can be defined separately.</p>
+<p>A function declaration has the following parts &minus;</p>
+<pre class="result notranslate">
+return_type function_name( parameter list );
+</pre>
+<p>For the above defined function max(), following is the function declaration &minus;</p>
+<pre class="result notranslate">
+int max(int num1, int num2);
+</pre>
+<p>Parameter names are not important in function declaration only their type is required, so following is also valid declaration &minus;</p>
+<pre class="result notranslate">
+int max(int, int);
+</pre>
+<p>Function declaration is required when you define a function in one source file and you call that function in another file. In such case, you should declare the function at the top of the file calling the function.</p>
+<h2>Calling a Function</h2>
+<p>While creating a C++ function, you give a definition of what the function has to do. To use a function, you will have to call or invoke that function.</p>
+<p>When a program calls a function, program control is transferred to the called function. A called function performs defined task and when it’s return statement is executed or when its function-ending closing brace is reached, it returns program control back to the main program.</p>
+<p>To call a function, you simply need to pass the required parameters along with function name, and if function returns a value, then you can store returned value. For example &minus;</p>
+
+<pre class="prettyprint notranslate">
+#include &lt;iostream&gt;
+using namespace std;
+
+// function declaration
+int max(int num1, int num2);
+
+int main () {
+   // local variable declaration:
+   int a = 100;
+   int b = 200;
+   int ret;
+
+   // calling a function to get max value.
+   ret = max(a, b);
+   cout &lt;&lt; "Max value is : " &lt;&lt; ret &lt;&lt; endl;
+
+   return 0;
+}
+
+// function returning the max between two numbers
+int max(int num1, int num2) {
+   // local variable declaration
+   int result;
+
+   if (num1 &gt; num2)
+      result = num1;
+   else
+      result = num2;
+
+   return result;
+}
+</pre>
+<p>I kept max() function along with main() function and compiled the source code. While running final executable, it would produce the following result &minus;</p>
+<pre class="result notranslate">
+Max value is : 200
+</pre>
+<h2>Function Arguments</h2>
+<p>If a function is to use arguments, it must declare variables that accept the values of the arguments. These variables are called the <b>formal parameters</b> of the function.</p>
+<p>The formal parameters behave like other local variables inside the function and are created upon entry into the function and destroyed upon exit.</p>
+<p>While calling a function, there are two ways that arguments can be passed to a function &minus;</p>
+<table class="table table-bordered">
+<tr>
+<th>Sr.No</th>
+<th style="text-align:center;">Call Type &amp; Description</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><a >Call by Value</a>
+<p>This method copies the actual value of an argument into the formal parameter of the function. In this case, changes made to the parameter inside the function have no effect on the argument.</p></td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><a >Call by Pointer</a>
+<p>This method copies the address of an argument into the formal parameter. Inside the function, the address is used to access the actual argument used in the call. This means that changes made to the parameter affect the argument.</p></td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><a >Call by Reference</a>
+<p>This method copies the reference of an argument into the formal parameter. Inside the function, the reference is used to access the actual argument used in the call. This means that changes made to the parameter affect the argument.</p></td>
+</tr>
+</table>
+<p>By default, C++ uses <b>call by value</b> to pass arguments. In general, this means that code within a function cannot alter the arguments used to call the function and above mentioned example while calling max() function used the same method.</p>
+<h2>Default Values for Parameters</h2>
+<p>When you define a function, you can specify a default value for each of the last parameters. This value will be used if the corresponding argument is left blank when calling to the function.</p>
+<p>This is done by using the assignment operator and assigning values for the arguments in the function definition. If a value for that parameter is not passed when the function is called, the default given value is used, but if a value is specified, this default value is ignored and the passed value is used instead. Consider the following example &minus;</p>
+<pre class="prettyprint notranslate">
+#include &lt;iostream&gt;
+using namespace std;
+
+int sum(int a, int b = 20) {
+   int result;
+   result = a + b;
+
+   return (result);
+}
+int main () {
+   // local variable declaration:
+   int a = 100;
+   int b = 200;
+   int result;
+
+   // calling a function to add the values.
+   result = sum(a, b);
+   cout &lt;&lt; "Total value is :" &lt;&lt; result &lt;&lt; endl;
+
+   // calling a function again as follows.
+   result = sum(a);
+   cout &lt;&lt; "Total value is :" &lt;&lt; result &lt;&lt; endl;
+
+   return 0;
+}
+</pre>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+Total value is :300
+Total value is :120
+</pre>
+<hr />
+
+
+
+
+
+
+            <center><a href="{% url 'cpDecisionMaking1' %}" class="previous">&laquo; Previous</a>
+            <a href="{% url 'cpNumbers1' %}" class="next">Next &raquo;</a></center>
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

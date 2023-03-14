@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+    <script type="text/javascript" src="{% static 'clever/jq/jquery-1.10.2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'clever/jq/jquery.min.js' %}"></script>
+
+    <style>
+
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:1500px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+p{font-size: 18px;}
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+
+}
+</style>
+<body>
+
+<div class="container-fluid">
+
+<div class="row">
+        <div class="col-md-3 bll">
+        </div>
+       <div class="col-md-6 all" style="border:solid 0px ;">
+         <center> <h3>Your Result is</h3><br>
+             <h2>You are {{result}} in the Test</h2>
+             <p>Your Score is {{totalcorrectans}} out of 10</p>
+             <p>No of Right Answers {{totalcorrectans}}</p>
+             <p>No of Wrong Answers {{wrongans}}</p>
+             <p>The right questions are Q{{correctans}}</p>
+
+         </center>
+
+        </div><!--  6 div close --->
+
+    <div class="col-md-3 bll"></div>
+</div>
+</div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

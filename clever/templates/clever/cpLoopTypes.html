@@ -1,0 +1,214 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:2490px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+        <h2> C++ Programming Tutorials</h2>
+               <a href="{% url 'cpHome1' %}">C++ Home</a>
+                <a href="{% url 'cpEnvironmentSetup1' %}">C++ Environment Setup</a>
+                <a href="{% url 'cpBasicSyntax1' %}">C++ Basic Syntax</a>
+                <a href="{% url 'cpComments1' %}">C++ Comments</a>
+                <a href="{% url 'cpDataTypes1' %}">C++ Data Types</a>
+                <a href="{% url 'cpVariableTypes1' %}">C++ Variable Types</a>
+                <a href="{% url 'cpVariableScope1' %}">C++ Variable Scope</a>
+                <a href="{% url 'cpConstantsLiterals1' %}">C++ Constants/Literals</a>
+                <a href="{% url 'cpModifierTypes1' %}">C++ Modifier Types</a>
+                <a href="{% url 'cpStorageClasses1' %}">C++ Storage Classes</a>
+                <a href="{% url 'cpOperators1' %}">C++ Operators</a>
+                <a href="{% url 'cpLoopTypes1' %}">C++ Loop Types</a>
+                <a href="{% url 'cpDecisionMaking1' %}">C++ Decision Making</a>
+                <a href="{% url 'cpFunctions1' %}">C++ Functions</a>
+                <a href="{% url 'cpNumbers1' %}">C++ Numbers</a>
+                <a href="{% url 'cpArrays1' %}">C++ Arrays</a>
+
+
+                </ul>
+
+
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>C++ Loop Types</h1></center><br>
+            </div>
+            <p>There may be a situation, when you need to execute a block of code several number of times. In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on.</p>
+<p>Programming languages provide various control structures that allow for more complicated execution paths.</p>
+<p>A loop statement allows us to execute a statement or group of statements multiple times and following is the general from of a loop statement in most of the programming languages &minus;</p>
+            <center><img src="{% static 'clever/img/bg-img/u.jpg' %}" alt="Loop Architecture" /></center>
+<p>C++ programming language provides the following type of loops to handle looping requirements.</p>
+<table class="table table-bordered">
+<tr>
+<th>Sr.No</th>
+<th style="text-align:center;">Loop Type &amp; Description</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><a title="C++ while loop">while loop</a>
+<p>Repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body.</p></td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><a title="C++ for loop">for loop</a>
+<p>Execute a sequence of statements multiple times and abbreviates the code that manages the loop variable.</p></td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><a title="C++ do...while loop">do...while loop</a>
+<p>Like a ‘while’ statement, except that it tests the condition at the end of the loop body.</p></td>
+</tr>
+<tr>
+<td class="ts">4</td>
+<td><a>nested loops</a>
+<p>You can use one or more loop inside any another ‘while’, ‘for’ or ‘do..while’ loop.</p></td>
+</tr>
+</table>
+<h2>Loop Control Statements</h2>
+<p>Loop control statements change execution from its normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed.</p>
+<p>C++ supports the following control statements.</p>
+<table class="table table-bordered">
+<tr>
+<th>Sr.No</th>
+<th style="text-align:center;">Control Statement &amp; Description</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><a >break statement</a>
+<p>Terminates the <b>loop</b> or <b>switch</b> statement and transfers execution to the statement immediately following the loop or switch.</p></td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><a >continue statement</a>
+<p>Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.</p></td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><a >goto statement</a>
+<p>Transfers control to the labeled statement. Though it is not advised to use goto statement in your program.</p></td>
+</tr>
+</table>
+<h2>The Infinite Loop</h2>
+<p>A loop becomes infinite loop if a condition never becomes false. The <b>for</b> loop is traditionally used for this purpose. Since none of the three expressions that form the ‘for’ loop are required, you can make an endless loop by leaving the conditional expression empty.</p>
+<pre class="prettyprint notranslate">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main () {
+   for( ; ; ) {
+      printf("This loop will run forever.\n");
+   }
+
+   return 0;
+}
+</pre>
+<p>When the conditional expression is absent, it is assumed to be true. You may have an initialization and increment expression, but C++ programmers more commonly use the ‘for (;;)’ construct to signify an infinite loop.</p>
+<p><b>NOTE</b> &minus; You can terminate an infinite loop by pressing Ctrl + C keys.</p>
+<hr />
+
+
+
+
+
+            <center><a href="{% url 'cpOperators1' %}" class="previous">&laquo; Previous</a>
+            <a href="{% url 'cpDecisionMaking1' %}" class="next">Next &raquo;</a></center>
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

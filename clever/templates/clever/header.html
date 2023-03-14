@@ -1,0 +1,103 @@
+
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *Must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Clever - Education &amp; Courses Template | Home</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'clever/img/core-img/favicon.ico'%}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'clever/style.css' %}">
+
+</head>
+
+<!-- ##### Header Area Start ##### -->
+    <header class="header-area" >
+       <!-- Navbar Area -->
+        <div class="clever-main-menu" >
+
+            <div class="classy-nav-container breakpoint-off" >
+                <!-- Menu -->
+                <nav class="classy-navbar justify-content-between"   style="height:100px;" id="cleverNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand" href="index.html"><img src="{% static 'clever/img/core-img/logo.png' %}" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+
+                        <!-- Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                <li><a href="{% url 'index1' %}">Home</a></li>
+                                <li><a href="#">Languages</a>
+                                    <ul class="dropdown">
+                                        <li><a href="{% url 'C1' %}">C</a></li>
+                                        <li><a href="{% url 'CPP1' %}">C++</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">CS Subjects</a>
+                                    <ul class="dropdown">
+                                        <li><a href="{% url 'DataStructure1' %}">Data Structure</a></li>
+                                        <li><a href="{% url 'OperatingSystem1' %}">Operating System</a></li>
+                                        <li><a href="{% url 'AI1' %}">AI</a></li>
+                                    </ul>
+                                <li><a href="{% url 'contribute1' %}">Contribute</a></li>
+                                <li><a href="{% url 'Practice1' %}">Practice</a></li>
+                                 <li><a href="#">Pages</a>
+                                    <ul class="dropdown">
+                                        <li><a href="http://www.m.ptuexam.com/LoginMe.aspx">Ptu Result</a></li>
+                                        <li><a href="https://brpaper.com/ptu/b-tech">Ptu Question Papers</a></li>
+                                         <li><a href="{% url 'Contact1' %}">Contact</a></li>
+                                    </ul>
+
+
+                            </ul>
+
+                            <!-- Search Button -->
+                            <div class="search-area">
+                                <form action="{% url 'Search1' %}" method="post">{% csrf_token %}
+                                    <input type="search" name="search" id="search" placeholder="Search">
+                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+
+                            <!-- Register / Login -->
+                            <div class="register-login-area">
+                                <a href="#register" class="btn">Register</a>
+                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                                {% if 'uid' in request.session %}
+                                    <a href="{% url 'logout1' %}" class="text-uppercase">Logout</a>
+                                {% else %}
+                                    <a href="#" data-toggle="modal" data-target="#signModal" class="text-uppercase">Login</a>
+                                {% endif %}
+
+                           </div>
+                    <!---------------modal here--------------------------->
+
+
+<!-- login Modal start here -->
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+</header>

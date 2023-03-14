@@ -1,0 +1,261 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:3260px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+                <h2>  C Programming</h2>
+                <a href="{% url 'C1' %}">C - Home</a>
+                <a href="{% url 'EnvironmentSetup1' %}">C - Environment Setup</a>
+                <a href="{% url 'ProgramStructure1' %}">C - Program Structure</a>
+                <a href="{% url 'BasicSyntax1' %}">C - Basic Syntax</a>
+                <a href="{% url 'DataTypes1' %}">C - Data Types</a>
+                <a href="{% url 'Variables1' %}">C - Variables</a>
+                  <a href="{% url 'Constants1' %}">C - Constants</a>
+                 <a href="{% url 'StorageClass1' %}">C - Storage Classes</a>
+                <a href="{% url 'Operators1' %}">C - Operators</a>
+                <a href="{% url 'DecisionMaking1' %}">C - Decision Making</a>
+                <a href="{% url 'Loops1' %}">C - Loops</a>
+                <a href="{% url 'Functions1' %}">C - Functions</a>
+                 <a href="{% url 'ScopeRules1' %}">C - Scope Rules</a>
+                <a href="{% url 'Arrays1' %}">C - Arrays</a>
+                 <a href="{% url 'Pointers1' %}">C - Pointers</a>
+                <a href="{% url 'Strings1' %}">C - Strings</a>
+                <a href="{% url 'Structures1' %}">C - Structures</a>
+                 <a href="{% url 'Unions1' %}">C - Unions</a>
+                <a href="{% url 'BitField1' %}">C - Bit Fields</a>
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>Pointers In C</h1></center>
+
+            </div>
+<p>Pointers in C are easy and fun to learn. Some C programming tasks are performed more easily with pointers, and other tasks, such as dynamic memory allocation, cannot be performed without using pointers. So it becomes necessary to learn pointers to become a perfect C programmer. Let's start learning them in simple and easy steps.</p>
+<p>As you know, every variable is a memory location and every memory location has its address defined which can be accessed using ampersand (&amp;) operator, which denotes an address in memory. Consider the following example, which prints the address of the variables defined &minus;</p>
+
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+
+int main () {
+
+   int  var1;
+   char var2[10];
+
+   printf("Address of var1 variable: %x\n", &amp;var1  );
+   printf("Address of var2 variable: %x\n", &amp;var2  );
+
+   return 0;
+}
+</pre>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+Address of var1 variable: bff5a400
+Address of var2 variable: bff5a3f6
+</pre>
+<h2>What are Pointers?</h2>
+<p>A <b>pointer</b> is a variable whose value is the address of another variable, i.e., direct address of the memory location. Like any variable or constant, you must declare a pointer before using it to store any variable address. The general form of a pointer variable declaration is &minus;</p>
+<pre class="result notranslate">
+type *var-name;
+</pre>
+<p>Here, <b>type</b> is the pointer's base type; it must be a valid C data type and <b>var-name</b> is the name of the pointer variable. The asterisk * used to declare a pointer is the same asterisk used for multiplication. However, in this statement the asterisk is being used to designate a variable as a pointer. Take a look at some of the valid pointer declarations &minus;</p>
+<pre class="result notranslate">
+int    *ip;    /* pointer to an integer */
+double *dp;    /* pointer to a double */
+float  *fp;    /* pointer to a float */
+char   *ch     /* pointer to a character */
+</pre>
+<p>The actual data type of the value of all pointers, whether integer, float, character, or otherwise, is the same, a long hexadecimal number that represents a memory address. The only difference between pointers of different data types is the data type of the variable or constant that the pointer points to.</p>
+<h2>How to Use Pointers?</h2>
+<p>There are a few important operations, which we will do with the help of pointers very frequently. <b>(a)</b> We define a pointer variable, <b>(b)</b> assign the address of a variable to a pointer and <b>(c)</b> finally access the value at the address available in the pointer variable. This is done by using unary operator <b>*</b> that returns the value of the variable located at the address specified by its operand. The following example makes use of these operations &minus;</p>
+
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+
+int main () {
+
+   int  var = 20;   /* actual variable declaration */
+   int  *ip;        /* pointer variable declaration */
+
+   ip = &amp;var;  /* store address of var in pointer variable*/
+
+   printf("Address of var variable: %x\n", &amp;var  );
+
+   /* address stored in pointer variable */
+   printf("Address stored in ip variable: %x\n", ip );
+
+   /* access the value using the pointer */
+   printf("Value of *ip variable: %d\n", *ip );
+
+   return 0;
+}
+</pre>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+Address of var variable: bffd8b3c
+Address stored in ip variable: bffd8b3c
+Value of *ip variable: 20
+</pre>
+<h2>NULL Pointers</h2>
+<p>It is always a good practice to assign a NULL value to a pointer variable in case you do not have an exact address to be assigned. This is done at the time of variable declaration. A pointer that is assigned NULL is called a <b>null</b> pointer.</p>
+<p>The NULL pointer is a constant with a value of zero defined in several standard libraries. Consider the following program &minus;</p>
+
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+
+int main () {
+
+   int  *ptr = NULL;
+
+   printf("The value of ptr is : %x\n", ptr  );
+
+   return 0;
+}
+</pre>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+The value of ptr is 0
+</pre>
+<p>In most of the operating systems, programs are not permitted to access memory at address 0 because that memory is reserved by the operating system. However, the memory address 0 has special significance; it signals that the pointer is not intended to point to an accessible memory location. But by convention, if a pointer contains the null (zero) value, it is assumed to point to nothing.</p>
+<p>To check for a null pointer, you can use an 'if' statement as follows &minus;</p>
+<pre class="result notranslate">
+if(ptr)     /* succeeds if p is not null */
+if(!ptr)    /* succeeds if p is null */
+</pre>
+<h2>Pointers in Detail</h2>
+<p>Pointers have many but easy concepts and they are very important to C programming. The following important pointer concepts should be clear to any C programmer &minus;</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">Sr.No.</th>
+<th style="text-align:center;">Concept &amp; Description</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><a href="/cprogramming/c_pointer_arithmetic.htm">Pointer arithmetic</a>
+<p>There are four arithmetic operators that can be used in pointers: ++, --, +, -</p></td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><a href="/cprogramming/c_array_of_pointers.htm">Array of pointers</a>
+<p>You can define arrays to hold a number of pointers.</p></td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><a href="/cprogramming/c_pointer_to_pointer.htm">Pointer to pointer</a>
+<p>C allows you to have pointer on a pointer and so on.</p></td>
+</tr>
+<tr>
+<td class="ts">4</td>
+<td><a href="/cprogramming/c_passing_pointers_to_functions.htm">Passing pointers to functions in C</a>
+<p>Passing an argument by reference or by address enable the passed argument to be changed in the calling function by the called function.</p></td>
+</tr>
+<tr>
+<td class="ts">5</td>
+<td><a href="/cprogramming/c_return_pointer_from_functions.htm">Return pointer from functions in C</a>
+<p>C allows a function to return a pointer to the local variable, static variable, and dynamically allocated memory as well.</p></td>
+</tr>
+</table>
+<hr />
+            <center><a href="{% url 'Arrays1' %}" class="previous">&laquo; Previous</a>
+            <a href="{% url 'Strings1' %}" class="next">Next &raquo;</a></center>
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

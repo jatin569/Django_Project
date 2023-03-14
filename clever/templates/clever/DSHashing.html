@@ -1,0 +1,131 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:890px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+   <h2> Data Structure Topics</h2>
+                <a href="{% url 'DataStructure1' %}">Array</a>
+                <a href="{% url 'DSLinkList1' %}">Linked List</a>
+                <a href="{% url 'DStack1' %}">Stack</a>
+                <a href="{% url 'DSQueue1' %}">Queue</a>
+                <a href="{% url 'DSBTree1' %}">Binary Tree</a>
+                <a href="{% url 'DSBSTree1' %}">Binary Search Tree</a>
+                <a href="{% url 'DSHeap1' %}">Heap</a>
+                <a href="{% url 'DSHashing1' %}">Hashing</a>
+                <a href="{% url 'DSGraph1' %}">Graph</a>
+                <a href="{% url 'DSMatrix1' %}">Matrix</a>
+
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>Hashing</h1></center>
+
+            </div><br>
+            <p>Hashing is an important Data Structure which is designed to use a special function called the Hash function which is used to map a given value with a particular key for faster access of elements. The efficiency of mapping depends of the efficiency of the hash function used.</p>
+<p>Let a hash function H(x) maps the value <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-4fdd037713ae07c442e4e7d7e059e818_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#120;" title="Rendered by QuickLaTeX.com" height="12" width="14" style="vertical-align: 0px;"/> at the index <b>x%10</b> in an Array. For example if the list of values is [11,12,13,14,15] it will be stored at positions {1,2,3,4,5} in the array or Hash table respectively. </p>
+<p><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/HashingDataStructure-min-1024x512.png" alt="" width="665" height="333" class="aligncenter size-large wp-image-251333" srcset="https://www.geeksforgeeks.org/wp-content/uploads/HashingDataStructure-min-1024x512.png 1024w, https://www.geeksforgeeks.org/wp-content/uploads/HashingDataStructure-min-300x150.png 300w, https://www.geeksforgeeks.org/wp-content/uploads/HashingDataStructure-min-768x384.png 768w, https://www.geeksforgeeks.org/wp-content/uploads/HashingDataStructure-min-660x330.png 660w, https://www.geeksforgeeks.org/wp-content/uploads/HashingDataStructure-min.png 1600w" sizes="(max-width: 665px) 100vw, 665px" /></p>
+ <center><a href="{% url 'DSHeap1' %}" class="previous">&laquo; Previous</a>
+            <a href="{% url 'DSGraph1' %}" class="next">Next &raquo;</a></center>
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

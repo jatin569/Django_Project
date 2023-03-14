@@ -1,0 +1,249 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:2740px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+                <h2>  C Programming</h2>
+                <a href="{% url 'C1' %}">C - Home</a>
+                <a href="{% url 'EnvironmentSetup1' %}">C - Environment Setup</a>
+                <a href="{% url 'ProgramStructure1' %}">C - Program Structure</a>
+                <a href="{% url 'BasicSyntax1' %}">C - Basic Syntax</a>
+                <a href="{% url 'DataTypes1' %}">C - Data Types</a>
+                <a href="{% url 'Variables1' %}">C - Variables</a>
+                  <a href="{% url 'Constants1' %}">C - Constants</a>
+                 <a href="{% url 'StorageClass1' %}">C - Storage Classes</a>
+                <a href="{% url 'Operators1' %}">C - Operators</a>
+                <a href="{% url 'DecisionMaking1' %}">C - Decision Making</a>
+                <a href="{% url 'Loops1' %}">C - Loops</a>
+                <a href="{% url 'Functions1' %}">C - Functions</a>
+                 <a href="{% url 'ScopeRules1' %}">C - Scope Rules</a>
+                <a href="{% url 'Arrays1' %}">C - Arrays</a>
+                 <a href="{% url 'Pointers1' %}">C - Pointers</a>
+                <a href="{% url 'Strings1' %}">C - Strings</a>
+                <a href="{% url 'Structures1' %}">C - Structures</a>
+                 <a href="{% url 'Unions1' %}">C - Unions</a>
+                <a href="{% url 'BitField1' %}">C - Bit Fields</a>
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>Bit Field In C</h1></center>
+
+            </div>
+<p>Suppose your C program contains a number of TRUE/FALSE variables grouped in a structure called status, as follows &minus;</p>
+<pre class="prettyprint notranslate">
+struct {
+   unsigned int widthValidated;
+   unsigned int heightValidated;
+} status;
+</pre>
+<p>This structure requires 8 bits of memory space but in actual, we are going to store either 0 or 1 in each of the variables. The C programming language offers a better way to utilize the memory space in such situations.</p>
+<p>If you are using such variables inside a structure then you can define the width of a variable which tells the C compiler that you are going to use only those number of bits. For example, the above structure can be re-written as follows &minus;</p>
+<pre class="prettyprint notranslate">
+struct {
+   unsigned int widthValidated : 1;
+   unsigned int heightValidated : 1;
+} status;
+</pre>
+<p>The above structure requires 4 bits of memory space for status variable, but only 2 bits will be used to store the values.</p>
+<p>If you will use up to 32 variables each one with a width of 1 bit, then also the status structure will use 4 bits. However as soon as you have 33 variables, it will allocate the next slot of the memory and it will start using 8 bits. Let us check the following example to understand the concept &minus;</p>
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+/* define simple structure */
+struct {
+   unsigned int widthValidated;
+   unsigned int heightValidated;
+} status1;
+
+/* define a structure with bit fields */
+struct {
+   unsigned int widthValidated : 1;
+   unsigned int heightValidated : 1;
+} status2;
+
+int main( ) {
+
+   printf( "Memory size occupied by status1 : %d\n", sizeof(status1));
+   printf( "Memory size occupied by status2 : %d\n", sizeof(status2));
+
+   return 0;
+}
+</pre>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+Memory size occupied by status1 : 8
+Memory size occupied by status2 : 4
+</pre>
+<h2>Bit Field Declaration</h2>
+<p>The declaration of a bit-field has the following form inside a structure &minus;</p>
+<pre class="prettyprint notranslate">
+struct {
+   type [member_name] : width ;
+};
+</pre>
+<p>The following table describes the variable elements of a bit field &minus;</p>
+<table class="table table-bordered">
+<tr>
+<th>Sr.No.</th>
+<th style="text-align:center;">Element &amp; Description</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><p><b>type</b></p>
+<p>An integer type that determines how a bit-field's value is interpreted. The type may be int, signed int, or unsigned int.</p></td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><p><b>member_name</b></p>
+<p>The name of the bit-field.</p></td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><p><b>width</b></p>
+<p>The number of bits in the bit-field. The width must be less than or equal to the bit width of the specified type.</p></td>
+</tr>
+</table>
+<p>The variables defined with a predefined width are called <b>bit fields</b>. A bit field can hold more than a single bit; for example, if you need a variable to store a value from 0 to 7, then you can define a bit field with a width of 3 bits as follows &minus;</p>
+<pre class="prettyprint notranslate">
+struct {
+   unsigned int age : 3;
+} Age;
+</pre>
+<p>The above structure definition instructs the C compiler that the age variable is going to use only 3 bits to store the value. If you try to use more than 3 bits, then it will not allow you to do so. Let us try the following example &minus;</p>
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+struct {
+   unsigned int age : 3;
+} Age;
+
+int main( ) {
+
+   Age.age = 4;
+   printf( "Sizeof( Age ) : %d\n", sizeof(Age) );
+   printf( "Age.age : %d\n", Age.age );
+
+   Age.age = 7;
+   printf( "Age.age : %d\n", Age.age );
+
+   Age.age = 8;
+   printf( "Age.age : %d\n", Age.age );
+
+   return 0;
+}
+</pre>
+<p>When the above code is compiled it will compile with a warning and when executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+Sizeof( Age ) : 4
+Age.age : 4
+Age.age : 7
+Age.age : 0
+</pre>
+<hr />
+            <center><a href="{% url 'Unions1' %}" class="previous">&laquo; Previous</a>
+           </center>
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>

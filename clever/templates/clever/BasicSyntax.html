@@ -1,0 +1,237 @@
+<html>
+{% load staticfiles %}
+{% include 'clever/header.html'%}
+<head>
+<link rel="icon" href="{% static 'clever/css/bootstrap.css'%}">
+<style>
+.all
+{
+border:0px solid;
+margin:20px;
+background-image:url({% static 'clever/img/core-img/texture.png' %});
+background-size: 100% 100%;
+height:2200px;
+padding: 50px;
+}
+.bll
+{
+border:0px solid;
+background-size: 100% 100%;
+height:1000px;
+}
+
+h1 {font-size: 30px;}
+h2{font-size: 20px;}
+
+
+  .s2 {
+  width: 340px;
+  z-index: 1;
+  margin:20px;
+  background: #f0f0f0;;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+  .s2 a {
+  padding: 6px 10px 6px 60px;
+  font-size: 15px;
+  color: #000;;
+  display: block;
+}
+
+  .s2 a:hover {
+ background-color: #555;
+  color: white;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .s2 {padding-top: 15px;}
+    .s2 a {font-size: 18px;}
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1 ;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+        <div class="col-md-3 bll">
+            <div class="s2">
+                <h2> C Programming</h2>
+                <a href="{% url 'C1' %}">C - Home</a>
+                <a href="{% url 'EnvironmentSetup1' %}">C - Environment Setup</a>
+                <a href="{% url 'ProgramStructure1' %}">C - Program Structure</a>
+                <a href="{% url 'BasicSyntax1' %}">C - Basic Syntax</a>
+                <a href="{% url 'DataTypes1' %}">C - Data Types</a>
+                <a href="{% url 'Variables1' %}">C - Variables</a>
+                  <a href="{% url 'Constants1' %}">C - Constants</a>
+                 <a href="{% url 'StorageClass1' %}">C - Storage Classes</a>
+                <a href="{% url 'Operators1' %}">C - Operators</a>
+                <a href="{% url 'DecisionMaking1' %}">C - Decision Making</a>
+                <a href="{% url 'Loops1' %}">C - Loops</a>
+                <a href="{% url 'Functions1' %}">C - Functions</a>
+                 <a href="{% url 'ScopeRules1' %}">C - Scope Rules</a>
+                <a href="{% url 'Arrays1' %}">C - Arrays</a>
+                 <a href="{% url 'Pointers1' %}">C - Pointers</a>
+                <a href="{% url 'Strings1' %}">C - Strings</a>
+                <a href="{% url 'Structures1' %}">C - Structures</a>
+                 <a href="{% url 'Unions1' %}">C - Unions</a>
+                <a href="{% url 'BitField1' %}">C - Bit Fields</a>
+        </div>
+        </div>
+        <div class="col-md-6 all">
+            <div class="course-content">
+                <center><h1>Basic Syntax</h1></center>
+
+            </div>
+            <p>You have seen the basic structure of a C program, so it will be easy to understand other basic building blocks of the C programming language.</p>
+<h2>Tokens in C</h2>
+<p>A C program consists of various tokens and a token is either a keyword, an identifier, a constant, a string literal, or a symbol. For example, the following C statement consists of five tokens &minus;</p>
+<pre class="prettyprint notranslate">
+printf("Hello, World! \n");
+</pre>
+<p>The individual tokens are &minus;</p>
+<pre class="prettyprint notranslate">
+printf
+(
+"Hello, World! \n"
+)
+;
+</pre>
+<h2>Semicolons</h2>
+<p>In a C program, the semicolon is a statement terminator. That is, each individual statement must be ended with a semicolon. It indicates the end of one logical entity.</p>
+<p>Given below are two different statements &minus;</p>
+
+<h2>Comments</h2>
+<p>Comments are like helping text in your C program and they are ignored by the compiler. They start with /* and terminate with the characters */ as shown below &minus;</p>
+<pre class="result notranslate">
+/* my first program in C */
+</pre>
+<p>You cannot have comments within comments and they do not occur within a string or character literals.</p>
+<h2>Identifiers</h2>
+<p>A C identifier is a name used to identify a variable, function, or any other user-defined item. An identifier starts with a letter A to Z, a to z, or an underscore '_' followed by zero or more letters, underscores, and digits (0 to 9).</p>
+<p>C does not allow punctuation characters such as @, $, and % within identifiers. C is a <b>case-sensitive</b> programming language. Thus, <i>Manpower</i> and <i>manpower</i> are two different identifiers in C. Here are some examples of acceptable identifiers &minus;</p>
+<pre class="result notranslate">
+mohd       zara    abc   move_name  a_123
+myname50   _temp   j     a23b9      retVal
+</pre>
+<h2>Keywords</h2>
+<p>The following list shows the reserved words in C. These reserved words may not be used as constants or variables or any other identifier names.</p>
+<table style="text-align:center;" class="table table-bordered">
+<tr>
+<td style="width:25%">auto</td>
+<td style="width:25%">else</td>
+<td style="width:25%">long</td>
+<td style="width:25%">switch</td>
+</tr>
+<tr>
+<td>break</td>
+<td>enum</td>
+<td>register</td>
+<td>typedef</td>
+</tr>
+<tr>
+<td>case</td>
+<td>extern</td>
+<td>return</td>
+<td>union</td>
+</tr>
+<tr>
+<td>char</td>
+<td>float</td>
+<td>short</td>
+<td>unsigned</td>
+</tr>
+<tr>
+<td>const</td>
+<td>for</td>
+<td>signed</td>
+<td>void</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>goto</td>
+<td>sizeof</td>
+<td>volatile</td>
+</tr>
+<tr>
+<td>default</td>
+<td>if</td>
+<td>static</td>
+<td>while</td>
+</tr>
+<tr>
+<td>do</td>
+<td>int</td>
+<td>struct</td>
+<td>_Packed</td>
+</tr>
+<tr>
+<td>double</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<h2>Whitespace in C</h2>
+<p>A line containing only whitespace, possibly with a comment, is known as a blank line, and a C compiler totally ignores it.</p>
+<p>Whitespace is the term used in C to describe blanks, tabs, newline characters and comments. Whitespace separates one part of a statement from another and enables the compiler to identify where one element in a statement, such as int, ends and the next element begins. Therefore, in the following statement &minus;</p>
+<pre class="prettyprint notranslate">
+int age;
+</pre>
+<p>there must be at least one whitespace character (usually a space) between int and age for the compiler to be able to distinguish them. On the other hand, in the following statement &minus;</p>
+<pre class="prettyprint notranslate">
+fruit = apples + oranges;   // get the total fruit
+</pre>
+<p>no whitespace characters are necessary between fruit and =, or between = and apples, although you are free to include some if you wish to increase readability.</p>
+<hr />
+            <center><a href="{% url 'ProgramStructure1' %}" class="previous">&laquo; Previous</a>
+            <a href="{% url 'DataTypes1' %}" class="next">Next &raquo;</a></center>
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'clever/footer.html'%}
+<!-- jQuery-2.2.4 js -->
+    <script src="{% static 'clever/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'clever/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'clever/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'clever/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'clever/js/active.js' %}"></script>
+</html>
